@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Livre blanc NUMMA — Calculer le ROI de la digitalisation comptable (2026)</title>
+  <meta name="description" content="Livre blanc NUMMA 2026 : méthode complète pour calculer le ROI de la digitalisation comptable d'une TPE ou PME française. Grille de calcul, cas types, plan de migration.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.numma.eu/livre-blanc-roi-numma-contenu.html">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <meta name="theme-color" content="#7C3AED">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .wp-cover { background: linear-gradient(135deg, #5B21B6 0%, #7C3AED 50%, #FB923C 100%); color: white; padding: 5rem 2rem; border-radius: var(--radius-lg); margin-bottom: 3rem; text-align: center; }
+    .wp-cover .badge { display: inline-block; background: rgba(255,255,255,0.2); padding: 0.5rem 1.25rem; border-radius: var(--radius-full); font-size: 0.85rem; letter-spacing: 0.05em; text-transform: uppercase; font-weight: 700; margin-bottom: 1.5rem; }
+    .wp-cover h1 { color: white; font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1rem; max-width: 720px; margin-left: auto; margin-right: auto; }
+    .wp-cover .subtitle { font-size: 1.15rem; opacity: 0.95; max-width: 600px; margin: 0 auto; line-height: 1.5; }
+    .wp-cover .meta { margin-top: 2.5rem; font-size: 0.85rem; opacity: 0.8; }
+    .wp-toc { background: var(--ink-50); border: 1px solid var(--ink-100); border-radius: var(--radius-lg); padding: 2rem 2.25rem; margin: 2rem 0 3rem; }
+    .wp-toc h2 { font-size: 1.1rem; color: var(--numma-purple-700); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1.25rem; }
+    .wp-toc ol { padding-left: 1.5rem; columns: 2; column-gap: 3rem; margin: 0; }
+    .wp-toc ol li { margin-bottom: 0.6rem; font-size: 0.95rem; }
+    .wp-toc ol li a { color: var(--ink-700); }
+    .wp-toc ol li a:hover { color: var(--numma-purple-700); }
+    .wp-chapter { margin-bottom: 4rem; padding-top: 2rem; border-top: 2px solid var(--numma-purple-100); }
+    .wp-chapter:first-of-type { border-top: 0; padding-top: 0; }
+    .wp-chapter-num { color: var(--numma-purple-600); font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
+    .wp-chapter h2 { font-size: 1.75rem; margin-bottom: 1.25rem; }
+    .wp-chapter h3 { margin-top: 2rem; margin-bottom: 0.75rem; font-size: 1.15rem; }
+    .wp-callout { background: var(--numma-purple-50); border-left: 4px solid var(--numma-purple-600); border-radius: var(--radius-md); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+    .wp-callout strong { color: var(--numma-purple-700); }
+    .wp-table { background: var(--white); border: 1px solid var(--ink-100); border-radius: var(--radius-lg); overflow: hidden; margin: 1.5rem 0; }
+    .wp-table table { width: 100%; border-collapse: collapse; }
+    .wp-table th { background: var(--ink-50); padding: 0.85rem 1rem; text-align: left; font-size: 0.9rem; color: var(--ink-700); border-bottom: 1px solid var(--ink-100); }
+    .wp-table td { padding: 0.85rem 1rem; border-bottom: 1px solid var(--ink-100); font-size: 0.92rem; color: var(--ink-700); }
+    .wp-table tr:last-child td { background: var(--numma-purple-50); font-weight: 800; color: var(--numma-purple-700); }
+    .wp-case { background: var(--white); border: 1px solid var(--ink-100); border-radius: var(--radius-lg); padding: 1.75rem; margin: 1.5rem 0; }
+    .wp-case h3 { margin-top: 0; }
+    .wp-case .profile-line { font-size: 0.9rem; color: var(--ink-500); margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--ink-100); }
+    .wp-print-btn { position: fixed; bottom: 2rem; right: 2rem; z-index: 100; }
+    @media print {
+      .site-header, .site-footer, .wp-print-btn { display: none !important; }
+      .wp-cover { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .wp-chapter { page-break-inside: avoid; page-break-before: auto; }
+      body { background: white; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="index.html" class="nav-logo"><img src="images/logo.svg" alt="Logo NUMMA" width="36" height="36" decoding="async"><span>NUMMA</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li class="has-dropdown"><a href="fonctionnalites.html">Fonctionnalités ▾</a>
+          <div class="dropdown">
+            <a href="facturation-electronique.html">Facturation électronique</a>
+            <a href="comptabilite.html">Comptabilité</a>
+            <a href="paie-rh.html">Paie & RH</a>
+            <a href="tresorerie.html">Trésorerie & Finance</a>
+          </div>
+        </li>
+        <li><a href="tarifs.html">Tarifs</a></li>
+        <li><a href="blog.html">Ressources</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="https://app.numma.eu/login" class="btn btn-ghost btn-sm">Connexion</a>
+        <a href="reserver-demo.html" class="btn btn-primary btn-sm">Réserver une démo</a>
+        <button class="nav-toggle btn btn-secondary btn-sm" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">Menu</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section style="padding-top: 2rem;">
+  <div class="container container-xs">
+
+    <div class="wp-cover">
+      <span class="badge">Livre blanc 2026</span>
+      <h1>Calculer le ROI de la digitalisation comptable pour une TPE ou PME française</h1>
+      <p class="subtitle">Méthode complète, grille de calcul, cas types par taille d'entreprise et plan de migration sur 30 jours.</p>
+      <div class="meta">
+        NUMMA · Édition 2026 · Mai 2026 · 24 pages
+      </div>
+    </div>
+
+    <div class="wp-toc">
+      <h2>Sommaire</h2>
+      <ol>
+        <li><a href="#chap1">L'environnement TPE/PME en 2026</a></li>
+        <li><a href="#chap2">Méthodologie de calcul du vrai coût total</a></li>
+        <li><a href="#chap3">Grille de calcul interactive</a></li>
+        <li><a href="#chap4">Cas type 1 : Indépendant en libéral</a></li>
+        <li><a href="#chap5">Cas type 2 : TPE 8 salariés</a></li>
+        <li><a href="#chap6">Cas type 3 : PME 25 salariés</a></li>
+        <li><a href="#chap7">Les 5 piliers d'une compta digitale réussie</a></li>
+        <li><a href="#chap8">Plan de migration en 30 jours</a></li>
+        <li><a href="#chap9">Pièges à éviter</a></li>
+        <li><a href="#chap10">Conclusion &amp; prochaine étape</a></li>
+      </ol>
+    </div>
+
+    <article class="blog-post" style="padding-top: 0;">
+
+      <section class="wp-chapter" id="chap1">
+        <div class="wp-chapter-num">Chapitre 1</div>
+        <h2>L'environnement TPE/PME en 2026</h2>
+
+        <p>2026 marque un point d'inflexion pour la gestion administrative des petites entreprises françaises. Trois mouvements simultanés transforment ce qui était jusqu'ici un sujet de confort en un sujet de conformité — et de coûts.</p>
+
+        <h3>La facturation électronique devient obligatoire</h3>
+        <p>Depuis septembre 2026, toutes les entreprises françaises doivent pouvoir recevoir des factures électroniques au format Factur-X. L'obligation d'émission s'étale ensuite jusqu'à septembre 2027 pour les plus petites structures. Cette réforme, portée par l'Agence de l'Informatique Financière de l'État (AIFE), n'est ni un test ni une option. Une entreprise qui n'est pas équipée perdra la capacité d'émettre des factures à terme.</p>
+
+        <h3>Les obligations sociales se durcissent</h3>
+        <p>DSN mensuelle pour la paie, déclarations URSSAF, RGPD pour les données salariés, archivage obligatoire pendant 10 ans : la simple gestion administrative d'une entreprise de 5 à 50 salariés mobilise une charge réglementaire qui dépasse de loin les capacités d'une feuille Excel et d'un cabinet qui découvre les pièces six mois après.</p>
+
+        <h3>Le PCG 2025 change la présentation des comptes</h3>
+        <p>Le nouveau Plan Comptable Général en vigueur impose des règles de présentation et de classification revues. Les logiciels comptables qui n'ont pas été mis à jour produisent des liasses fiscales non conformes. Tous les éditeurs sérieux ont intégré le PCG 2025 dans leur version 2026 — mais cette mise à jour est parfois payante pour les solutions installées.</p>
+
+        <div class="wp-callout">
+          <p><strong>À retenir :</strong> En 2026, digitaliser sa comptabilité ne relève plus du « confort de gestion ». C'est une exigence de conformité dont le défaut a des conséquences chiffrées : amendes Factur-X, surcoûts cabinet, blocages opérationnels avec les clients qui n'acceptent plus que des factures électroniques.</p>
+        </div>
+      </section>
+
+      <section class="wp-chapter" id="chap2">
+        <div class="wp-chapter-num">Chapitre 2</div>
+        <h2>Méthodologie de calcul du vrai coût total</h2>
+
+        <p>Le calcul du ROI d'une digitalisation comptable est généralement faux pour une raison simple : on ne compare pas les bons chiffres. On compare le tarif d'appel d'une nouvelle solution avec le tarif d'appel de l'ancienne, en oubliant tout le reste. Pour faire un calcul juste, il faut additionner six composantes côté coût.</p>
+
+        <h3>1. Le coût direct des logiciels et abonnements</h3>
+        <p>Tous les abonnements souscrits pour la gestion administrative et financière : logiciel comptable, logiciel de facturation s'il est séparé, outil de notes de frais, outil de gestion des congés, gestion commerciale, etc. Souvent dispersés entre plusieurs lignes du compte de résultat.</p>
+
+        <h3>2. Le coût des modules et options non inclus</h3>
+        <p>Le tarif d'appel d'un logiciel couvre rarement la totalité des besoins. Paie facturée à la fiche, banque illimitée en option, prévisionnel en upgrade : ces add-ons représentent souvent 30 à 60 % du coût total réel.</p>
+
+        <h3>3. Le coût de maintenance et de mise à jour</h3>
+        <p>Pour les logiciels installés : mise à jour millésime annuelle, maintenance serveur, sauvegardes. Pour les solutions cloud : ces coûts sont en principe inclus, mais certains éditeurs facturent l'onboarding ou les exports.</p>
+
+        <h3>4. Le surcoût d'honoraires comptables provoqué par la désorganisation</h3>
+        <p>C'est la composante la plus invisible. Un cabinet qui doit reconstituer une comptabilité éparpillée passe 30 à 50 % de temps en plus que sur un dossier bien tenu. Ce temps est facturé — dans le forfait ou en hors-forfait. Sur une TPE de 5-10 salariés, ce surcoût représente entre 600 et 2 000 € par an.</p>
+
+        <h3>5. Le temps interne consommé par la stack</h3>
+        <p>Le plus gros poste, et le plus oublié. Temps de saisie manuelle, ressaisie entre outils, rapprochement bancaire à la main, recherche de justificatifs, corrections d'erreurs de TVA. À 40-50 € de l'heure de coût complet, ce temps représente entre 6 000 et 20 000 € par an selon la taille de l'entreprise.</p>
+
+        <h3>6. Le coût des risques non couverts</h3>
+        <p>Risque de non-conformité Factur-X (amendes jusqu'à 15 000 € par an), risque d'erreur sur la TVA (redressement), risque de perte de données (sinistre serveur). Ces risques sont rarement chiffrés, mais ils existent.</p>
+
+        <div class="wp-callout">
+          <p><strong>Principe du calcul :</strong> ne comparez jamais un tarif d'appel avec un tarif d'appel. Comparez toujours <em>vrai coût total</em> avec <em>vrai coût total</em>, sur 12 mois glissants.</p>
+        </div>
+      </section>
+
+      <section class="wp-chapter" id="chap3">
+        <div class="wp-chapter-num">Chapitre 3</div>
+        <h2>Grille de calcul interactive</h2>
+
+        <p>Cette grille vous permet de chiffrer votre situation actuelle. Vous y remplissez vos propres données, et vous obtenez le vrai coût annuel de votre stack. Comparez ensuite avec une solution cloud intégrée pour estimer votre ROI.</p>
+
+        <div class="wp-table">
+          <table>
+            <thead>
+              <tr>
+                <th>Poste de coût (à remplir avec vos chiffres)</th>
+                <th>Méthode de calcul</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Abonnement logiciel comptable principal</td><td>Tarif mensuel × 12</td></tr>
+              <tr><td>Modules supplémentaires (paie, banque, etc.)</td><td>Total des options activées × 12</td></tr>
+              <tr><td>Logiciels séparés (facturation, NDF, gestion)</td><td>Tarif mensuel cumulé × 12</td></tr>
+              <tr><td>Mise à jour annuelle / maintenance technique</td><td>Coût annuel direct</td></tr>
+              <tr><td>Surcoût d'honoraires cabinet (versus dossier bien tenu)</td><td>Différence avec un forfait standard cabinet</td></tr>
+              <tr><td>Temps interne consacré à l'administratif</td><td>Heures/semaine × 48 sem × coût horaire chargé</td></tr>
+              <tr><td>Risques non couverts (Factur-X, RGPD, perte données)</td><td>Estimation prudente, ex. 500 €/an</td></tr>
+              <tr><td><strong>VRAI COÛT TOTAL ANNUEL</strong></td><td><strong>Somme des lignes ci-dessus</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Faites le même calcul avec une solution cloud intégrée. La différence représente votre ROI annuel attendu.</p>
+      </section>
+
+      <section class="wp-chapter" id="chap4">
+        <div class="wp-chapter-num">Chapitre 4</div>
+        <h2>Cas type 1 : Indépendant en libéral</h2>
+
+        <div class="wp-case">
+          <h3>Profil</h3>
+          <p class="profile-line">Profession libérale (consultant, kinésithérapeute, formateur), 1 personne, CA 75 000 € HT, 1 compte bancaire pro.</p>
+
+          <h3>Stack actuelle typique</h3>
+          <p>Excel pour les factures + outil de facturation à 10 €/mois + cabinet comptable à 100 €/mois forfaitaire + URSSAF auto-déclarée.</p>
+
+          <h3>Coût annuel réel</h3>
+          <p>Outil de facturation : 120 €. Cabinet comptable : 1 200 €. Temps interne (2 h/semaine × 50 € × 48 sem) : 4 800 €. <strong>Total : environ 6 120 €/an.</strong></p>
+
+          <h3>Avec NUMMA Indépendant à 19 €/mois</h3>
+          <p>Abonnement : 228 €. Cabinet comptable (allégé grâce à la qualité du dossier) : 800 €. Temps interne (1 h/semaine × 50 € × 48 sem) : 2 400 €. <strong>Total : environ 3 428 €/an.</strong></p>
+
+          <h3>ROI annuel</h3>
+          <p><strong>Économie nette : ~2 700 €/an</strong>, plus une heure de récupérée par semaine.</p>
+        </div>
+      </section>
+
+      <section class="wp-chapter" id="chap5">
+        <div class="wp-chapter-num">Chapitre 5</div>
+        <h2>Cas type 2 : TPE 8 salariés</h2>
+
+        <div class="wp-case">
+          <h3>Profil</h3>
+          <p class="profile-line">SAS de prestations de service, 8 salariés, CA 650 000 € HT, 3 comptes bancaires pro.</p>
+
+          <h3>Stack actuelle typique</h3>
+          <p>Logiciel comptable installé (Sage ou équivalent) à 39 €/mois + paie externalisée à 12 €/salarié × 8 + logiciel de facturation séparé + outil notes de frais + cabinet comptable.</p>
+
+          <h3>Coût annuel réel</h3>
+          <p>Logiciel compta : 468 €. Modules : 1 152 € (paie). Logiciel facturation : 420 €. Notes de frais : 360 €. Mise à jour millésime : 450 €. Surcoût cabinet : 1 200 €. Maintenance serveur : 1 800 €. Temps interne (6 h/sem × 40 € × 48 sem) : 11 520 €. <strong>Total : environ 17 370 €/an.</strong></p>
+
+          <h3>Avec NUMMA Pro à 35 €/mois + paie à 7 €/employé</h3>
+          <p>Abonnement Pro : 420 €. Paie (8 × 7 × 12) : 672 €. Surcoût cabinet : 400 €. Temps interne (2 h/sem × 40 € × 48 sem) : 3 840 €. <strong>Total : environ 5 332 €/an.</strong></p>
+
+          <h3>ROI annuel</h3>
+          <p><strong>Économie nette : ~12 000 €/an</strong>, plus 4 heures gagnées chaque semaine.</p>
+        </div>
+      </section>
+
+      <section class="wp-chapter" id="chap6">
+        <div class="wp-chapter-num">Chapitre 6</div>
+        <h2>Cas type 3 : PME 25 salariés</h2>
+
+        <div class="wp-case">
+          <h3>Profil</h3>
+          <p class="profile-line">SAS de services BtoB, 25 salariés, CA 2,2 M€ HT, multi-comptes bancaires, 1 assistante administrative à mi-temps.</p>
+
+          <h3>Stack actuelle typique</h3>
+          <p>Logiciel ERP léger (Cegid Quadra) + module paie + module banque + logiciel notes de frais + outil trésorerie + cabinet comptable. Salaire chargé assistante administrative mi-temps : 18 000 €/an dont environ 14 000 € passés sur la gestion administrative.</p>
+
+          <h3>Coût annuel réel</h3>
+          <p>Suite ERP + modules : 3 600 €. Notes de frais : 1 080 €. Logiciel tréso : 720 €. Mises à jour : 800 €. Maintenance : 2 400 €. Cabinet comptable : 4 800 €. Temps assistante administrative (charge admin) : 14 000 €. Temps dirigeant (1 h/sem × 60 € × 48) : 2 880 €. <strong>Total : environ 30 280 €/an.</strong></p>
+
+          <h3>Avec NUMMA Business à 79 €/mois + paie à 5 €/employé</h3>
+          <p>Abonnement Business : 948 €. Paie (25 × 5 × 12) : 1 500 €. Cabinet comptable : 4 200 €. Temps assistante : 8 000 €. Temps dirigeant : 1 440 €. <strong>Total : environ 16 088 €/an.</strong></p>
+
+          <h3>ROI annuel</h3>
+          <p><strong>Économie nette : ~14 000 €/an</strong>, plus une réallocation de l'assistante sur des tâches à plus haute valeur (relation client, suivi commercial).</p>
+        </div>
+      </section>
+
+      <section class="wp-chapter" id="chap7">
+        <div class="wp-chapter-num">Chapitre 7</div>
+        <h2>Les 5 piliers d'une compta digitale réussie</h2>
+
+        <p>Au-delà du choix d'un logiciel, une digitalisation réussie repose sur cinq briques qui doivent fonctionner ensemble.</p>
+
+        <h3>Pilier 1 — Facturation électronique conforme Factur-X</h3>
+        <p>Émission et réception au format XML embarqué dans PDF, transmission via PDP ou PPF, synchronisation des statuts. Non négociable en 2026.</p>
+
+        <h3>Pilier 2 — Agrégation bancaire en temps réel</h3>
+        <p>Comptes bancaires remontés automatiquement via API DSP2, rapprochement automatique des paiements et des factures.</p>
+
+        <h3>Pilier 3 — Préparation comptable automatisée</h3>
+        <p>Écritures, journaux, TVA, grand livre construits au fil de l'eau à partir des données factures et banque.</p>
+
+        <h3>Pilier 4 — Lien direct avec l'expert-comptable</h3>
+        <p>Accès en lecture pour le cabinet, sans surcoût, à tout moment. FEC exportable en un clic.</p>
+
+        <h3>Pilier 5 — Tableau de bord en temps réel</h3>
+        <p>Résultat, marge, trésorerie disponible, cash flow prévisionnel accessibles sur ordinateur et mobile.</p>
+      </section>
+
+      <section class="wp-chapter" id="chap8">
+        <div class="wp-chapter-num">Chapitre 8</div>
+        <h2>Plan de migration en 30 jours</h2>
+
+        <p>Voici le séquencement éprouvé pour une bascule sans douleur. Comptez 10 à 15 heures de votre côté, réparties sur 4 semaines.</p>
+
+        <h3>Semaine 1 — Audit et choix</h3>
+        <p>Listez votre stack actuelle, vos flux, vos points de douleur. Sélectionnez 2 ou 3 solutions cible et demandez des démos guidées avec vos propres cas.</p>
+
+        <h3>Semaine 2 — Préparation</h3>
+        <p>Exportez et sauvegardez votre comptabilité actuelle (PCG, balance, FEC, clients, fournisseurs). Nettoyez les doublons et les fiches inactives.</p>
+
+        <h3>Semaine 3 — Import et paramétrage</h3>
+        <p>Importez vos données dans la solution cible avec le support de l'éditeur. Connectez les comptes bancaires. Paramétrez les automatisations de rapprochement et de relances clients.</p>
+
+        <h3>Semaine 4 — Tests et bascule</h3>
+        <p>Saisissez les nouvelles opérations dans les deux outils en parallèle pendant 2 semaines pour vérifier la cohérence. Invitez votre expert-comptable. Puis basculez définitivement.</p>
+      </section>
+
+      <section class="wp-chapter" id="chap9">
+        <div class="wp-chapter-num">Chapitre 9</div>
+        <h2>Pièges à éviter</h2>
+
+        <p>Quatre erreurs récurrentes plombent les migrations. Voici comment ne pas tomber dedans.</p>
+
+        <p><strong>Choisir sur le tarif d'appel.</strong> Vous payerez la différence en options. Comparez toujours sur le vrai coût annuel total.</p>
+
+        <p><strong>Migrer sans embarquer son expert-comptable.</strong> Vous risquez une clôture catastrophique. Invitez-le dès la phase d'audit.</p>
+
+        <p><strong>Choisir un éditeur qui verrouille les données.</strong> Vérifiez avant de signer que l'export en CSV, FEC et balance est garanti gratuitement à tout moment. Pas de promesse orale, exigez-le par écrit.</p>
+
+        <p><strong>Sous-estimer la durée.</strong> Une migration sérieuse prend 30 jours, pas 3. Ne vous lancez pas en pleine clôture annuelle.</p>
+      </section>
+
+      <section class="wp-chapter" id="chap10">
+        <div class="wp-chapter-num">Chapitre 10</div>
+        <h2>Conclusion &amp; prochaine étape</h2>
+
+        <p>En 2026, la digitalisation comptable n'est plus un sujet d'arbitrage. C'est un alignement avec un environnement qui a changé. Les chiffres présentés dans ce livre blanc montrent une réalité simple : pour une TPE ou PME française moyenne, la bascule vers une solution cloud intégrée représente une économie nette de plusieurs milliers d'euros par an, plus une qualité de pilotage radicalement supérieure.</p>
+
+        <p>La question n'est pas de savoir s'il faut le faire, mais quand. Et la réponse, pour la plupart des dirigeants qui lisent ce document, est : avant la fin de l'année 2026, idéalement dans les 90 jours qui viennent.</p>
+
+        <p>NUMMA a été conçu pour répondre exactement à ce contexte. Plateforme française, hébergement souverain, conformité Factur-X dès le premier jour, expert-comptable invité gratuitement, paie facturée à l'usage par employé. Notre offre couvre l'ensemble du spectre : indépendants à 19 €/mois, TPE à 35 €/mois, PME à 79 €/mois, grands comptes sur devis.</p>
+
+        <div class="cta-final" style="margin-top: 2rem;">
+          <h2>La meilleure suite logique ?</h2>
+          <p>30 minutes avec un expert NUMMA pour faire votre calcul sur votre situation, et repartir avec un plan de migration concret. Sans engagement, sans pitch agressif.</p>
+          <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
+            <a href="reserver-demo.html" class="btn btn-primary btn-lg">Réserver une démo</a>
+            <a href="tarifs.html" class="btn btn-ghost btn-lg">Voir les tarifs</a>
+          </div>
+        </div>
+      </section>
+
+    </article>
+
+  </div>
+</section>
+
+</main>
+
+<a href="javascript:window.print()" class="btn btn-secondary wp-print-btn">Imprimer / PDF</a>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="footer-logo-text"><img src="images/logo.svg" alt="Logo NUMMA" width="32" height="32" loading="lazy"><span>NUMMA</span></div><p>Le logiciel de gestion tout-en-un pour TPE, PME et scale-ups françaises.</p></div>
+      <div class="footer-col"><h4>Produit</h4><ul><li><a href="fonctionnalites.html">Fonctionnalités</a></li><li><a href="tarifs.html">Tarifs</a></li><li><a href="micro-entreprise.html">Micro-entreprise</a></li></ul></div>
+      <div class="footer-col"><h4>Ressources</h4><ul><li><a href="blog.html">Blog</a></li><li><a href="blog/digitaliser-comptabilite-tpe-pme.html">Guide compta digitale</a></li></ul></div>
+      <div class="footer-col"><h4>Entreprise</h4><ul><li><a href="a-propos.html">À propos</a></li><li><a href="reserver-demo.html">Réserver une démo</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Légal</h4><ul><li><a href="mentions-legales.html">Mentions légales</a></li><li><a href="politique-confidentialite.html">Confidentialité</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><div>© 2025–2026 NUMMA SAS · Société française fondée en 2025 · Tous droits réservés</div></div>
+  </div>
+</footer>
+
+<script src="js/cookies.js" defer></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>

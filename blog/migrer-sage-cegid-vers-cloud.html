@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Migrer de Sage ou Cegid vers une solution cloud : méthode en 7 étapes (2026)</title>
+  <meta name="description" content="Le guide opérationnel pour migrer de Sage ou Cegid vers une solution comptable cloud moderne : 7 étapes, durée, pièges à éviter, et préparation Factur-X 2026.">
+  <meta name="keywords" content="migrer sage, migration cegid, alternative sage cegid, comptabilité cloud migration, remplacer logiciel comptable installé">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.numma.eu/blog/migrer-sage-cegid-vers-cloud.html">
+  <meta property="og:title" content="Migrer de Sage ou Cegid vers une solution cloud : méthode en 7 étapes">
+  <meta property="og:description" content="Le guide concret pour passer d'un logiciel comptable installé à une solution moderne, sans perdre vos données.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.numma.eu/blog/migrer-sage-cegid-vers-cloud.html">
+  <meta property="og:image" content="https://www.numma.eu/images/og-cover.png">
+  <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+  <meta name="theme-color" content="#7C3AED">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Migrer de Sage ou Cegid vers une solution cloud : méthode en 7 étapes (2026)",
+    "description": "Le guide opérationnel pour migrer de Sage ou Cegid vers une solution comptable cloud moderne en 7 étapes.",
+    "image": "https://www.numma.eu/images/og-cover.png",
+    "datePublished": "2026-05-27",
+    "dateModified": "2026-05-27",
+    "author": { "@type": "Organization", "name": "NUMMA", "url": "https://www.numma.eu" },
+    "publisher": { "@type": "Organization", "name": "NUMMA", "logo": { "@type": "ImageObject", "url": "https://www.numma.eu/images/logo.svg" } },
+    "mainEntityOfPage": "https://www.numma.eu/blog/migrer-sage-cegid-vers-cloud.html"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.numma.eu/"},
+      {"@type": "ListItem", "position": 2, "name": "Ressources", "item": "https://www.numma.eu/blog.html"},
+      {"@type": "ListItem", "position": 3, "name": "Migrer de Sage ou Cegid vers le cloud", "item": "https://www.numma.eu/blog/migrer-sage-cegid-vers-cloud.html"}
+    ]
+  }
+  </script>
+  <style>
+    .step-card { background: var(--white); border: 1px solid var(--ink-100); border-radius: var(--radius-lg); padding: 1.5rem; margin-bottom: 1.25rem; display: grid; grid-template-columns: 60px 1fr; gap: 1.25rem; align-items: start; }
+    .step-num { width: 52px; height: 52px; border-radius: var(--radius-full); background: var(--gradient-brand); color: #fff; font-weight: 800; font-size: 1.3rem; display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-purple); }
+    .step-card h3 { margin-bottom: 0.5rem; font-size: 1.1rem; }
+    .step-card .duration { font-size: 0.85rem; color: var(--numma-purple-600); font-weight: 700; }
+    .callout { background: var(--numma-purple-50); border-left: 4px solid var(--numma-purple-600); border-radius: var(--radius-md); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+    .compare-old-new { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 2rem 0; }
+    .compare-old, .compare-new { padding: 1.5rem; border-radius: var(--radius-lg); }
+    .compare-old { background: var(--ink-50); border: 1px solid var(--ink-100); }
+    .compare-new { background: var(--numma-purple-50); border: 1px solid var(--numma-purple-100); }
+    .compare-old h4, .compare-new h4 { font-size: 1rem; margin-bottom: 0.75rem; }
+    .compare-old h4 { color: var(--ink-700); }
+    .compare-new h4 { color: var(--numma-purple-700); }
+    .compare-old ul, .compare-new ul { padding-left: 1.25rem; font-size: 0.92rem; color: var(--ink-700); }
+    .compare-old ul li, .compare-new ul li { margin-bottom: 0.4rem; }
+    .pillar-link-card { background: linear-gradient(135deg, var(--numma-purple-50) 0%, var(--numma-purple-100) 100%); border-radius: var(--radius-lg); padding: 1.75rem; margin: 2rem 0; }
+    .pillar-link-card h3 { color: var(--numma-purple-700); margin-bottom: 0.5rem; }
+    @media (max-width: 700px) { .compare-old-new { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="../index.html" class="nav-logo"><img src="../images/logo.svg" alt="Logo NUMMA" width="36" height="36" decoding="async"><span>NUMMA</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li class="has-dropdown"><a href="../fonctionnalites.html">Fonctionnalités ▾</a>
+          <div class="dropdown">
+            <a href="../facturation-electronique.html">Facturation électronique</a>
+            <a href="../comptabilite.html">Comptabilité</a>
+            <a href="../paie-rh.html">Paie & RH</a>
+            <a href="../tresorerie.html">Trésorerie & Finance</a>
+          </div>
+        </li>
+        <li><a href="../tarifs.html">Tarifs</a></li>
+        <li><a href="../blog.html">Ressources</a></li>
+        <li><a href="../a-propos.html">À propos</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="https://app.numma.eu/login" class="btn btn-ghost btn-sm">Connexion</a>
+        <a href="../reserver-demo.html" class="btn btn-primary btn-sm">Réserver une démo</a>
+        <button class="nav-toggle btn btn-secondary btn-sm" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">Menu</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="page-header">
+  <div class="container">
+    <nav class="breadcrumb"><a href="../index.html">Accueil</a> / <a href="../blog.html">Ressources</a> / <span>Migrer Sage Cegid vers cloud</span></nav>
+    <span class="eyebrow">Article · Lecture 8 min</span>
+    <h1>Migrer de Sage ou Cegid vers une <span class="gradient-text">solution cloud</span> : méthode en 7 étapes</h1>
+    <p class="lead">Quitter un logiciel comptable installé pour une solution moderne est plus simple qu'il n'y paraît, à condition de suivre la bonne méthode. Le guide opérationnel pour une migration sereine.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container container-xs">
+    <article class="blog-post" style="padding-top: 0;">
+
+      <p>Sage et Cegid ont équipé des centaines de milliers de PME françaises depuis les années 1990. Ces solutions ont rendu un service réel — mais leur architecture date d'une époque où on installait des logiciels sur des serveurs locaux, où la facturation se faisait en PDF, et où le cloud était un mot pour les ingénieurs. En 2026, ce modèle frotte de plus en plus contre la réalité quotidienne d'un dirigeant : Factur-X obligatoire, télétravail, expert-comptable qui veut voir les données en temps réel, dirigeant qui veut consulter sa trésorerie depuis son téléphone à 20 h.</p>
+
+      <p>Migrer vers une solution cloud n'est ni un caprice, ni une mode. C'est un alignement avec un environnement qui a changé. Voici la méthode en 7 étapes pour le faire proprement.</p>
+
+      <h2>Comprendre ce qui change vraiment</h2>
+
+      <p>Avant la méthode, le cadre. Voici, côte à côte, ce que vous quittez et ce que vous gagnez.</p>
+
+      <div class="compare-old-new">
+        <div class="compare-old">
+          <h4>Logiciel installé (Sage, Cegid, Quadratus)</h4>
+          <ul>
+            <li>Installation sur poste ou serveur local</li>
+            <li>Mises à jour manuelles (parfois payantes)</li>
+            <li>Sauvegarde à votre charge</li>
+            <li>Accès depuis un seul lieu</li>
+            <li>Maintenance informatique nécessaire</li>
+            <li>Coût initial élevé + maintenance annuelle</li>
+            <li>Données isolées du compte bancaire</li>
+            <li>Mises à jour réglementaires reportées</li>
+          </ul>
+        </div>
+        <div class="compare-new">
+          <h4>Solution cloud (NUMMA, Pennylane, etc.)</h4>
+          <ul>
+            <li>Aucune installation, connexion navigateur</li>
+            <li>Mises à jour automatiques incluses</li>
+            <li>Sauvegarde et redondance incluses</li>
+            <li>Accès depuis bureau, mobile, expert-comptable</li>
+            <li>Zéro maintenance informatique de votre côté</li>
+            <li>Abonnement mensuel sans coût initial</li>
+            <li>Banque, factures et compta synchronisées</li>
+            <li>PCG 2025, Factur-X, DSN livrés au fil de l'eau</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2>Les 7 étapes pour migrer sans douleur</h2>
+
+      <p>Cette méthode est éprouvée pour des TPE et PME de 3 à 50 salariés. Comptez 30 à 45 jours du démarrage à la pleine vitesse. Le travail effectif de votre côté tourne autour de 10 à 15 heures réparties sur la période.</p>
+
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <div>
+          <span class="duration">Semaine 1 · 2-3 h</span>
+          <h3>Auditer vos données et flux actuels</h3>
+          <p>Listez tout ce que votre logiciel actuel contient : plan comptable, journaux, comptes clients et fournisseurs, écritures de l'exercice en cours, immobilisations, taux de TVA paramétrés. Ajoutez vos flux : par où entrent les factures, où sont stockés les justificatifs, qui saisit quoi, à quelle fréquence votre cabinet exporte. Ce diagnostic est la matière première de votre projet.</p>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <div>
+          <span class="duration">Semaine 1-2 · 2-3 h</span>
+          <h3>Choisir la solution cloud cible</h3>
+          <p>Sélectionnez 2 à 3 solutions qui couvrent votre périmètre. Les critères qui comptent vraiment : conformité Factur-X 2026, qualité du support en français, support de migration depuis Sage/Cegid, accès expert-comptable gratuit, hébergement français. Demandez des démos guidées avec vos propres cas — pas une démo générique. Notre <a href="choisir-logiciel-compta.html">guide pour choisir son logiciel comptable</a> détaille les points de vigilance.</p>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <div>
+          <span class="duration">Semaine 2 · 1-2 h</span>
+          <h3>Sauvegarder l'historique avant tout</h3>
+          <p>Exportez et archivez localement l'intégralité de votre base Sage ou Cegid : sauvegarde complète, exports comptables (FEC, balance détaillée, grand livre), exports clients-fournisseurs au format CSV. Vous gardez cette archive même après la bascule, pour ne jamais perdre l'historique. Stockez-la sur deux supports différents (cloud + disque externe).</p>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num">4</div>
+        <div>
+          <span class="duration">Semaine 2 · 1-2 h</span>
+          <h3>Exporter le PCG, clients et fournisseurs</h3>
+          <p>Depuis Sage ou Cegid, exportez en CSV ou XLSX : plan comptable général, fiches clients (avec SIRET, TVA intra, adresse, conditions de paiement), fiches fournisseurs, taux de TVA, journaux paramétrés. Nettoyez les doublons et les fiches inactives — c'est l'occasion de faire le ménage que vous repoussiez.</p>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num">5</div>
+        <div>
+          <span class="duration">Semaine 3 · 2-3 h</span>
+          <h3>Importer dans la solution cloud</h3>
+          <p>Les bonnes solutions cloud disposent d'imports natifs pour Sage et Cegid. Importez votre plan comptable, vos clients, vos fournisseurs, votre balance d'ouverture de l'exercice en cours. Demandez au support de l'éditeur de valider l'import avec vous — c'est un service qui doit être inclus dans l'abonnement, pas un surcoût.</p>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num">6</div>
+        <div>
+          <span class="duration">Semaine 3 · 2-3 h</span>
+          <h3>Reproduire les automatisations clés</h3>
+          <p>Connectez vos comptes bancaires via DSP2. Paramétrez les règles de rapprochement automatique. Configurez vos modèles de factures avec votre logo et vos mentions légales. Activez la transmission Factur-X via PPF ou PDP. Invitez votre expert-comptable et donnez-lui les bons accès.</p>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num">7</div>
+        <div>
+          <span class="duration">Semaine 4-6 · 2-3 h</span>
+          <h3>Doubler en parallèle un mois, puis basculer</h3>
+          <p>Pendant 3 à 4 semaines, saisissez les nouvelles opérations dans les deux outils en parallèle. C'est fastidieux, mais c'est votre filet de sécurité : à la fin du mois, vous comparez les chiffres. Si tout colle, vous basculez définitivement sur le cloud et vous gardez Sage/Cegid en lecture seule pour consulter l'historique. Si quelque chose cloche, vous corrigez à chaud, sans pression.</p>
+        </div>
+      </div>
+
+      <div class="callout">
+        <p><strong>Le piège classique :</strong> vouloir migrer en plein mois de mai-juin, en pleine clôture. C'est le pire moment. Migrez idéalement <strong>en septembre-octobre</strong> (après les vacances, avant la rush de fin d'année) ou <strong>en janvier-février</strong> (début d'exercice).</p>
+      </div>
+
+      <h2>Les 4 erreurs qui plombent une migration</h2>
+
+      <p><strong>Tenter la migration sans son expert-comptable.</strong> Vous risquez de découvrir à la clôture des écarts irréconciliables. Embarquez-le dès l'étape 1, même s'il fait la moue.</p>
+
+      <p><strong>Couper Sage/Cegid trop tôt.</strong> Gardez l'accès en lecture pendant 12 à 18 mois après la bascule, le temps d'avoir une clôture complète sur le nouvel outil. Un éditeur qui vous force à supprimer immédiatement votre ancien outil est suspect.</p>
+
+      <p><strong>Sous-estimer le temps des paramétrages spécifiques.</strong> Les particularités fiscales (TVA agricole, autoliquidation, multi-établissements) demandent souvent une demi-journée chacune. Listez vos cas particuliers dès l'audit.</p>
+
+      <p><strong>Migrer tous les modules en même temps.</strong> Si vous utilisez Sage ou Cegid pour la compta + la paie + la facturation + la gestion commerciale, basculez d'abord la compta + la facturation, puis la paie au mois suivant. Une bascule par mois maximum.</p>
+
+      <div class="pillar-link-card">
+        <h3>Pour aller plus loin</h3>
+        <p>Cet article fait partie de notre <a href="digitaliser-comptabilite-tpe-pme.html"><strong>guide complet sur la digitalisation comptable des TPE/PME en 2026</strong></a>. Vous y trouverez les 5 piliers d'une compta digitale, le calcul de ROI détaillé, et les critères de choix selon votre taille d'entreprise.</p>
+        <a href="digitaliser-comptabilite-tpe-pme.html" class="btn btn-primary">Lire le guide complet →</a>
+      </div>
+
+      <h2>Questions fréquentes</h2>
+
+      <div class="faq">
+        <details class="faq-item">
+          <summary>Combien de temps prend la migration en pratique ?</summary>
+          <p>Pour une TPE 3-10 salariés : 30 jours en mode standard, dont 10-15 heures effectives de votre côté. Pour une PME 10-50 salariés : 45-60 jours, dont 20-30 heures. Le gros du travail est fait par les imports automatiques et le support de l'éditeur cloud.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Peut-on continuer à utiliser Sage ou Cegid en parallèle ?</summary>
+          <p>Oui, et c'est même recommandé pendant 3 à 4 semaines après la bascule, en lecture seule ensuite. Vous gardez l'accès à votre historique pendant 12 à 18 mois, le temps d'avoir un cycle complet sur le nouvel outil.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Que devient mon expert-comptable habitué à Sage / Cegid ?</summary>
+          <p>Il s'adapte vite, parce qu'une solution cloud lui fait gagner du temps : moins de pièces à demander, données en temps réel, FEC en un clic. Beaucoup de cabinets ont déjà migré une partie de leur portefeuille et connaissent les principales solutions du marché.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Et si je veux revenir en arrière après quelques mois ?</summary>
+          <p>Possible mais coûteux. Un bon éditeur cloud exporte vos données en FEC, balance et CSV à tout moment. Vous pouvez réimporter dans Sage ou Cegid si besoin. Mais en pratique, sur 100 entreprises qui migrent, moins de 5 reviennent en arrière, et toujours pour des raisons opérationnelles précises (rachat par un groupe, exigence métier rare).</p>
+        </details>
+        <details class="faq-item">
+          <summary>Y a-t-il une obligation Factur-X qui me force à migrer ?</summary>
+          <p>Indirectement, oui. Sage et Cegid proposent des modules Factur-X mais souvent en option payante supplémentaire. Si votre version actuelle ne les gère pas, vous devrez soit payer la mise à jour, soit basculer. Le calcul économique penche presque toujours vers la bascule cloud.</p>
+        </details>
+      </div>
+
+      <div class="cta-final" style="margin-top: 3rem;">
+        <h2>Envie de tester <span class="gradient-text">NUMMA depuis Sage ou Cegid</span> ?</h2>
+        <p>Démo de 30 minutes pour voir comment vos données et vos automatisations actuelles se transposent. Migration accompagnée incluse.</p>
+        <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
+          <a href="../reserver-demo.html" class="btn btn-primary btn-lg">Réserver une démo</a>
+          <a href="../tarifs.html" class="btn btn-ghost btn-lg">Voir les tarifs</a>
+        </div>
+      </div>
+
+    </article>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="footer-logo-text"><img src="../images/logo.svg" alt="Logo NUMMA" width="32" height="32" loading="lazy"><span>NUMMA</span></div><p>Le logiciel de gestion tout-en-un pour TPE, PME et scale-ups françaises.</p></div>
+      <div class="footer-col"><h4>Produit</h4><ul><li><a href="../fonctionnalites.html">Fonctionnalités</a></li><li><a href="../tarifs.html">Tarifs</a></li><li><a href="../micro-entreprise.html">Micro-entreprise</a></li></ul></div>
+      <div class="footer-col"><h4>Ressources</h4><ul><li><a href="../blog.html">Blog</a></li><li><a href="digitaliser-comptabilite-tpe-pme.html">Guide compta digitale</a></li></ul></div>
+      <div class="footer-col"><h4>Entreprise</h4><ul><li><a href="../a-propos.html">À propos</a></li><li><a href="../reserver-demo.html">Réserver une démo</a></li><li><a href="../contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Légal</h4><ul><li><a href="../mentions-legales.html">Mentions légales</a></li><li><a href="../politique-confidentialite.html">Confidentialité</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><div>© 2025–2026 NUMMA SAS · Société française fondée en 2025 · Tous droits réservés</div></div>
+  </div>
+</footer>
+
+<script src="../js/cookies.js" defer></script>
+<script src="../js/main.js" defer></script>
+</body>
+</html>

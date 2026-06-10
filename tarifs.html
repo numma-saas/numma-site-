@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tarifs NUMMA — À partir de 39 €/mois (essai gratuit 14 jours)</title>
-  <meta name="description" content="Tarifs NUMMA : Pro 39 €/mois, Business 79 €/mois, Enterprise sur devis. Sans engagement, support français inclus, expert-comptable invité gratuitement.">
-  <meta name="keywords" content="tarifs logiciel comptabilité, prix SaaS gestion entreprise, abonnement compta, prix facturation électronique">
+  <title>Tarifs NUMMA — À partir de 19 €/mois (essai gratuit 14 jours)</title>
+  <meta name="description" content="Tarifs NUMMA : Indépendant 19 €/mois, Pro 35 €/mois, Business 79 €/mois, Enterprise sur devis. Sans engagement, support français inclus, expert-comptable invité gratuitement.">
+  <meta name="keywords" content="tarifs logiciel comptabilité, prix SaaS gestion entreprise, abonnement compta, prix facturation électronique, tarif paie">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.numma.eu/tarifs.html">
-  <meta property="og:title" content="Tarifs NUMMA — Compta, paie, facturation à partir de 39 €/mois">
-  <meta property="og:description" content="3 plans, sans engagement. Essayez gratuitement pendant 14 jours.">
+  <meta property="og:title" content="Tarifs NUMMA — Compta, paie, facturation à partir de 19 €/mois">
+  <meta property="og:description" content="4 plans transparents, sans engagement. Essayez gratuitement pendant 14 jours.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.numma.eu/tarifs.html">
   <meta property="og:image" content="https://www.numma.eu/images/og-cover.png">
@@ -29,10 +29,18 @@
     "offers": [
       {
         "@type": "Offer",
-        "name": "Pro",
-        "price": "39",
+        "name": "Indépendant",
+        "price": "19",
         "priceCurrency": "EUR",
-        "priceSpecification": { "@type": "UnitPriceSpecification", "price": "39", "priceCurrency": "EUR", "unitCode": "MON" }
+        "priceSpecification": { "@type": "UnitPriceSpecification", "price": "19", "priceCurrency": "EUR", "unitCode": "MON" },
+        "url": "https://www.numma.eu/micro-entreprise.html"
+      },
+      {
+        "@type": "Offer",
+        "name": "Pro",
+        "price": "35",
+        "priceCurrency": "EUR",
+        "priceSpecification": { "@type": "UnitPriceSpecification", "price": "35", "priceCurrency": "EUR", "unitCode": "MON" }
       },
       {
         "@type": "Offer",
@@ -60,6 +68,21 @@
     ]
   }
   </script>
+  <style>
+    /* Tweaks tarifs */
+    .micro-banner { background: var(--numma-purple-50); border: 1px solid var(--numma-purple-200); border-radius: var(--radius-lg); padding: 1.25rem 1.5rem; display: flex; gap: 1rem; align-items: center; justify-content: space-between; flex-wrap: wrap; margin-bottom: 2rem; }
+    .micro-banner-text { color: var(--ink-700); font-size: 0.95rem; }
+    .micro-banner-text strong { color: var(--numma-purple-700); }
+    .price-paie-detail { list-style: none; padding-left: 0; margin-left: -0.5rem; }
+    .price-paie-detail summary { cursor: pointer; font-size: 0.82rem; color: var(--ink-500); display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.15rem 0.4rem; border-radius: var(--radius-sm); transition: background 0.2s, color 0.2s; list-style: none; }
+    .price-paie-detail summary::-webkit-details-marker { display: none; }
+    .price-paie-detail summary::after { content: " ⓘ"; font-size: 0.85em; color: var(--numma-purple-500); }
+    .price-paie-detail summary:hover { background: var(--numma-purple-50); color: var(--numma-purple-700); }
+    .price-paie-detail summary strong { color: var(--ink-700); font-weight: 600; }
+    .price-paie-detail[open] summary { color: var(--numma-purple-700); }
+    .price-paie-detail .paie-body { background: var(--numma-purple-50); border-radius: var(--radius-sm); padding: 0.65rem 0.85rem; margin-top: 0.5rem; font-size: 0.82rem; color: var(--ink-600); line-height: 1.5; }
+    .price-paie-detail .paie-body strong { color: var(--ink-800); }
+  </style>
 </head>
 <body>
 
@@ -83,7 +106,7 @@
       </ul>
       <div class="nav-actions">
         <a href="https://app.numma.eu/login" class="btn btn-ghost btn-sm">Connexion</a>
-        <a href="contact.html" class="btn btn-primary btn-sm">Essai gratuit</a>
+        <a href="reserver-demo.html" class="btn btn-primary btn-sm">Réserver une démo</a>
         <button class="nav-toggle btn btn-secondary btn-sm" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">Menu</button>
       </div>
     </nav>
@@ -97,19 +120,28 @@
     <nav class="breadcrumb"><a href="index.html">Accueil</a> / <span>Tarifs</span></nav>
     <span class="eyebrow">Tarifs</span>
     <h1>Un prix juste, <span class="gradient-text">pas de mauvaise surprise</span></h1>
-    <p class="lead">Tous les plans incluent les mises à jour, le support en français, l'hébergement SecNumCloud et l'accès gratuit pour votre expert-comptable.</p>
+    <p class="lead">Tous les plans incluent les mises à jour, le support en français, l'hébergement sur infrastructure française et l'accès gratuit pour votre expert-comptable.</p>
   </div>
 </section>
 
 <section style="padding-top:2rem;">
   <div class="container">
+
+    <!-- Bandeau Indépendants -->
+    <div class="micro-banner">
+      <div class="micro-banner-text">
+        <strong>Indépendant, auto-entrepreneur ou micro-entreprise ?</strong> Une offre dédiée à <strong>19 € HT/mois</strong>, sans paie, pensée pour vos besoins.
+      </div>
+      <a href="micro-entreprise.html" class="btn btn-primary btn-sm">Voir l'offre Indépendant →</a>
+    </div>
+
     <div class="pricing-grid">
       <article class="price-card">
         <div class="price-name">Pro</div>
-        <div class="price-desc">Pour les TPE et indépendants qui veulent tout piloter seuls.</div>
-        <div class="price-amount"><span class="currency">€</span><span class="value">39</span><span class="period">/ mois HT</span></div>
+        <div class="price-desc">Pour les TPE qui veulent tout piloter seules.</div>
+        <div class="price-amount"><span class="currency">€</span><span class="value">35</span><span class="period">/ mois HT</span></div>
         <div class="price-billed">Sans engagement · Mensuel</div>
-        <a href="contact.html" class="btn btn-secondary">Démarrer 14 jours gratuits</a>
+        <a href="reserver-demo.html" class="btn btn-secondary">Démarrer 14 jours gratuits</a>
         <ul class="price-features">
           <li>Facturation électronique illimitée</li>
           <li>Comptabilité complète + TVA</li>
@@ -120,6 +152,14 @@
           <li class="disabled">Module Paie & RH</li>
           <li class="disabled">Prévisionnel de trésorerie</li>
         </ul>
+        <ul class="price-paie-detail">
+          <li>
+            <details>
+              <summary>Fiche de paie : <strong>7 € HT</strong> / employé</summary>
+              <div class="paie-body">Option à activer sur ce plan. <strong>7 € HT par employé/mois</strong>. Inclut : édition automatique, DSN nominative, envoi sécurisé, accès self-service salarié. Facturé à l'usage selon le nombre d'employés actifs dans le mois.</div>
+            </details>
+          </li>
+        </ul>
       </article>
 
       <article class="price-card featured">
@@ -128,16 +168,24 @@
         <div class="price-desc">Pour les PME et scale-ups en structuration.</div>
         <div class="price-amount"><span class="currency">€</span><span class="value">79</span><span class="period">/ mois HT</span></div>
         <div class="price-billed">Sans engagement · Mensuel</div>
-        <a href="contact.html" class="btn btn-primary">Démarrer 14 jours gratuits</a>
+        <a href="reserver-demo.html" class="btn btn-primary">Démarrer 14 jours gratuits</a>
         <ul class="price-features">
           <li>Tout ce qui est dans Pro</li>
-          <li>Paie & RH (jusqu'à 25 salariés)</li>
+          <li>Paie &amp; RH (jusqu'à 25 salariés)</li>
           <li>DSN automatisée</li>
           <li>Prévisionnel de trésorerie 12 mois</li>
           <li>Agrégation bancaire illimitée</li>
           <li>5 utilisateurs inclus</li>
-          <li>API & intégrations avancées</li>
+          <li>API &amp; intégrations avancées</li>
           <li>Support prioritaire (réponse &lt; 1 h)</li>
+        </ul>
+        <ul class="price-paie-detail">
+          <li>
+            <details>
+              <summary>Fiche de paie : <strong>5 € HT</strong> / employé</summary>
+              <div class="paie-body">Tarif préférentiel sur ce plan. <strong>5 € HT par employé/mois</strong> au-delà du forfait. Inclut : édition automatique, DSN nominative, envoi sécurisé, accès self-service salarié, gestion des congés et notes de frais. Facturé à l'usage selon le nombre d'employés actifs dans le mois.</div>
+            </details>
+          </li>
         </ul>
       </article>
 
@@ -162,7 +210,7 @@
 
     <p class="text-center" style="margin-top:2rem; color:var(--ink-500);">
       Tous les prix s'entendent hors taxes. TVA 20 % applicable en France.
-      <br>Paiement par CB ou prélèvement SEPA. Annulation à tout moment.
+      <br>Paiement par CB ou prélèvement SEPA. Annulation à tout moment. <strong>2 mois offerts</strong> en paiement annuel.
     </p>
   </div>
 </section>
@@ -178,45 +226,47 @@
       <table class="compare-table">
         <thead>
           <tr>
-            <th style="width:40%;">Fonctionnalité</th>
-            <th style="text-align:center;">Pro<br><span style="font-weight:400; color:var(--ink-500); font-size:0.85rem;">39 €/mois</span></th>
+            <th style="width:36%;">Fonctionnalité</th>
+            <th style="text-align:center;">Indépendant<br><span style="font-weight:400; color:var(--ink-500); font-size:0.85rem;">19 €/mois</span></th>
+            <th style="text-align:center;">Pro<br><span style="font-weight:400; color:var(--ink-500); font-size:0.85rem;">35 €/mois</span></th>
             <th style="text-align:center;">Business<br><span style="font-weight:400; color:var(--ink-500); font-size:0.85rem;">79 €/mois</span></th>
             <th style="text-align:center;">Enterprise<br><span style="font-weight:400; color:var(--ink-500); font-size:0.85rem;">Sur devis</span></th>
           </tr>
         </thead>
         <tbody>
-          <tr class="section-row"><td colspan="4">Facturation électronique</td></tr>
-          <tr><td>Factures, devis, avoirs illimités</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
-          <tr><td>Format Factur-X, UBL, CII</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
-          <tr><td>Transmission via PPF / PDP</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
-          <tr><td>Relances automatiques</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
-          <tr><td>Lien de paiement intégré</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+          <tr class="section-row"><td colspan="5">Facturation électronique</td></tr>
+          <tr><td>Factures, devis, avoirs illimités</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+          <tr><td>Format Factur-X, UBL, CII</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+          <tr><td>Transmission via PPF / PDP</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+          <tr><td>Relances automatiques</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+          <tr><td>Lien de paiement intégré</td><td class="x">—</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
 
-          <tr class="section-row"><td colspan="4">Comptabilité</td></tr>
-          <tr><td>Plan comptable général PCG 2025</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
-          <tr><td>Grand livre, balance, bilan</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
-          <tr><td>Déclarations TVA (CA3, CA12)</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
-          <tr><td>Export FEC</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
-          <tr><td>Multi-sociétés / consolidation</td><td class="x">—</td><td class="x">—</td><td class="check">✓</td></tr>
+          <tr class="section-row"><td colspan="5">Comptabilité</td></tr>
+          <tr><td>Compta micro (recettes/dépenses)</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+          <tr><td>Plan comptable général PCG 2025</td><td class="x">—</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+          <tr><td>Grand livre, balance, bilan</td><td class="x">—</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+          <tr><td>Déclarations TVA (CA3, CA12)</td><td class="x">—</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+          <tr><td>Export FEC</td><td class="x">—</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+          <tr><td>Multi-sociétés / consolidation</td><td class="x">—</td><td class="x">—</td><td class="x">—</td><td class="check">✓</td></tr>
 
-          <tr class="section-row"><td colspan="4">Paie & RH</td></tr>
-          <tr><td>Fiches de paie</td><td class="x">—</td><td class="check">✓ (25 max)</td><td class="check">✓ (illimité)</td></tr>
-          <tr><td>DSN automatisée</td><td class="x">—</td><td class="check">✓</td><td class="check">✓</td></tr>
-          <tr><td>Self-service employés</td><td class="x">—</td><td class="check">✓</td><td class="check">✓</td></tr>
-          <tr><td>Notes de frais & congés</td><td class="x">—</td><td class="check">✓</td><td class="check">✓</td></tr>
+          <tr class="section-row"><td colspan="5">Paie &amp; RH</td></tr>
+          <tr><td>Fiches de paie</td><td class="x">—</td><td><strong>7 €/employé</strong></td><td><strong>5 €/employé</strong></td><td class="check">Illimité inclus</td></tr>
+          <tr><td>DSN automatisée</td><td class="x">—</td><td class="check">Avec module paie</td><td class="check">✓</td><td class="check">✓</td></tr>
+          <tr><td>Self-service employés</td><td class="x">—</td><td class="check">Avec module paie</td><td class="check">✓</td><td class="check">✓</td></tr>
+          <tr><td>Notes de frais &amp; congés</td><td class="x">—</td><td class="x">—</td><td class="check">✓</td><td class="check">✓</td></tr>
 
-          <tr class="section-row"><td colspan="4">Trésorerie</td></tr>
-          <tr><td>Agrégation bancaire</td><td class="check">3 comptes</td><td class="check">Illimité</td><td class="check">Illimité</td></tr>
-          <tr><td>Rapprochement automatique</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
-          <tr><td>Prévisionnel cash-flow</td><td class="x">—</td><td class="check">12 mois</td><td class="check">36 mois</td></tr>
-          <tr><td>Module caisse</td><td class="x">—</td><td class="check">✓</td><td class="check">✓</td></tr>
+          <tr class="section-row"><td colspan="5">Trésorerie</td></tr>
+          <tr><td>Agrégation bancaire</td><td class="check">1 compte</td><td class="check">3 comptes</td><td class="check">Illimité</td><td class="check">Illimité</td></tr>
+          <tr><td>Rapprochement automatique</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+          <tr><td>Prévisionnel cash-flow</td><td class="x">—</td><td class="x">—</td><td class="check">12 mois</td><td class="check">36 mois</td></tr>
+          <tr><td>Module caisse</td><td class="x">—</td><td class="x">—</td><td class="check">✓</td><td class="check">✓</td></tr>
 
-          <tr class="section-row"><td colspan="4">Plateforme</td></tr>
-          <tr><td>Utilisateurs inclus</td><td class="check">1</td><td class="check">5</td><td class="check">Illimité</td></tr>
-          <tr><td>Accès expert-comptable</td><td class="check">Offert</td><td class="check">Offert</td><td class="check">Offert</td></tr>
-          <tr><td>API REST & webhooks</td><td class="x">—</td><td class="check">✓</td><td class="check">✓</td></tr>
-          <tr><td>SSO SAML / Azure AD</td><td class="x">—</td><td class="x">—</td><td class="check">✓</td></tr>
-          <tr><td>Support</td><td class="check">Email + Chat</td><td class="check">Prioritaire &lt; 1 h</td><td class="check">CSM dédié + SLA</td></tr>
+          <tr class="section-row"><td colspan="5">Plateforme</td></tr>
+          <tr><td>Utilisateurs inclus</td><td class="check">1</td><td class="check">1</td><td class="check">5</td><td class="check">Illimité</td></tr>
+          <tr><td>Accès expert-comptable</td><td class="check">Offert</td><td class="check">Offert</td><td class="check">Offert</td><td class="check">Offert</td></tr>
+          <tr><td>API REST &amp; webhooks</td><td class="x">—</td><td class="x">—</td><td class="check">✓</td><td class="check">✓</td></tr>
+          <tr><td>SSO SAML / Azure AD</td><td class="x">—</td><td class="x">—</td><td class="x">—</td><td class="check">✓</td></tr>
+          <tr><td>Support</td><td class="check">Email</td><td class="check">Email + Chat</td><td class="check">Prioritaire &lt; 1 h</td><td class="check">CSM dédié + SLA</td></tr>
         </tbody>
       </table>
     </div>
@@ -231,6 +281,14 @@
     </header>
     <div class="faq">
       <details class="faq-item">
+        <summary>Je suis indépendant ou auto-entrepreneur, quelle offre choisir ?</summary>
+        <p>L'offre <a href="micro-entreprise.html"><strong>Indépendant à 19 € HT/mois</strong></a> est faite pour vous : facturation Factur-X, comptabilité micro (recettes/dépenses), agrégation bancaire et accès gratuit pour votre expert-comptable. Vous ne payez pas pour de la paie ou des modules dont vous n'avez pas besoin.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Comment fonctionne la tarification de la paie ?</summary>
+        <p>La paie est facturée à l'usage selon le nombre d'employés actifs dans le mois. Sur le plan <strong>Pro</strong>, c'est <strong>7 € HT par employé</strong>. Sur le plan <strong>Business</strong>, le tarif descend à <strong>5 € HT par employé</strong>. Sur le plan <strong>Enterprise</strong>, la paie est incluse en illimité. Aucun engagement de volume : si un mois vous n'avez qu'un seul salarié, vous ne payez qu'un seul forfait.</p>
+      </details>
+      <details class="faq-item">
         <summary>Y a-t-il une période d'engagement ?</summary>
         <p>Non. Tous nos plans sont mensuels et sans engagement. Vous pouvez changer de plan ou résilier à tout moment depuis votre espace.</p>
       </details>
@@ -244,11 +302,11 @@
       </details>
       <details class="faq-item">
         <summary>Puis-je passer d'un plan à l'autre ?</summary>
-        <p>Oui, à tout moment et sans frais. Le prorata est calculé automatiquement.</p>
+        <p>Oui, à tout moment et sans frais. Le prorata est calculé automatiquement. Vous démarrez en Indépendant et passez en Pro quand votre activité grandit, sans rupture.</p>
       </details>
       <details class="faq-item">
         <summary>Et si je dépasse les 25 salariés sur le plan Business ?</summary>
-        <p>Vous pouvez ajouter des salariés supplémentaires à 4 €/mois/salarié, ou passer en plan Enterprise pour un volume illimité.</p>
+        <p>Vous pouvez ajouter des salariés supplémentaires à 5 €/mois/salarié, ou passer en plan Enterprise pour un volume illimité inclus.</p>
       </details>
       <details class="faq-item">
         <summary>L'essai gratuit est-il vraiment sans engagement ?</summary>
@@ -268,8 +326,8 @@
       <h2>Pas encore convaincu ?</h2>
       <p>Réservez une démo de 30 minutes avec un expert NUMMA pour vous projeter dans l'outil.</p>
       <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap; position:relative;">
-        <a href="contact.html#demo" class="btn btn-primary btn-lg">Réserver une démo</a>
-        <a href="contact.html" class="btn btn-ghost btn-lg">Démarrer l'essai gratuit</a>
+        <a href="reserver-demo.html" class="btn btn-primary btn-lg">Réserver une démo</a>
+        <a href="contact.html" class="btn btn-ghost btn-lg">Poser une question</a>
       </div>
     </div>
   </div>
@@ -281,9 +339,9 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand"><div class="footer-logo-text"><img src="images/logo.svg" alt="Logo NUMMA" width="32" height="32" loading="lazy"><span>NUMMA</span></div><p>Le logiciel de gestion tout-en-un pour TPE, PME et scale-ups françaises.</p></div>
-      <div class="footer-col"><h4>Produit</h4><ul><li><a href="fonctionnalites.html">Fonctionnalités</a></li><li><a href="facturation-electronique.html">Facturation électronique</a></li><li><a href="comptabilite.html">Comptabilité</a></li><li><a href="paie-rh.html">Paie & RH</a></li><li><a href="tresorerie.html">Trésorerie</a></li><li><a href="tarifs.html">Tarifs</a></li></ul></div>
+      <div class="footer-col"><h4>Produit</h4><ul><li><a href="fonctionnalites.html">Fonctionnalités</a></li><li><a href="facturation-electronique.html">Facturation électronique</a></li><li><a href="comptabilite.html">Comptabilité</a></li><li><a href="paie-rh.html">Paie & RH</a></li><li><a href="tresorerie.html">Trésorerie</a></li><li><a href="tarifs.html">Tarifs</a></li><li><a href="micro-entreprise.html">Micro-entreprise</a></li></ul></div>
       <div class="footer-col"><h4>Ressources</h4><ul><li><a href="blog.html">Blog</a></li><li><a href="blog/facturation-electronique-2026.html">Guide facturation 2026</a></li><li><a href="blog/choisir-logiciel-compta.html">Choisir son logiciel</a></li></ul></div>
-      <div class="footer-col"><h4>Entreprise</h4><ul><li><a href="a-propos.html">À propos</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Entreprise</h4><ul><li><a href="a-propos.html">À propos</a></li><li><a href="reserver-demo.html">Réserver une démo</a></li><li><a href="contact.html">Contact</a></li></ul></div>
       <div class="footer-col"><h4>Légal</h4><ul><li><a href="mentions-legales.html">Mentions légales</a></li><li><a href="politique-confidentialite.html">Confidentialité</a></li></ul></div>
     </div>
     <div class="footer-bottom"><div>© 2025–2026 NUMMA SAS · Société française fondée en 2025 · Tous droits réservés</div></div>
