@@ -1,22 +1,51 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="NUMMA — logiciel de gestion tout-en-un">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" role="img" aria-label="NUMMA — logiciel de gestion tout-en-un">
   <defs>
-    <linearGradient id="numma-grad-main" x1="10%" y1="10%" x2="95%" y2="95%">
-      <stop offset="0%" stop-color="#5B21B6"/>
-      <stop offset="30%" stop-color="#7C3AED"/>
-      <stop offset="55%" stop-color="#A78BFA"/>
-      <stop offset="78%" stop-color="#F9A8D4"/>
+    <!-- Gradient for left vertical bar : deep blue → purple -->
+    <linearGradient id="numma-left" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E40AF"/>
+      <stop offset="55%" stop-color="#6D28D9"/>
       <stop offset="100%" stop-color="#FB923C"/>
     </linearGradient>
-    <linearGradient id="numma-grad-soft" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.65"/>
+    <!-- Gradient for right vertical bar : purple → lavender -->
+    <linearGradient id="numma-right" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#C4B5FD"/>
+    </linearGradient>
+    <!-- Gradient for diagonal ribbon : peach → lavender -->
+    <linearGradient id="numma-diag" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FDBA74"/>
+      <stop offset="35%" stop-color="#F472B6"/>
+      <stop offset="75%" stop-color="#A78BFA"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+    <!-- Soft highlight overlay -->
+    <linearGradient id="numma-glow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.35"/>
       <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
     </linearGradient>
   </defs>
-  <rect x="0" y="0" width="64" height="64" rx="16" fill="white"/>
-  <!-- Stylized N with curved sweep mimicking the brand mark -->
-  <path d="M14 50 V16 Q14 12 18 12 L22 12 Q26 12 28 16 Q34 28 40 38 Q42 41 42 37 V16 Q42 12 46 12 L48 12 Q52 12 52 16 V48 Q52 52 48 52 L44 52 Q40 52 38 48 Q32 36 26 26 Q24 23 24 27 V48 Q24 52 20 52 L18 52 Q14 52 14 48 Z"
-        fill="url(#numma-grad-main)"/>
-  <!-- subtle highlight -->
-  <path d="M14 48 V20 Q14 14 20 14 Q22 14 24 16 L26 20 Q22 22 22 28 V44"
-        fill="none" stroke="url(#numma-grad-soft)" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+
+  <!-- Diagonal "ribbon" behind, layered first for depth -->
+  <path d="M22 30 Q28 28 36 42 L66 80 Q70 86 76 84 L76 86 Q72 88 66 84 L26 30 Z"
+        fill="url(#numma-diag)" opacity="0.85"/>
+
+  <!-- Left vertical bar (rounded ends) -->
+  <rect x="20" y="18" width="20" height="64" rx="10" fill="url(#numma-left)"/>
+
+  <!-- Right vertical bar (rounded ends) -->
+  <rect x="60" y="18" width="20" height="64" rx="10" fill="url(#numma-right)"/>
+
+  <!-- Diagonal stroke connecting them, layered on top -->
+  <path d="M30 28 Q34 24 42 32 L72 70 Q76 74 74 78 L70 80 Q66 80 62 74 L34 38 Q30 34 26 36 Z"
+        fill="url(#numma-diag)"/>
+
+  <!-- Bottom-left peach accent (inside left bar) -->
+  <path d="M20 60 Q22 56 28 56 L36 56 Q38 70 30 78 L22 78 Q18 78 18 74 Z"
+        fill="#FDBA74" opacity="0.7"/>
+
+  <!-- Subtle white highlight on top of left bar -->
+  <rect x="20" y="18" width="20" height="22" rx="10" fill="url(#numma-glow)"/>
+
+  <!-- Subtle white highlight on top of right bar -->
+  <rect x="60" y="18" width="20" height="22" rx="10" fill="url(#numma-glow)"/>
 </svg>
