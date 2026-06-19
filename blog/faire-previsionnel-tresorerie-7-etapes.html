@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7LBVCJ4GZG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7LBVCJ4GZG');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faire son prévisionnel de trésorerie en 7 étapes : méthode TPE/PME 2026</title>
+  <meta name="description" content="Comment faire un prévisionnel de trésorerie en 7 étapes pour une TPE ou PME : méthode opérationnelle, exemples chiffrés, erreurs à éviter, modèle Excel gratuit.">
+  <meta name="keywords" content="faire prévisionnel trésorerie, prévisionnel trésorerie excel, méthode prévisionnel cash flow, plan de trésorerie TPE PME">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <link rel="canonical" href="https://www.numma.eu/blog/faire-previsionnel-tresorerie-7-etapes.html">
+  <meta property="og:title" content="Faire son prévisionnel de trésorerie en 7 étapes : méthode TPE/PME">
+  <meta property="og:description" content="La méthode opérationnelle pour construire un prévisionnel 12 mois en 2 heures. Modèle Excel inclus.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.numma.eu/blog/faire-previsionnel-tresorerie-7-etapes.html">
+  <meta property="og:image" content="https://www.numma.eu/images/og-cover.png">
+  <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+  <meta name="theme-color" content="#7C3AED">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Faire son prévisionnel de trésorerie en 7 étapes : méthode TPE/PME 2026",
+    "description": "Comment faire un prévisionnel de trésorerie en 7 étapes pour une TPE ou PME : méthode opérationnelle, exemples chiffrés, erreurs à éviter.",
+    "image": "https://www.numma.eu/images/og-cover.png",
+    "datePublished": "2026-06-19",
+    "dateModified": "2026-06-19",
+    "author": { "@type": "Organization", "name": "NUMMA", "url": "https://www.numma.eu" },
+    "publisher": { "@type": "Organization", "name": "NUMMA", "logo": { "@type": "ImageObject", "url": "https://www.numma.eu/images/logo.jpg" } },
+    "mainEntityOfPage": "https://www.numma.eu/blog/faire-previsionnel-tresorerie-7-etapes.html",
+    "wordCount": 2100,
+    "inLanguage": "fr-FR"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Faire un prévisionnel de trésorerie en 7 étapes",
+    "description": "Méthode opérationnelle pour construire un prévisionnel de trésorerie 12 mois fiable pour une TPE ou PME française.",
+    "totalTime": "PT2H",
+    "supply": [{"@type":"HowToSupply","name":"Relevés bancaires des 12 derniers mois"},{"@type":"HowToSupply","name":"Échéancier clients et fournisseurs"},{"@type":"HowToSupply","name":"Calendrier fiscal et social"}],
+    "tool": [{"@type":"HowToTool","name":"Excel ou Google Sheets"},{"@type":"HowToTool","name":"Modèle de prévisionnel NUMMA (gratuit)"}],
+    "step": [
+      {"@type":"HowToStep","position":1,"name":"Lister tous les encaissements prévus sur 12 mois","text":"Recensez les factures clients à venir (selon contrats), les subventions attendues, les remboursements d'impôts et toute autre entrée de cash."},
+      {"@type":"HowToStep","position":2,"name":"Lister tous les décaissements prévus sur 12 mois","text":"Charges fixes mensuelles, charges variables, échéances fiscales (TVA, IS), échéances sociales (URSSAF), investissements, remboursements d'emprunt."},
+      {"@type":"HowToStep","position":3,"name":"Intégrer les délais de paiement réels observés","text":"Mesurez votre DSO réel à partir des relevés, et appliquez ce délai aux encaissements clients (pas le délai théorique des CGV)."},
+      {"@type":"HowToStep","position":4,"name":"Calculer le solde mois par mois","text":"Solde initial + encaissements - décaissements = solde fin de mois, qui devient solde initial du mois suivant. Faire le calcul sur 12 mois glissants."},
+      {"@type":"HowToStep","position":5,"name":"Identifier les mois à risque","text":"Marquer en rouge tout mois où le solde projeté passe sous le seuil de sécurité (1 mois de charges fixes minimum)."},
+      {"@type":"HowToStep","position":6,"name":"Construire 3 scénarios","text":"Pessimiste (encaissements -20%, décaissements +10%), central (estimation réaliste), optimiste (+15% sur les ventes). Comparer les courbes."},
+      {"@type":"HowToStep","position":7,"name":"Mettre à jour chaque semaine","text":"Chaque vendredi 15 minutes pour reconcilier le réel et le prévu, ajuster les hypothèses, maintenir l'outil vivant."}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.numma.eu/"},
+      {"@type": "ListItem", "position": 2, "name": "Ressources", "item": "https://www.numma.eu/blog.html"},
+      {"@type": "ListItem", "position": 3, "name": "Faire son prévisionnel de trésorerie en 7 étapes", "item": "https://www.numma.eu/blog/faire-previsionnel-tresorerie-7-etapes.html"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+      {"@type":"Question","name":"Combien de temps faut-il pour faire un prévisionnel de trésorerie ?","acceptedAnswer":{"@type":"Answer","text":"Comptez 2 à 4 heures la première fois pour construire la structure avec votre historique. Ensuite, 15 minutes par semaine pour la mise à jour. Un logiciel SaaS connecté à la banque divise ce temps par 4."}},
+      {"@type":"Question","name":"Sur combien de mois doit-on faire un prévisionnel ?","acceptedAnswer":{"@type":"Answer","text":"12 mois glissants pour la vision stratégique, et idéalement 8 semaines en granularité plus fine pour le pilotage court terme. Au-delà de 18 mois, la fiabilité chute drastiquement."}},
+      {"@type":"Question","name":"Quelles sont les erreurs les plus fréquentes dans un prévisionnel ?","acceptedAnswer":{"@type":"Answer","text":"Trois erreurs classiques : utiliser les délais théoriques des CGV au lieu des délais réels observés, oublier les charges saisonnières (prime de fin d'année, taxe foncière, CFE), et ne pas mettre à jour. Un prévisionnel statique est mort."}},
+      {"@type":"Question","name":"Excel ou logiciel pour le prévisionnel ?","acceptedAnswer":{"@type":"Answer","text":"Excel suffit pour un indépendant ou une TPE simple. Au-delà de 5 salariés ou 2 comptes bancaires, un logiciel connecté à la banque automatise la mise à jour et fait gagner 4 à 8 heures par mois."}}
+    ]
+  }
+  </script>
+  <style>
+    .step-card { background: var(--white); border: 1px solid var(--ink-100); border-radius: var(--radius-lg); padding: 1.75rem; margin-bottom: 1.5rem; }
+    .step-card .step-head { display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem; }
+    .step-card .step-num { width: 48px; height: 48px; border-radius: var(--radius-full); background: var(--gradient-brand); color: #fff; font-weight: 800; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-purple); flex: 0 0 48px; }
+    .step-card h3 { margin: 0; font-size: 1.15rem; }
+    .step-card .time-badge { font-size: 0.82rem; color: var(--numma-purple-600); font-weight: 700; background: var(--numma-purple-50); padding: 0.3rem 0.7rem; border-radius: var(--radius-full); display: inline-block; margin-bottom: 0.5rem; }
+    .step-card .example { background: var(--ink-50); border-left: 3px solid var(--numma-purple-400); border-radius: var(--radius-sm); padding: 0.85rem 1rem; margin-top: 1rem; font-size: 0.92rem; }
+    .step-card .example strong { color: var(--numma-purple-700); }
+    .featured-answer { background: linear-gradient(135deg, var(--numma-purple-50) 0%, var(--numma-purple-100) 100%); border-radius: var(--radius-lg); padding: 1.5rem 1.75rem; margin: 1.5rem 0; font-size: 1.05rem; color: var(--ink-800); }
+    .callout { background: var(--numma-purple-50); border-left: 4px solid var(--numma-purple-600); border-radius: var(--radius-md); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+    .pillar-link-card { background: linear-gradient(135deg, var(--numma-purple-50) 0%, var(--numma-purple-100) 100%); border-radius: var(--radius-lg); padding: 1.75rem; margin: 2rem 0; }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="../index.html" class="nav-logo"><img src="../images/logo.jpg" alt="Logo NUMMA" width="36" height="36" decoding="async"><span>NUMMA</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li class="has-dropdown"><a href="../fonctionnalites.html">Fonctionnalités ▾</a>
+          <div class="dropdown">
+            <a href="../facturation-electronique.html">Facturation électronique</a>
+            <a href="../comptabilite.html">Comptabilité</a>
+            <a href="../paie-rh.html">Paie & RH</a>
+            <a href="../tresorerie.html">Trésorerie & Finance</a>
+          </div>
+        </li>
+        <li><a href="../tarifs.html">Tarifs</a></li>
+        <li><a href="../blog.html">Ressources</a></li>
+        <li><a href="../a-propos.html">À propos</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="https://app.numma.eu/login" class="btn btn-ghost btn-sm">Connexion</a>
+        <a href="../reserver-demo.html" class="btn btn-primary btn-sm">Réserver une démo</a>
+        <button class="nav-toggle btn btn-secondary btn-sm" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">Menu</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="page-header">
+  <div class="container">
+    <nav class="breadcrumb"><a href="../index.html">Accueil</a> / <a href="../blog.html">Ressources</a> / <span>Faire son prévisionnel de trésorerie</span></nav>
+    <span class="eyebrow">Méthode pratique · Lecture 9 min</span>
+    <h1>Faire son prévisionnel de trésorerie en <span class="gradient-text">7 étapes</span></h1>
+    <p class="lead">La méthode opérationnelle complète pour construire un prévisionnel 12 mois fiable en 2 heures, avec exemples chiffrés et modèle Excel téléchargeable.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container container-xs">
+    <article class="blog-post" style="padding-top: 0;">
+
+      <div class="featured-answer">
+        <strong>Comment faire un prévisionnel de trésorerie ?</strong> Listez vos encaissements (factures à venir, subventions), listez vos décaissements (charges fixes, variables, fiscales, sociales), intégrez les délais de paiement réels observés (pas théoriques), calculez le solde mois par mois, identifiez les mois sous le seuil de sécurité, testez 3 scénarios (pessimiste, central, optimiste), puis mettez à jour chaque semaine. Comptez 2 à 4 heures pour la construction initiale.
+      </div>
+
+      <p>Un prévisionnel de trésorerie est l'outil qui vous dit, mois par mois sur 12 mois glissants, combien d'argent vous aurez sur vos comptes après tous les encaissements et les décaissements. C'est la différence entre piloter une entreprise et conduire les yeux bandés. Pourtant, la majorité des dirigeants de TPE/PME n'en ont pas — par manque de temps perçu, par manque de méthode, ou parce que l'exercice paraît réservé aux contrôleurs de gestion.</p>
+
+      <p>Cet article démolit ces trois excuses. La méthode 7 étapes ci-dessous est applicable par tout dirigeant, sans formation comptable, en 2 à 4 heures la première fois et 15 minutes par semaine ensuite. Elle est utilisée en pratique par les TPE/PME qui pilotent leur cash avec sérieux. À la fin de l'article, vous pourrez télécharger gratuitement notre modèle Excel pour passer directement à l'exécution.</p>
+
+      <div class="step-card">
+        <div class="step-head">
+          <div class="step-num">1</div>
+          <div>
+            <span class="time-badge">⏱ 30 minutes</span>
+            <h3>Lister tous les encaissements prévus sur 12 mois</h3>
+          </div>
+        </div>
+        <p>Ouvrez votre fichier clients et listez toutes les entrées de cash attendues. Cela inclut : les factures déjà émises non encore payées, les facturations futures basées sur les contrats récurrents ou les commandes en cours, les subventions BPI ou régionales attendues, les remboursements d'impôts (CIR, CICE, crédit d'impôt formation), les apports en compte courant prévus, les déblocages de prêts.</p>
+        <p>Pour chaque ligne, notez : le client/source, le montant TTC, la date prévisionnelle d'encaissement. Soyez exhaustif, quitte à mettre des estimations basses au départ : un prévisionnel trop optimiste est plus dangereux qu'un prévisionnel trop prudent.</p>
+        <div class="example">
+          <strong>Exemple TPE de prestation B2B :</strong> Pour 2 contrats récurrents à 4 000 € HT/mois, vous projetez 12 × 4 800 € TTC = 57 600 € sur l'année. Plus 3 projets ponctuels de 8 000 € HT facturés en avril, juillet, octobre. Plus une subvention BPI Innovation de 15 000 € attendue en septembre.
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-head">
+          <div class="step-num">2</div>
+          <div>
+            <span class="time-badge">⏱ 30 minutes</span>
+            <h3>Lister tous les décaissements prévus sur 12 mois</h3>
+          </div>
+        </div>
+        <p>Faites le même exercice côté sorties. Cinq catégories à couvrir.</p>
+        <p><strong>Charges fixes mensuelles</strong> : salaires (avec charges sociales chargées, soit ~+42 % du brut), loyer, abonnements logiciels, énergies, télécoms, assurances.</p>
+        <p><strong>Charges variables</strong> : achats matières, sous-traitance, commissions commerciales, frais bancaires, déplacements professionnels.</p>
+        <p><strong>Échéances fiscales</strong> : TVA mensuelle ou trimestrielle, acomptes IS (en mars, juin, septembre, décembre), CFE (en décembre), CVAE le cas échéant.</p>
+        <p><strong>Échéances sociales</strong> : URSSAF (mensuelle si plus de 9 salariés, sinon trimestrielle), caisses de retraite, prévoyance, mutuelle.</p>
+        <p><strong>Investissements et remboursements</strong> : achats matériels prévus, remboursements d'emprunts (capital + intérêts), distributions de dividendes.</p>
+        <p><strong>N'oubliez pas</strong> : prime de fin d'année, 13e mois si applicable, primes commerciales, congés payés provisionnés, dépenses commerciales (déplacements, événements), taxe foncière.</p>
+        <div class="example">
+          <strong>Exemple TPE 3 salariés :</strong> Charges fixes mensuelles 12 800 € (3 salaires chargés 9 000 € + loyer 1 200 € + 7 abonnements logiciels 800 € + énergies/télécoms 600 € + autres 1 200 €). Soit 153 600 € sur 12 mois pour les seules charges fixes.
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-head">
+          <div class="step-num">3</div>
+          <div>
+            <span class="time-badge">⏱ 15 minutes</span>
+            <h3>Intégrer les délais de paiement réels (pas théoriques)</h3>
+          </div>
+        </div>
+        <p>C'est l'étape qui fait la différence entre un prévisionnel utile et un fantasme. Si vos CGV mentionnent « paiement à 30 jours net », mais que vos clients vous paient en moyenne à 47 jours, utilisez 47 jours dans le prévisionnel. Cette mesure s'appelle le DSO (Days Sales Outstanding).</p>
+        <p>Comment le calculer : (Total créances clients en fin de mois ÷ Chiffre d'affaires des 12 derniers mois) × 365. Vous obtenez le nombre moyen de jours entre la facturation et l'encaissement. Faites-le pour chaque type de client si vous avez des profils très différents (grands comptes lents, TPE rapides, marchés publics très lents).</p>
+        <p>Appliquez ensuite ce délai à chaque encaissement projeté : une facture émise le 15 mars avec un DSO de 47 jours arrive sur votre compte autour du 1er mai.</p>
+        <div class="callout">
+          <p><strong>L'erreur n°1 des prévisionnels naïfs :</strong> sur-estimer la rapidité d'encaissement. Mesurer le DSO réel sur 12 mois glissants évite ce piège. Et si votre DSO est supérieur à 45 jours en B2B, c'est qu'il y a une marge d'amélioration sur votre processus de relance et vos conditions de paiement.</p>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-head">
+          <div class="step-num">4</div>
+          <div>
+            <span class="time-badge">⏱ 20 minutes</span>
+            <h3>Calculer le solde de trésorerie mois par mois</h3>
+          </div>
+        </div>
+        <p>La formule est simple : <strong>Solde initial + Encaissements du mois − Décaissements du mois = Solde fin de mois</strong>. Ce solde de fin de mois devient le solde initial du mois suivant. Vous obtenez une courbe sur 12 mois.</p>
+        <p>Pour le court terme, faites aussi une version <strong>hebdomadaire sur les 8 prochaines semaines</strong>. C'est sur cette granularité fine que les problèmes de cash apparaissent : un mois peut sembler équilibré globalement mais avoir un trou en semaine 3 quand l'URSSAF et un loyer tombent avant que les clients ne paient.</p>
+        <div class="example">
+          <strong>Exemple :</strong> Solde initial 1er janvier 28 000 €. Encaissements janvier 16 200 €. Décaissements janvier 19 800 € (charges fixes 12 800 € + TVA 4 200 € + autres 2 800 €). Solde fin janvier : 28 000 + 16 200 − 19 800 = 24 400 €. Vous démarrez février avec 24 400 €.
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-head">
+          <div class="step-num">5</div>
+          <div>
+            <span class="time-badge">⏱ 10 minutes</span>
+            <h3>Identifier les mois à risque</h3>
+          </div>
+        </div>
+        <p>Fixez votre seuil de sécurité. La règle généralement admise : <strong>1 mois de charges fixes minimum</strong>. Si vous êtes dans un secteur saisonnier ou avec des cycles longs, montez à 2 ou 3 mois.</p>
+        <p>Marquez en rouge dans votre tableur tout mois où le solde projeté passe sous ce seuil. Ces alertes sont votre boussole opérationnelle :</p>
+        <ul>
+          <li><strong>Alerte 3 mois à l'avance</strong> : vous avez le temps d'agir confortablement (relances commerciales, négociation fournisseurs).</li>
+          <li><strong>Alerte 1 mois à l'avance</strong> : c'est urgent mais gérable (négociation de découvert, accélération encaissements, report de dépenses).</li>
+          <li><strong>Alerte le mois même</strong> : c'est de la chirurgie (mobilisation d'aides publiques, médiation du crédit, plan d'urgence).</li>
+        </ul>
+        <p>L'objectif d'un bon prévisionnel : transformer toutes vos alertes "mois même" en alertes "3 mois à l'avance".</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-head">
+          <div class="step-num">6</div>
+          <div>
+            <span class="time-badge">⏱ 30 minutes</span>
+            <h3>Construire 3 scénarios pour tester la robustesse</h3>
+          </div>
+        </div>
+        <p>Le scénario central est votre meilleure estimation. C'est utile mais insuffisant. Ajoutez deux autres scénarios pour mesurer la résistance de votre trajectoire.</p>
+        <p><strong>Scénario pessimiste</strong> : encaissements à <strong>−20 %</strong> (un gros client paie en retard, un autre annule), décaissements à <strong>+10 %</strong> (un imprévu : panne machine, contrôle URSSAF, augmentation matière). Si même dans ce scénario votre trésorerie tient, vous avez une marge de sécurité confortable.</p>
+        <p><strong>Scénario optimiste</strong> : encaissements à <strong>+15 %</strong> (nouveau gros contrat, accélération commerciale), décaissements stables. Ce scénario sert moins à se rassurer qu'à anticiper les investissements possibles si l'activité s'accélère.</p>
+        <p>Dans Excel, dupliquez votre prévisionnel central et ajustez les pourcentages. Comparez les 3 courbes côte à côte. Vous découvrirez souvent que votre marge de sécurité est plus mince que vous ne le pensiez.</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-head">
+          <div class="step-num">7</div>
+          <div>
+            <span class="time-badge">⏱ 15 min/semaine</span>
+            <h3>Mettre à jour chaque semaine pour garder l'outil vivant</h3>
+          </div>
+        </div>
+        <p>Un prévisionnel statique est mort à 3 semaines. Le rituel hebdomadaire est ce qui fait la différence entre un fichier oublié et un outil de pilotage.</p>
+        <p><strong>Chaque vendredi à 17h, 15 minutes :</strong></p>
+        <ol>
+          <li>Notez le solde réel de tous vos comptes bancaires.</li>
+          <li>Comparez au solde projeté pour la semaine écoulée. Variance &lt; 10 % : tout va bien. Variance &gt; 20 % : enquête immédiate.</li>
+          <li>Mettez à jour les encaissements et décaissements des 4 prochaines semaines avec les informations fraîches.</li>
+          <li>Ajustez l'horizon 6-12 mois si une information majeure le justifie (nouveau contrat signé, perte d'un client).</li>
+        </ol>
+        <p>Bloquez ce créneau dans votre calendrier comme une vraie réunion. Si vous le sautez 3 semaines de suite, l'outil meurt.</p>
+        <div class="callout">
+          <p><strong>Gain de temps majeur :</strong> un logiciel de trésorerie connecté à votre banque (DSP2) met à jour les soldes et les flux <strong>automatiquement chaque nuit</strong>. Vous ne faites plus que valider et ajuster les hypothèses. Le rituel hebdo passe de 15 min à 5 min, et la qualité du suivi monte d'un cran.</p>
+        </div>
+      </div>
+
+      <h2>Erreurs fréquentes à éviter</h2>
+
+      <p><strong>Confondre solde bancaire et trésorerie disponible.</strong> Votre solde bancaire inclut les chèques encaissés non encore débités, les virements émis non encore débités, les autorisations CB. La trésorerie disponible réelle est souvent inférieure de 5 à 15 %.</p>
+
+      <p><strong>Oublier la saisonnalité.</strong> La taxe foncière en septembre, la prime de fin d'année en décembre, les acomptes IS trimestriels. Ces dépenses tombent de manière prévisible mais brutale. Un prévisionnel "moyenne mensuelle" les sous-estime systématiquement.</p>
+
+      <p><strong>Ne pas distinguer encaissé et facturé.</strong> Beaucoup de premières versions confondent les deux : le mois où la facture est émise. C'est faux : c'est le mois où l'argent arrive sur le compte qui compte pour la trésorerie.</p>
+
+      <p><strong>Travailler en HT au lieu de TTC.</strong> La trésorerie, c'est du TTC : la TVA collectée transite par votre compte avant d'être reversée. Travaillez toujours en TTC dans le prévisionnel.</p>
+
+      <h2>Excel ou logiciel SaaS ?</h2>
+
+      <p>Excel est suffisant pour un indépendant ou une TPE avec moins de 5 salariés et 1 compte bancaire principal. Notre modèle téléchargeable ci-dessous est conçu pour ce profil.</p>
+
+      <p>Au-delà, un logiciel SaaS connecté à votre banque via DSP2 prend le relais : agrégation automatique des comptes, mise à jour temps réel du prévisionnel à partir des factures émises, alertes par email quand le solde projeté passe sous le seuil. Le module est inclus dans le plan <a href="../tarifs.html">Pro NUMMA à 35 € HT/mois</a> (prévisionnel 12 mois, jusqu'à 3 banques) et étendu en Business 79 € HT (banques illimitées, prévisionnel temps réel).</p>
+
+      <div class="pillar-link-card">
+        <h3 style="color:var(--numma-purple-700); margin-bottom:0.5rem;">Pour aller plus loin</h3>
+        <p>Cet article fait partie du <a href="piloter-tresorerie-tpe-pme-2026.html"><strong>guide pilier : piloter sa trésorerie TPE/PME en 2026</strong></a> qui couvre les 4 piliers du pilotage, les 13 KPI à suivre, et que faire en cas de <a href="tresorerie-negative-5-leviers.html">trésorerie négative</a>.</p>
+        <a href="piloter-tresorerie-tpe-pme-2026.html" class="btn btn-primary">Lire le guide complet →</a>
+      </div>
+
+      <h2>Questions fréquentes</h2>
+
+      <div class="faq">
+        <details class="faq-item">
+          <summary>Combien de temps faut-il pour faire un prévisionnel de trésorerie ?</summary>
+          <p>Comptez 2 à 4 heures la première fois pour construire la structure avec votre historique. Ensuite, 15 minutes par semaine pour la mise à jour. Un logiciel SaaS connecté à la banque divise ce temps par 4 grâce à l'agrégation automatique des flux.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Sur combien de mois doit-on faire un prévisionnel ?</summary>
+          <p>12 mois glissants pour la vision stratégique, et idéalement 8 semaines en granularité plus fine pour le pilotage court terme. Au-delà de 18 mois, la fiabilité chute drastiquement car les hypothèses s'accumulent.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Quelles sont les erreurs les plus fréquentes ?</summary>
+          <p>Trois erreurs classiques : utiliser les délais théoriques des CGV au lieu des délais réels observés, oublier les charges saisonnières (prime de fin d'année, taxe foncière, CFE), et ne pas mettre à jour. Un prévisionnel statique est mort à 3 semaines.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Faut-il intégrer la TVA dans le prévisionnel ?</summary>
+          <p>Oui, absolument. Travaillez en TTC pour les encaissements et décaissements, et ajoutez les échéances TVA (mensuelles ou trimestrielles) en tant que décaissement à part. Une TVA "oubliée" est l'une des causes classiques de surprise négative.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Comment intégrer les charges sociales URSSAF ?</summary>
+          <p>Les salaires bruts sont payés au 25-30 du mois travaillé. Les charges patronales (~42 % du brut chargé) tombent sur l'échéancier URSSAF : mensuel si vous avez 9 salariés ou plus, trimestriel sinon. Intégrez précisément les dates dans votre prévisionnel.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Comment estimer les encaissements quand on démarre une activité ?</summary>
+          <p>Sans historique, basez-vous sur votre business plan, des benchmarks sectoriels (CCI, BdF) et des comparatifs entreprises similaires. Soyez prudent : multipliez les décaissements estimés par 1,3 et divisez les encaissements par 1,5.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Excel ou logiciel SaaS, comment choisir ?</summary>
+          <p>Excel suffit pour un indépendant ou une TPE simple. Au-delà de 5 salariés ou 2 comptes bancaires, un logiciel connecté à la banque automatise la mise à jour et fait gagner 4 à 8 heures par mois, tout en réduisant les erreurs.</p>
+        </details>
+      </div>
+
+      <div class="cta-final" style="margin-top: 3rem;">
+        <h2>Télécharger le modèle Excel + livre blanc</h2>
+        <p>Modèle de prévisionnel 12 mois prêt à remplir + livre blanc 28 pages avec 3 cas types résolus. Gratuit, sans engagement.</p>
+        <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
+          <a href="../livre-blanc-pilotage-tresorerie.html" class="btn btn-primary btn-lg">Télécharger le pack</a>
+          <a href="../reserver-demo.html" class="btn btn-ghost btn-lg">Réserver une démo NUMMA</a>
+        </div>
+      </div>
+
+    </article>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="footer-logo-text"><img src="../images/logo.jpg" alt="Logo NUMMA" width="32" height="32" loading="lazy"><span>NUMMA</span></div><p>Le logiciel de gestion tout-en-un pour TPE, PME et scale-ups françaises.</p></div>
+      <div class="footer-col"><h4>Produit</h4><ul><li><a href="../fonctionnalites.html">Fonctionnalités</a></li><li><a href="../tarifs.html">Tarifs</a></li><li><a href="../micro-entreprise.html">Micro-entreprise</a></li></ul></div>
+      <div class="footer-col"><h4>Ressources</h4><ul><li><a href="../blog.html">Blog</a></li><li><a href="piloter-tresorerie-tpe-pme-2026.html">Guide pilotage trésorerie</a></li><li><a href="../livre-blanc-pilotage-tresorerie.html">Livre blanc trésorerie</a></li></ul></div>
+      <div class="footer-col"><h4>Entreprise</h4><ul><li><a href="../a-propos.html">À propos</a></li><li><a href="../reserver-demo.html">Réserver une démo</a></li><li><a href="../contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Légal</h4><ul><li><a href="../mentions-legales.html">Mentions légales</a></li><li><a href="../politique-confidentialite.html">Confidentialité</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><div>© 2025–2026 NUMMA SAS · Société française fondée en 2025 · Tous droits réservés</div></div>
+  </div>
+</footer>
+
+<script src="../js/cookies.js" defer></script>
+<script src="../js/main.js" defer></script>
+</body>
+</html>

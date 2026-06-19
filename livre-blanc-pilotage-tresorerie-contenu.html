@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7LBVCJ4GZG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7LBVCJ4GZG');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Livre blanc NUMMA — Méthode pilotage trésorerie TPE/PME (2026)</title>
+  <meta name="description" content="Livre blanc NUMMA 2026 : méthode complète pilotage trésorerie TPE/PME. 7 étapes du prévisionnel, 13 KPI, 3 cas types résolus, plan d'action 30 jours.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.numma.eu/livre-blanc-pilotage-tresorerie-contenu.html">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <meta name="theme-color" content="#7C3AED">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .wp-cover { background: linear-gradient(135deg, #1E3A8A 0%, #7C3AED 50%, #FB923C 100%); color: white; padding: 5rem 2rem; border-radius: var(--radius-lg); margin-bottom: 3rem; text-align: center; }
+    .wp-cover .badge { display: inline-block; background: rgba(255,255,255,0.2); padding: 0.5rem 1.25rem; border-radius: var(--radius-full); font-size: 0.85rem; letter-spacing: 0.05em; text-transform: uppercase; font-weight: 700; margin-bottom: 1.5rem; }
+    .wp-cover h1 { color: white; font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1rem; max-width: 720px; margin-left: auto; margin-right: auto; }
+    .wp-cover .subtitle { font-size: 1.15rem; opacity: 0.95; max-width: 600px; margin: 0 auto; line-height: 1.5; }
+    .wp-cover .meta { margin-top: 2.5rem; font-size: 0.85rem; opacity: 0.8; }
+    .wp-toc { background: var(--ink-50); border: 1px solid var(--ink-100); border-radius: var(--radius-lg); padding: 2rem 2.25rem; margin: 2rem 0 3rem; }
+    .wp-toc h2 { font-size: 1.1rem; color: var(--numma-purple-700); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1.25rem; }
+    .wp-toc ol { padding-left: 1.5rem; columns: 2; column-gap: 3rem; margin: 0; }
+    .wp-toc ol li { margin-bottom: 0.6rem; font-size: 0.95rem; }
+    .wp-chapter { margin-bottom: 4rem; padding-top: 2rem; border-top: 2px solid var(--numma-purple-100); }
+    .wp-chapter:first-of-type { border-top: 0; padding-top: 0; }
+    .wp-chapter-num { color: var(--numma-purple-600); font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
+    .wp-chapter h2 { font-size: 1.75rem; margin-bottom: 1.25rem; }
+    .wp-chapter h3 { margin-top: 2rem; margin-bottom: 0.75rem; font-size: 1.15rem; }
+    .wp-callout { background: var(--numma-purple-50); border-left: 4px solid var(--numma-purple-600); border-radius: var(--radius-md); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+    .wp-callout strong { color: var(--numma-purple-700); }
+    .wp-table { background: var(--white); border: 1px solid var(--ink-100); border-radius: var(--radius-lg); overflow: hidden; margin: 1.5rem 0; }
+    .wp-table table { width: 100%; border-collapse: collapse; }
+    .wp-table th { background: var(--ink-50); padding: 0.85rem 1rem; text-align: left; font-size: 0.9rem; color: var(--ink-700); }
+    .wp-table td { padding: 0.85rem 1rem; border-top: 1px solid var(--ink-100); font-size: 0.92rem; color: var(--ink-700); }
+    .wp-case { background: var(--white); border: 1px solid var(--ink-100); border-radius: var(--radius-lg); padding: 1.75rem; margin: 1.5rem 0; }
+    .wp-case h3 { margin-top: 0; }
+    .wp-case .profile-line { font-size: 0.9rem; color: var(--ink-500); margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--ink-100); }
+    .wp-print-btn { position: fixed; bottom: 2rem; right: 2rem; z-index: 100; }
+    @media print {
+      .site-header, .site-footer, .wp-print-btn { display: none !important; }
+      .wp-cover { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .wp-chapter { page-break-inside: avoid; }
+      body { background: white; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="index.html" class="nav-logo"><img src="images/logo.jpg" alt="Logo NUMMA" width="36" height="36" decoding="async"><span>NUMMA</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li class="has-dropdown"><a href="fonctionnalites.html">Fonctionnalités ▾</a>
+          <div class="dropdown">
+            <a href="facturation-electronique.html">Facturation électronique</a>
+            <a href="comptabilite.html">Comptabilité</a>
+            <a href="paie-rh.html">Paie & RH</a>
+            <a href="tresorerie.html">Trésorerie & Finance</a>
+          </div>
+        </li>
+        <li><a href="tarifs.html">Tarifs</a></li>
+        <li><a href="blog.html">Ressources</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="https://app.numma.eu/login" class="btn btn-ghost btn-sm">Connexion</a>
+        <a href="reserver-demo.html" class="btn btn-primary btn-sm">Réserver une démo</a>
+        <button class="nav-toggle btn btn-secondary btn-sm" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">Menu</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section style="padding-top: 2rem;">
+  <div class="container container-xs">
+
+    <div class="wp-cover">
+      <span class="badge">Livre blanc 2026</span>
+      <h1>Piloter sa trésorerie TPE/PME en 2026 — méthode complète + modèle Excel</h1>
+      <p class="subtitle">7 étapes du prévisionnel, 13 KPI documentés, 3 cas types résolus et plan d'action 30 jours.</p>
+      <div class="meta">NUMMA · Édition 2026 · Juin 2026 · 28 pages</div>
+    </div>
+
+    <div class="wp-toc">
+      <h2>Sommaire</h2>
+      <ol>
+        <li><a href="#chap1">L'enjeu trésorerie pour une TPE/PME en 2026</a></li>
+        <li><a href="#chap2">Les 4 piliers du pilotage trésorerie</a></li>
+        <li><a href="#chap3">La méthode 7 étapes du prévisionnel</a></li>
+        <li><a href="#chap4">Les 13 KPI à suivre chaque semaine</a></li>
+        <li><a href="#chap5">Cas type 1 : TPE BTP 8 salariés</a></li>
+        <li><a href="#chap6">Cas type 2 : Agence digitale 18 salariés</a></li>
+        <li><a href="#chap7">Cas type 3 : E-commerce B2C</a></li>
+        <li><a href="#chap8">Trésorerie négative : 5 leviers</a></li>
+        <li><a href="#chap9">Plan d'action 30 jours</a></li>
+        <li><a href="#chap10">Conclusion &amp; modèle Excel</a></li>
+      </ol>
+    </div>
+
+    <article class="blog-post" style="padding-top: 0;">
+
+      <section class="wp-chapter" id="chap1">
+        <div class="wp-chapter-num">Chapitre 1</div>
+        <h2>L'enjeu trésorerie pour une TPE/PME en 2026</h2>
+        <p>25 % des défaillances de TPE et PME françaises ne sont pas causées par un manque de rentabilité. Elles sont causées par un manque de trésorerie (chiffre BPI France, 2024). Une entreprise peut être bénéficiaire sur le papier et déposer le bilan parce qu'elle n'arrive plus à payer ses fournisseurs ou ses salaires.</p>
+        <p>Trois mécanismes expliquent ce paradoxe : le décalage temporel entre facturation et encaissement (45-60 jours en B2B en moyenne), l'effet ciseau entre encaissements élastiques et décaissements rigides (salaires, charges, loyer), et le mur du BFR qui croît mécaniquement avec l'activité.</p>
+        <p>Le pilotage actif de la trésorerie n'est donc pas un sujet d'expert-comptable mais le sujet n°1 du dirigeant. Ce livre blanc propose une méthode opérationnelle, applicable en 2 à 4 heures pour la construction initiale, puis 15 minutes par semaine pour la mise à jour.</p>
+        <div class="wp-callout"><p><strong>À retenir :</strong> votre P&amp;L peut mentir. Votre trésorerie, jamais. C'est elle, et elle seule, qui vous dit si vous tiendrez le mois prochain.</p></div>
+      </section>
+
+      <section class="wp-chapter" id="chap2">
+        <div class="wp-chapter-num">Chapitre 2</div>
+        <h2>Les 4 piliers du pilotage trésorerie</h2>
+        <h3>Pilier 1 — Connaissance fine du BFR</h3>
+        <p>Comprendre quelle est votre exposition au cycle d'exploitation. Formule : Stocks + Créances clients − Dettes fournisseurs. Sans cette base, vous pilotez aveugle. Un BFR positif signifie que vous avancez en permanence du cash à votre activité.</p>
+        <h3>Pilier 2 — Prévisionnel 12 mois</h3>
+        <p>Un tableau qui projette mois par mois encaissements, décaissements et soldes. Sans prévisionnel, vous découvrez les problèmes au moment où ils explosent. Avec un bon prévisionnel, vous les voyez arriver 3 à 6 mois à l'avance.</p>
+        <h3>Pilier 3 — Agrégation bancaire temps réel</h3>
+        <p>Pouvoir consulter en quelques secondes le solde réel de tous vos comptes via API DSP2. Aujourd'hui, n'importe quel logiciel SaaS conforme remonte les flux toutes les nuits depuis votre banque.</p>
+        <h3>Pilier 4 — Plan B financier</h3>
+        <p>Une ligne de crédit court-terme négociée à l'avance (découvert autorisé, Dailly, affacturage). À négocier quand tout va bien, pas quand on en a besoin.</p>
+      </section>
+
+      <section class="wp-chapter" id="chap3">
+        <div class="wp-chapter-num">Chapitre 3</div>
+        <h2>La méthode 7 étapes du prévisionnel</h2>
+        <p><strong>Étape 1 — Lister les encaissements</strong> (30 min). Factures clients à venir, subventions, remboursements impôts, apports.</p>
+        <p><strong>Étape 2 — Lister les décaissements</strong> (30 min). Charges fixes mensuelles, charges variables, échéances fiscales (TVA, IS, CFE), échéances sociales (URSSAF), investissements.</p>
+        <p><strong>Étape 3 — Intégrer les délais de paiement réels</strong> (15 min). Mesurez votre DSO réel et appliquez-le. Erreur n°1 des prévisionnels naïfs : utiliser les délais théoriques.</p>
+        <p><strong>Étape 4 — Calculer les soldes mensuels</strong> (20 min). Solde initial + Encaissements − Décaissements = Solde fin de mois. Faire aussi une vue hebdo 8 semaines.</p>
+        <p><strong>Étape 5 — Identifier les mois à risque</strong> (10 min). Marquer en rouge tout mois où le solde projeté passe sous 1 mois de charges fixes.</p>
+        <p><strong>Étape 6 — Tester 3 scénarios</strong> (30 min). Pessimiste (-20 % encaissements, +10 % décaissements), central, optimiste (+15 % encaissements).</p>
+        <p><strong>Étape 7 — Mettre à jour chaque semaine</strong> (15 min/sem). Chaque vendredi 17h : reconcilier le réel et le prévu, ajuster les hypothèses.</p>
+        <div class="wp-callout"><p><strong>Méthode détaillée :</strong> chaque étape est expliquée en profondeur avec exemples chiffrés dans notre <a href="blog/faire-previsionnel-tresorerie-7-etapes.html">article dédié au prévisionnel en 7 étapes</a>.</p></div>
+      </section>
+
+      <section class="wp-chapter" id="chap4">
+        <div class="wp-chapter-num">Chapitre 4</div>
+        <h2>Les 13 KPI à suivre chaque semaine</h2>
+        <div class="wp-table">
+          <table>
+            <thead><tr><th>KPI</th><th>Formule</th><th>Seuil sain</th></tr></thead>
+            <tbody>
+              <tr><td>Position trésorerie nette</td><td>Solde tous comptes</td><td>&gt; 1 mois charges fixes</td></tr>
+              <tr><td>Runway</td><td>Trésorerie / Burn rate</td><td>&gt; 6 mois</td></tr>
+              <tr><td>Burn rate</td><td>Charges fixes mensuelles</td><td>Stable</td></tr>
+              <tr><td>DSO (délai client)</td><td>(Encours / CA) × 365</td><td>&lt; 45 j B2B</td></tr>
+              <tr><td>DPO (délai fournisseur)</td><td>(Dettes / Achats) × 365</td><td>&gt; 30 j</td></tr>
+              <tr><td>BFR en jours de CA</td><td>(BFR / CA) × 365</td><td>Stable</td></tr>
+              <tr><td>Taux recouvrement</td><td>Encaissé / Facturé</td><td>&gt; 95 %</td></tr>
+              <tr><td>Concentration client</td><td>% CA top 3</td><td>&lt; 50 %</td></tr>
+              <tr><td>Cash conversion ratio</td><td>Cash flow / EBE</td><td>&gt; 80 %</td></tr>
+              <tr><td>Échéances 30j à venir</td><td>Sorties 30j</td><td>Couvertes</td></tr>
+              <tr><td>Solde par compte</td><td>Par banque</td><td>Équilibré</td></tr>
+              <tr><td>Variance prévisionnel</td><td>Réel vs prévu</td><td>&lt; 10 %</td></tr>
+              <tr><td>Coût du découvert</td><td>Agios mensuels</td><td>Tendre vers 0</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Pour le suivi pratique, concentrez-vous d'abord sur les 5 premiers : position de trésorerie, runway, burn rate, DSO, DPO. Ce sont eux qui donnent 80 % de la photo.</p>
+      </section>
+
+      <section class="wp-chapter" id="chap5">
+        <div class="wp-chapter-num">Chapitre 5</div>
+        <h2>Cas type 1 : TPE BTP 8 salariés</h2>
+        <div class="wp-case">
+          <h3>Profil</h3>
+          <p class="profile-line">SARL gros œuvre, 8 salariés (1 conducteur travaux + 6 ouvriers + 1 secrétaire), CA 850 000 € HT/an, marchés essentiellement publics et grands comptes.</p>
+          <h3>Spécificités trésorerie</h3>
+          <p>Marchés publics avec retenues de garantie 5 %, délais de paiement légaux 30j non respectés en pratique (60-90j observés), masse salariale lourde (~38 000 €/mois chargés), achats matières conséquents (béton, acier, location matériel).</p>
+          <h3>Position de départ</h3>
+          <p>DSO mesuré : 78 jours (vs CGV 30j). BFR : 165 000 € (60 jours de CA). Trésorerie disponible : 42 000 € (1,1 mois de charges fixes). Découvert autorisé : 60 000 €. Runway : 1,1 mois — <strong>tendu</strong>.</p>
+          <h3>Diagnostic et plan</h3>
+          <p>Trois leviers prioritaires : (1) Mettre en place l'affacturage sur 3 grands comptes publics (libère ~80 000 € immédiats), (2) Demander des acomptes 30 % à la commande sur nouveaux chantiers privés, (3) Négocier un délai 60j sur 2 gros fournisseurs matériaux. Effet attendu en 90 jours : remontée trésorerie à 130 000 € (3,4 mois de charges), DSO à 55 jours.</p>
+        </div>
+      </section>
+
+      <section class="wp-chapter" id="chap6">
+        <div class="wp-chapter-num">Chapitre 6</div>
+        <h2>Cas type 2 : Agence digitale 18 salariés</h2>
+        <div class="wp-case">
+          <h3>Profil</h3>
+          <p class="profile-line">SAS agence web/communication, 18 salariés (developers, chefs de projet, designers), CA 1,8 M€ HT/an, mix clients PME et grands comptes, contrats récurrents (50 %) + projets ponctuels (50 %).</p>
+          <h3>Spécificités trésorerie</h3>
+          <p>Masse salariale 90 000 €/mois chargés (50 % du CA). Charges fixes hors salaires 18 000 €/mois (loyer, abonnements SaaS, énergies). DSO sur récurrents corrects (35 j) mais DSO sur projets ponctuels désastreux (70 j) avec retards multiples.</p>
+          <h3>Position de départ</h3>
+          <p>Trésorerie disponible : 180 000 € (1,7 mois). BFR : 290 000 € (58 jours de CA). DSO global pondéré : 52 jours. Runway 1,7 mois — <strong>insuffisant pour absorber un retard client significatif</strong>.</p>
+          <h3>Diagnostic et plan</h3>
+          <p>Quatre leviers : (1) Migrer 60 % des projets ponctuels en contrat avec acompte 40 % à la commande, (2) Mettre en place relance automatique J+7/J+15/J+30, (3) Négocier paiement annuel sur 2 abonnements SaaS contre remise 16 %, (4) Lever une réserve de précaution à 350 000 € avant fin d'année (4 mois de charges). Effet attendu : DSO à 38 jours, runway à 4 mois.</p>
+        </div>
+      </section>
+
+      <section class="wp-chapter" id="chap7">
+        <div class="wp-chapter-num">Chapitre 7</div>
+        <h2>Cas type 3 : E-commerce B2C</h2>
+        <div class="wp-case">
+          <h3>Profil</h3>
+          <p class="profile-line">SARL e-commerce mode 4 salariés (dont 2 préparateurs), CA 1,1 M€ TTC/an, saisonnalité forte (40 % du CA sur octobre-décembre), encaissement immédiat (CB, PayPal), stocks importants.</p>
+          <h3>Spécificités trésorerie</h3>
+          <p>Pas de DSO (encaissement instantané). Mais BFR très lourd côté stocks : 220 000 € en moyenne, jusqu'à 380 000 € avant le rush Noël. Frais marketing variables (Meta Ads, Google Ads) 8-15 % du CA.</p>
+          <h3>Position de départ</h3>
+          <p>Trésorerie hors saison : 95 000 €. Trésorerie pic de stock (octobre) : 12 000 € — <strong>critique</strong>. Marge à protéger malgré la tension de fin d'année.</p>
+          <h3>Diagnostic et plan</h3>
+          <p>Trois leviers : (1) Négocier des délais fournisseurs 60-90 jours sur la commande Noël (libère 150 000 €), (2) Mettre en place une ligne de crédit court terme 100 000 € activable juin-octobre, (3) Affiner la prévision de demande pour réduire le stock dormant de 15 %. Effet : tampon sécurité +50 000 € pendant le pic, marge nette inchangée.</p>
+        </div>
+      </section>
+
+      <section class="wp-chapter" id="chap8">
+        <div class="wp-chapter-num">Chapitre 8</div>
+        <h2>Trésorerie négative : les 5 leviers</h2>
+        <p>Si votre prévisionnel passe en rouge à 1-3 mois ou si vous y êtes déjà, voici les leviers à actionner dans l'ordre.</p>
+        <p><strong>Levier 1 — Accélérer les encaissements.</strong> Relances clients en retard (téléphone + email + LRAR), demande d'acomptes, escompte 1-2 % pour règlement comptant. Effet sous 7-30 jours.</p>
+        <p><strong>Levier 2 — Décaler les décaissements.</strong> Demande de délais fournisseurs (la plupart acceptent 30j de décalage prévenu en amont), report d'échéances URSSAF (plan de paiement échelonné 6-24 mois), franchise temporaire sur emprunts bancaires.</p>
+        <p><strong>Levier 3 — Mobiliser le crédit court terme.</strong> Découvert autorisé, ligne Dailly (cession de créances), affacturage (cash sous 48h contre 1-3 % commission), crédits dédiés TPE (Cofidis Entreprises, Qonto Pay Later).</p>
+        <p><strong>Levier 4 — Activer les aides publiques.</strong> Médiation du crédit (gratuit, 60-70 % succès), BPI Garantie Trésorerie, aides régionales, activité partielle si baisse identifiable.</p>
+        <p><strong>Levier 5 — Réduire les charges non essentielles.</strong> Audit des abonnements SaaS (30-50 % de gras typique), gel embauches non critiques, renégociation loyer, coupure dépenses commerciales non productives.</p>
+        <p>Méthode détaillée dans notre <a href="blog/tresorerie-negative-5-leviers.html">article dédié sur les 5 leviers</a>.</p>
+      </section>
+
+      <section class="wp-chapter" id="chap9">
+        <div class="wp-chapter-num">Chapitre 9</div>
+        <h2>Plan d'action 30 jours</h2>
+        <p><strong>Semaine 1 — Mesurer.</strong> Calculez votre DSO, DPO, BFR, charges fixes mensuelles. Identifiez la trésorerie répartie sur vos comptes. Photo de départ.</p>
+        <p><strong>Semaine 2 — Construire le prévisionnel.</strong> Appliquez la méthode 7 étapes avec notre modèle Excel. 2-4 heures de travail. Marquez les mois à risque sur 12 mois.</p>
+        <p><strong>Semaine 3 — Activer 3 actions cash.</strong> Choisissez 3 actions à effet sous 30 jours : relances clients en retard, négociation 1 fournisseur, demande de découvert préventif.</p>
+        <p><strong>Semaine 4 — Installer le rituel.</strong> Chaque vendredi 17h, 15 minutes pour mettre à jour le prévisionnel et regarder les 5 KPI critiques. Bloquez le créneau comme une vraie réunion.</p>
+      </section>
+
+      <section class="wp-chapter" id="chap10">
+        <div class="wp-chapter-num">Chapitre 10</div>
+        <h2>Conclusion &amp; modèle Excel</h2>
+        <p>Le pilotage de trésorerie n'est pas un sujet technique ou comptable. C'est la première compétence d'un dirigeant qui veut tenir dans la durée. 15 minutes par semaine séparent ceux qui pilotent dans le rétroviseur de ceux qui voient venir.</p>
+        <p>Le modèle Excel qui accompagne ce livre blanc est conçu pour démarrer immédiatement : ouvrez-le, remplissez vos chiffres, observez les courbes. Vous aurez votre première vue 12 mois en moins d'une après-midi.</p>
+        <p>NUMMA propose un module de pilotage trésorerie connecté à votre banque qui prend le relais quand vous êtes prêt à automatiser : agrégation DSP2, mise à jour temps réel du prévisionnel, alertes par email. Inclus dans le plan <a href="tarifs.html">Pro à 35 € HT/mois</a>.</p>
+        <div class="cta-final" style="margin-top: 2rem;">
+          <h2>Prochaine étape</h2>
+          <p>30 minutes avec un expert NUMMA pour discuter votre situation et l'outillage adapté. Sans engagement.</p>
+          <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
+            <a href="reserver-demo.html" class="btn btn-primary btn-lg">Réserver une démo</a>
+            <a href="tarifs.html" class="btn btn-ghost btn-lg">Voir les tarifs</a>
+          </div>
+        </div>
+      </section>
+
+    </article>
+  </div>
+</section>
+
+</main>
+
+<a href="javascript:window.print()" class="btn btn-secondary wp-print-btn">Imprimer / PDF</a>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="footer-logo-text"><img src="images/logo.jpg" alt="Logo NUMMA" width="32" height="32" loading="lazy"><span>NUMMA</span></div><p>Le logiciel de gestion tout-en-un pour TPE, PME et scale-ups françaises.</p></div>
+      <div class="footer-col"><h4>Produit</h4><ul><li><a href="fonctionnalites.html">Fonctionnalités</a></li><li><a href="tarifs.html">Tarifs</a></li><li><a href="micro-entreprise.html">Micro-entreprise</a></li></ul></div>
+      <div class="footer-col"><h4>Ressources</h4><ul><li><a href="blog.html">Blog</a></li><li><a href="blog/piloter-tresorerie-tpe-pme-2026.html">Guide trésorerie</a></li><li><a href="blog/digitaliser-comptabilite-tpe-pme.html">Guide compta digitale</a></li></ul></div>
+      <div class="footer-col"><h4>Entreprise</h4><ul><li><a href="a-propos.html">À propos</a></li><li><a href="reserver-demo.html">Réserver une démo</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Légal</h4><ul><li><a href="mentions-legales.html">Mentions légales</a></li><li><a href="politique-confidentialite.html">Confidentialité</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><div>© 2025–2026 NUMMA SAS · Société française fondée en 2025 · Tous droits réservés</div></div>
+  </div>
+</footer>
+
+<script src="js/cookies.js" defer></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>

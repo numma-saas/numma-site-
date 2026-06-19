@@ -40,10 +40,16 @@
   <link rel="apple-touch-icon" href="images/favicon.svg">
   <meta name="theme-color" content="#7C3AED">
 
-  <!-- Fonts -->
+  <!-- Performance : preload critical assets -->
+  <link rel="preload" as="image" href="images/screenshots/dashboard-accueil.svg" fetchpriority="high">
+  <link rel="preload" as="style" href="css/style.css">
+
+  <!-- Fonts (non-blocking) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
@@ -208,16 +214,16 @@
 </section>
 
 <!-- ===== Trust bar : compliance badges (factuels) ===== -->
-<section class="trust-bar" aria-label="Conformités et certifications">
+<section class="trust-bar" aria-label="Conformités et certifications" style="background:#F8FAFC;">
   <div class="container">
-    <p>Conformité et sécurité</p>
-    <div class="trust-logos" role="list">
-      <span role="listitem" title="Hébergement qualifié SecNumCloud par l'ANSSI">SecNumCloud · ANSSI</span>
-      <span role="listitem" title="Conformité Règlement Général sur la Protection des Données">RGPD natif</span>
-      <span role="listitem" title="Réforme française de la facturation électronique 2026">Réforme 2026 (PDP)</span>
-      <span role="listitem" title="Plan Comptable Général applicable depuis 2025">PCG 2025</span>
-      <span role="listitem" title="Directive européenne Open Banking sur les services de paiement">DSP2 · Open Banking</span>
-      <span role="listitem" title="Déclaration Sociale Nominative">DSN · URSSAF</span>
+    <p style="color:#0F172A; font-weight:700;">Conformité et sécurité</p>
+    <div class="trust-logos" role="list" style="opacity:1;">
+      <span role="listitem" title="Hébergement qualifié SecNumCloud par l'ANSSI" style="color:#334155; font-weight:700;">SecNumCloud · ANSSI</span>
+      <span role="listitem" title="Conformité Règlement Général sur la Protection des Données" style="color:#334155; font-weight:700;">RGPD natif</span>
+      <span role="listitem" title="Réforme française de la facturation électronique 2026" style="color:#334155; font-weight:700;">Réforme 2026 (PDP)</span>
+      <span role="listitem" title="Plan Comptable Général applicable depuis 2025" style="color:#334155; font-weight:700;">PCG 2025</span>
+      <span role="listitem" title="Directive européenne Open Banking sur les services de paiement" style="color:#334155; font-weight:700;">DSP2 · Open Banking</span>
+      <span role="listitem" title="Déclaration Sociale Nominative" style="color:#334155; font-weight:700;">DSN · URSSAF</span>
     </div>
   </div>
 </section>
@@ -529,9 +535,10 @@
         <a href="reserver-demo.html" class="btn btn-secondary">Essai gratuit 14 jours</a>
         <ul class="price-features">
           <li>Facturation électronique illimitée</li>
-          <li>Comptabilité complète</li>
-          <li>1 utilisateur + expert-comptable offert</li>
-          <li>Agrégation bancaire</li>
+          <li>Pré-comptabilité complète + TVA</li>
+          <li>Prévisionnel de trésorerie 12 mois</li>
+          <li>Export FEC pour cabinet</li>
+          <li>1 utilisateur · Agrégation bancaire</li>
         </ul>
       </article>
       <article class="price-card featured">
