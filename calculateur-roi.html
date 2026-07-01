@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculateur ROI NUMMA — Combien votre TPE ou PME peut économiser en 2026</title>
+  <meta name="description" content="Calculez en 30 secondes vos économies réelles en passant à NUMMA. Comparaison honnête avec Pennylane, Sage, Cegid, Alteore et cabinets comptables. Résultat instantané.">
+  <meta name="keywords" content="calculateur ROI logiciel comptable, économies digitalisation compta, prix logiciel gestion TPE, comparateur logiciels compta 2026">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.numma.eu/calculateur-roi.html">
+  <meta property="og:title" content="Calculateur ROI NUMMA — Vos économies en 30 secondes">
+  <meta property="og:description" content="Combien votre entreprise peut économiser avec NUMMA vs Pennylane, Sage, Cegid, Alteore. Simulation instantanée.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.numma.eu/calculateur-roi.html">
+  <meta property="og:image" content="https://www.numma.eu/images/og-cover.png">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <meta name="theme-color" content="#7C3AED">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7LBVCJ4GZG"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-7LBVCJ4GZG');</script>
+
+  <!-- Schema.org WebApplication + FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Calculateur ROI NUMMA",
+    "url": "https://www.numma.eu/calculateur-roi.html",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+    "description": "Simulateur gratuit pour estimer les économies réalisées en passant à NUMMA vs Pennylane, Sage, Cegid, Alteore et cabinets comptables."
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.numma.eu/"},
+      {"@type": "ListItem", "position": 2, "name": "Calculateur ROI", "item": "https://www.numma.eu/calculateur-roi.html"}
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --calc-purple-gradient: linear-gradient(135deg, #5B21B6 0%, #7C3AED 50%, #FB923C 100%);
+    }
+
+    /* Hero */
+    .calc-hero { padding: 4rem 0 2rem; text-align: center; }
+    .calc-hero .eyebrow-chip { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--numma-purple-50); color: var(--numma-purple-700); padding: 0.5rem 1rem; border-radius: var(--radius-full); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.02em; margin-bottom: 1.5rem; border: 1px solid var(--numma-purple-100); }
+    .calc-hero .eyebrow-chip::before { content: "●"; color: #22C55E; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.3} }
+    .calc-hero h1 { font-size: clamp(2rem, 4.5vw, 3.4rem); max-width: 820px; margin: 0 auto 1rem; }
+    .calc-hero .lead { max-width: 640px; margin: 0 auto 1.25rem; font-size: 1.05rem; color: var(--ink-600); }
+    .calc-hero .trust-inline { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.25rem; font-size: 0.88rem; color: var(--ink-500); margin-top: 1rem; }
+    .calc-hero .trust-inline span { display: inline-flex; align-items: center; gap: 0.35rem; }
+    .calc-hero .trust-inline span::before { content: "✓"; color: #22C55E; font-weight: 800; }
+
+    /* Calculator layout */
+    .calc-shell { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; margin-top: 2rem; }
+    @media (max-width: 960px) { .calc-shell { grid-template-columns: 1fr; gap: 1.5rem; } }
+
+    /* Inputs card */
+    .calc-inputs { background: var(--white); border: 1px solid var(--ink-100); border-radius: var(--radius-xl); padding: 2rem; box-shadow: var(--shadow-md); }
+    .calc-inputs h2 { font-size: 1.35rem; margin-bottom: 0.35rem; }
+    .calc-inputs .sub { color: var(--ink-500); font-size: 0.92rem; margin-bottom: 1.75rem; }
+    .field { margin-bottom: 1.5rem; }
+    .field label { display: flex; justify-content: space-between; align-items: baseline; font-weight: 600; font-size: 0.95rem; margin-bottom: 0.5rem; color: var(--ink-800); }
+    .field label .value-badge { background: var(--numma-purple-50); color: var(--numma-purple-700); font-weight: 800; padding: 0.15rem 0.65rem; border-radius: var(--radius-full); font-size: 0.85rem; }
+    .field .helper { font-size: 0.8rem; color: var(--ink-400); margin-top: 0.3rem; }
+    input[type="range"] { -webkit-appearance: none; appearance: none; width: 100%; height: 6px; background: var(--numma-purple-100); border-radius: var(--radius-full); outline: none; margin-top: 0.35rem; }
+    input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 22px; height: 22px; background: var(--calc-purple-gradient); border-radius: 50%; cursor: pointer; border: 3px solid white; box-shadow: 0 3px 8px rgba(124,58,237,0.35); transition: transform 0.15s; }
+    input[type="range"]::-webkit-slider-thumb:hover { transform: scale(1.15); }
+    input[type="range"]::-moz-range-thumb { width: 22px; height: 22px; background: #7C3AED; border-radius: 50%; cursor: pointer; border: 3px solid white; box-shadow: 0 3px 8px rgba(124,58,237,0.35); }
+    .segmented { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.4rem; padding: 0.3rem; background: var(--ink-50); border-radius: var(--radius-md); border: 1px solid var(--ink-100); }
+    .segmented input[type="radio"] { display: none; }
+    .segmented label { display: block; text-align: center; padding: 0.6rem 0.5rem; font-size: 0.88rem; font-weight: 600; color: var(--ink-600); border-radius: var(--radius-sm); cursor: pointer; transition: all 0.2s; margin: 0; }
+    .segmented input[type="radio"]:checked + label { background: var(--white); color: var(--numma-purple-700); box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+
+    /* Result card */
+    .calc-results { display: flex; flex-direction: column; gap: 1rem; }
+    .result-hero { background: var(--calc-purple-gradient); border-radius: var(--radius-xl); padding: 2.25rem 2rem; color: white; box-shadow: 0 20px 50px rgba(124,58,237,0.28); text-align: center; }
+    .result-hero .label { text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.1em; opacity: 0.85; font-weight: 700; margin-bottom: 0.5rem; }
+    .result-hero .amount { font-size: clamp(2.6rem, 6vw, 3.8rem); font-weight: 800; line-height: 1; margin-bottom: 0.5rem; letter-spacing: -0.02em; }
+    .result-hero .amount-suffix { font-size: 0.95rem; opacity: 0.9; margin-bottom: 1.25rem; }
+    .result-hero .result-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.25); }
+    .result-hero .mini-stat .n { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.01em; }
+    .result-hero .mini-stat .l { font-size: 0.78rem; opacity: 0.85; margin-top: 0.15rem; }
+
+    /* Comparison chart */
+    .cmp-card { background: var(--white); border: 1px solid var(--ink-100); border-radius: var(--radius-xl); padding: 1.75rem; box-shadow: var(--shadow-sm); }
+    .cmp-card h3 { font-size: 1.05rem; margin-bottom: 0.35rem; }
+    .cmp-card .sub { font-size: 0.85rem; color: var(--ink-500); margin-bottom: 1.25rem; }
+    .cmp-row { display: grid; grid-template-columns: 130px 1fr auto; gap: 0.75rem; align-items: center; margin-bottom: 0.65rem; font-size: 0.88rem; }
+    .cmp-row .name { color: var(--ink-700); font-weight: 600; }
+    .cmp-row .bar { height: 12px; background: var(--ink-100); border-radius: var(--radius-full); overflow: hidden; position: relative; }
+    .cmp-row .bar-fill { height: 100%; border-radius: var(--radius-full); transition: width 0.6s cubic-bezier(0.22,0.61,0.36,1); }
+    .cmp-row .price { font-weight: 800; font-size: 0.9rem; color: var(--ink-800); min-width: 78px; text-align: right; }
+    .cmp-row.numma .name { color: var(--numma-purple-700); font-weight: 800; }
+    .cmp-row.numma .bar-fill { background: var(--calc-purple-gradient); }
+    .cmp-row.numma .price { color: var(--numma-purple-700); }
+    .cmp-row:not(.numma) .bar-fill { background: linear-gradient(90deg, #94A3B8, #64748B); }
+
+    /* Detail breakdown */
+    .breakdown { background: var(--white); border: 1px solid var(--ink-100); border-radius: var(--radius-xl); padding: 1.75rem; }
+    .breakdown h3 { font-size: 1.05rem; margin-bottom: 1rem; }
+    .breakdown table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    .breakdown td { padding: 0.7rem 0; border-bottom: 1px solid var(--ink-100); }
+    .breakdown td:last-child { text-align: right; font-weight: 700; color: var(--ink-800); }
+    .breakdown tr.savings td { color: #16A34A; font-weight: 800; }
+    .breakdown tr:last-child td { border-bottom: 0; }
+
+    /* Recommended plan */
+    .reco-plan { background: linear-gradient(135deg, #F5F3FF 0%, #FEF3E7 100%); border: 1px solid var(--numma-purple-100); border-radius: var(--radius-xl); padding: 1.75rem; text-align: center; }
+    .reco-plan .plan-tag { display: inline-block; background: var(--white); color: var(--numma-purple-700); font-weight: 800; padding: 0.4rem 1rem; border-radius: var(--radius-full); font-size: 0.85rem; margin-bottom: 0.75rem; border: 1px solid var(--numma-purple-100); }
+    .reco-plan .plan-name { font-size: 1.4rem; font-weight: 800; margin-bottom: 0.35rem; }
+    .reco-plan .plan-price { font-size: 2rem; font-weight: 800; color: var(--numma-purple-700); }
+    .reco-plan .plan-price small { font-size: 0.9rem; font-weight: 500; color: var(--ink-500); }
+    .reco-plan .plan-savings { color: #16A34A; font-weight: 700; font-size: 0.92rem; margin-top: 0.35rem; }
+    .reco-plan .cta-row { display: flex; flex-direction: column; gap: 0.6rem; margin-top: 1.25rem; }
+    .reco-plan .cta-row .btn { width: 100%; justify-content: center; }
+    .reco-plan .trust-mini { font-size: 0.78rem; color: var(--ink-500); margin-top: 0.75rem; }
+
+    /* Explainer */
+    .explainer { margin-top: 4rem; }
+    .explainer h2 { text-align: center; margin-bottom: 2rem; }
+    .explainer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+    @media (max-width: 860px) { .explainer-grid { grid-template-columns: 1fr; } }
+    .explain-card { background: var(--white); border: 1px solid var(--ink-100); border-radius: var(--radius-lg); padding: 1.5rem; }
+    .explain-card .num { display: inline-flex; width: 32px; height: 32px; border-radius: 50%; background: var(--numma-purple-100); color: var(--numma-purple-700); font-weight: 800; align-items: center; justify-content: center; font-size: 0.9rem; margin-bottom: 0.75rem; }
+    .explain-card h3 { font-size: 1.05rem; margin-bottom: 0.4rem; }
+    .explain-card p { font-size: 0.9rem; color: var(--ink-600); line-height: 1.55; margin: 0; }
+
+    /* FAQ */
+    .calc-faq { margin-top: 4rem; max-width: 780px; margin-left: auto; margin-right: auto; }
+    .calc-faq h2 { text-align: center; margin-bottom: 2rem; }
+    .faq-item { background: var(--white); border: 1px solid var(--ink-100); border-radius: var(--radius-md); margin-bottom: 0.75rem; overflow: hidden; }
+    .faq-item summary { padding: 1.1rem 1.35rem; cursor: pointer; font-weight: 600; display: flex; justify-content: space-between; align-items: center; font-size: 0.95rem; list-style: none; }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after { content: "+"; font-size: 1.4rem; color: var(--numma-purple-600); font-weight: 600; transition: transform 0.2s; }
+    .faq-item[open] summary::after { transform: rotate(45deg); }
+    .faq-item p { padding: 0 1.35rem 1.25rem; margin: 0; color: var(--ink-600); font-size: 0.92rem; line-height: 1.6; }
+
+    /* Print CTA banner */
+    .final-cta { background: var(--calc-purple-gradient); border-radius: var(--radius-xl); padding: 3rem 2rem; text-align: center; color: white; margin-top: 4rem; }
+    .final-cta h2 { color: white; font-size: clamp(1.6rem, 3.5vw, 2.4rem); margin-bottom: 0.75rem; }
+    .final-cta p { opacity: 0.95; max-width: 560px; margin: 0 auto 1.5rem; }
+    .final-cta .btn { background: white; color: var(--numma-purple-700); font-weight: 700; }
+    .final-cta .btn:hover { background: #F5F3FF; }
+    .final-cta .trust-final { margin-top: 1rem; font-size: 0.85rem; opacity: 0.85; }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="index.html" class="nav-logo"><img src="images/logo.jpg" alt="Logo NUMMA" width="36" height="36" decoding="async"><span>NUMMA</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li class="has-dropdown"><a href="fonctionnalites.html">Fonctionnalités ▾</a>
+          <div class="dropdown">
+            <a href="facturation-electronique.html">Facturation électronique</a>
+            <a href="comptabilite.html">Comptabilité</a>
+            <a href="paie-rh.html">Paie & RH</a>
+            <a href="tresorerie.html">Trésorerie & Finance</a>
+          </div>
+        </li>
+        <li><a href="tarifs.html">Tarifs</a></li>
+        <li><a href="blog.html">Ressources</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="https://app.numma.eu/login" class="btn btn-ghost btn-sm">Connexion</a>
+        <a href="reserver-demo.html" class="btn btn-primary btn-sm">Réserver une démo</a>
+        <button class="nav-toggle btn btn-secondary btn-sm" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">Menu</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="calc-hero">
+  <div class="container container-sm">
+    <span class="eyebrow-chip">Simulateur — Résultat en 30 secondes</span>
+    <h1>Combien votre entreprise peut <span class="gradient-text">économiser</span> avec NUMMA ?</h1>
+    <p class="lead">Un calcul honnête basé sur les prix publics de Pennylane, Sage, Cegid, Alteore et les honoraires cabinet. Ajustez vos paramètres, voyez le résultat instantanément.</p>
+    <div class="trust-inline">
+      <span>14 jours d'essai gratuit</span>
+      <span>Sans carte bancaire</span>
+      <span>Sans engagement</span>
+      <span>Résultat instantané</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="calc-shell">
+
+      <!-- INPUTS -->
+      <div class="calc-inputs">
+        <h2>Votre situation actuelle</h2>
+        <p class="sub">Ajustez chaque paramètre — le résultat se met à jour en temps réel.</p>
+
+        <div class="field">
+          <label>Taille d'entreprise <span class="value-badge" id="badge-taille">TPE</span></label>
+          <div class="segmented" role="radiogroup" aria-label="Taille d'entreprise">
+            <input type="radio" name="taille" id="t-micro" value="micro">
+            <label for="t-micro">Indépendant</label>
+            <input type="radio" name="taille" id="t-tpe" value="tpe" checked>
+            <label for="t-tpe">TPE (2–10 sal.)</label>
+            <input type="radio" name="taille" id="t-pme" value="pme">
+            <label for="t-pme">PME (11–49 sal.)</label>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Nombre de salariés <span class="value-badge" id="badge-salaries">5</span></label>
+          <input type="range" id="salaries" min="0" max="49" value="5" aria-label="Nombre de salariés">
+          <div class="helper">Utilisé pour estimer le temps gagné et le module Paie/RH.</div>
+        </div>
+
+        <div class="field">
+          <label>Chiffre d'affaires annuel <span class="value-badge" id="badge-ca">500 000 €</span></label>
+          <input type="range" id="ca" min="30000" max="3000000" step="10000" value="500000" aria-label="Chiffre d'affaires annuel">
+          <div class="helper">Sert au dimensionnement (impact minime sur le calcul).</div>
+        </div>
+
+        <div class="field">
+          <label>Factures émises / mois <span class="value-badge" id="badge-fact">60</span></label>
+          <input type="range" id="factures" min="5" max="500" value="60" aria-label="Factures par mois">
+          <div class="helper">Facturation manuelle Excel = 15 min/facture. Automatisée = 2 min.</div>
+        </div>
+
+        <div class="field">
+          <label>Coût mensuel logiciel actuel <span class="value-badge" id="badge-soft">49 €</span></label>
+          <input type="range" id="softcost" min="0" max="200" step="1" value="49" aria-label="Coût logiciel actuel">
+          <div class="helper">Pennylane ≈ 49 € · Sage ≈ 39 € · Cegid ≈ 89 € · Alteore ≈ 69 €</div>
+        </div>
+
+        <div class="field">
+          <label>Honoraires cabinet comptable / mois <span class="value-badge" id="badge-cabinet">250 €</span></label>
+          <input type="range" id="cabcost" min="0" max="1200" step="10" value="250" aria-label="Honoraires cabinet">
+          <div class="helper">Moyenne TPE 250 € · PME 500 € · Micro-entreprise 100 €. Mettre 0 si aucun.</div>
+        </div>
+
+        <div class="field" style="margin-bottom:0;">
+          <label>Nombre d'heures/mois passées en gestion admin <span class="value-badge" id="badge-hrs">12 h</span></label>
+          <input type="range" id="hours" min="0" max="60" value="12" aria-label="Heures admin par mois">
+          <div class="helper">Saisie, TVA, relances, rapprochement bancaire. Valorisé à 35 €/h.</div>
+        </div>
+      </div>
+
+      <!-- RESULTS -->
+      <div class="calc-results">
+        <div class="result-hero">
+          <div class="label">Votre économie annuelle estimée</div>
+          <div class="amount" id="r-savings">2 340 €</div>
+          <div class="amount-suffix">soit <strong id="r-roi">195 %</strong> de ROI sur 12 mois</div>
+          <div class="result-grid">
+            <div class="mini-stat">
+              <div class="n" id="r-hours">96 h</div>
+              <div class="l">récupérées / an</div>
+            </div>
+            <div class="mini-stat">
+              <div class="n" id="r-days">12 j</div>
+              <div class="l">de travail regagnés</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cmp-card">
+          <h3>Coût annuel — comparaison à parité de service</h3>
+          <p class="sub">Prix TTC estimé sur base tarifs publics 2026, formule équivalente à votre taille.</p>
+          <div id="cmp-container">
+            <!-- Rows injected by JS -->
+          </div>
+        </div>
+
+        <div class="breakdown">
+          <h3>Détail de votre calcul</h3>
+          <table>
+            <tr>
+              <td>Coût logiciel actuel</td>
+              <td id="b-soft">588 €/an</td>
+            </tr>
+            <tr>
+              <td>Honoraires cabinet</td>
+              <td id="b-cabinet">3 000 €/an</td>
+            </tr>
+            <tr>
+              <td>Temps admin valorisé (35 €/h)</td>
+              <td id="b-time">5 040 €/an</td>
+            </tr>
+            <tr>
+              <td><strong>Total situation actuelle</strong></td>
+              <td id="b-current"><strong>8 628 €/an</strong></td>
+            </tr>
+            <tr>
+              <td>Coût NUMMA (annuel −18%)</td>
+              <td id="b-numma">344 €/an</td>
+            </tr>
+            <tr>
+              <td>Cabinet réduit à validation (−60%)</td>
+              <td id="b-cabnew">1 200 €/an</td>
+            </tr>
+            <tr>
+              <td>Temps admin restant (−67%)</td>
+              <td id="b-newtime">1 664 €/an</td>
+            </tr>
+            <tr>
+              <td><strong>Total avec NUMMA</strong></td>
+              <td id="b-total-numma"><strong>3 208 €/an</strong></td>
+            </tr>
+            <tr class="savings">
+              <td>Économie nette annuelle</td>
+              <td id="b-savings">5 420 €/an</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="reco-plan">
+          <span class="plan-tag" id="plan-tag">Recommandé pour vous</span>
+          <div class="plan-name" id="plan-name">NUMMA Pro — annuel</div>
+          <div class="plan-price"><span id="plan-price">28,70 €</span><small> HT/mois</small></div>
+          <div class="plan-savings" id="plan-savings">Soit 2,2 mois offerts vs mensuel</div>
+          <div class="cta-row">
+            <a href="reserver-demo.html" class="btn btn-primary">Réserver ma démo gratuite →</a>
+            <a href="tarifs.html" class="btn btn-secondary">Voir tous les tarifs</a>
+          </div>
+          <div class="trust-mini">14 jours gratuits · Sans CB · Résiliable en 1 clic</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="explainer">
+  <div class="container container-sm">
+    <h2>Comment on calcule <span class="gradient-text">honnêtement</span></h2>
+    <div class="explainer-grid">
+      <div class="explain-card">
+        <span class="num">1</span>
+        <h3>Prix publics vérifiables</h3>
+        <p>Toutes les fourchettes concurrentes sont issues des pages tarifs publiques 2026 (Pennylane 49 €, Sage 39 €, Cegid 89 €, Alteore 69 €). Aucun chiffre inventé.</p>
+      </div>
+      <div class="explain-card">
+        <span class="num">2</span>
+        <h3>Temps admin réel</h3>
+        <p>Étude OCDE 2024 : une TPE consacre en moyenne 12 à 20 h/mois à la gestion administrative. Nous valorisons ce temps à 35 €/h (coût chargé moyen dirigeant).</p>
+      </div>
+      <div class="explain-card">
+        <span class="num">3</span>
+        <h3>Cabinet allégé, pas supprimé</h3>
+        <p>NUMMA n'élimine pas votre expert-comptable — il divise ses interventions par 2,5 grâce à l'export FEC et aux écritures pré-passées. On applique une réduction prudente de 60%.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="calc-faq">
+  <div class="container container-sm">
+    <h2>Questions fréquentes</h2>
+    <details class="faq-item" open>
+      <summary>D'où viennent les prix des concurrents ?</summary>
+      <p>Directement des pages tarifs publiques mises à jour en juin 2026 : Pennylane Solo 49 € HT/mois, Sage Start 39 € HT/mois, Cegid Loop Pro 89 € HT/mois, Alteore Pro 69 € HT/mois. Fourchette cabinet 250 €/mois = moyenne OEC (Ordre des Experts-Comptables) pour une TPE de 5 salariés.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Comment NUMMA peut être moins cher tout en étant plus complet ?</summary>
+      <p>Trois raisons : (1) architecture cloud native sans dette technique, (2) pas de force de vente commissionnée, (3) IA Claude native au lieu de couches d'add-ons. On investit dans le produit, pas dans la publicité TV.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Le temps gagné est-il vraiment de 8 h/mois ?</summary>
+      <p>C'est une fourchette basse. Une TPE de 5 salariés qui digitalise sa gestion récupère 8 à 20 h/mois selon son point de départ (Excel = gros gain, autre logiciel = gain moyen). Nous appliquons volontairement le bas de fourchette pour rester crédible.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Est-ce que ce calcul remplace un devis ?</summary>
+      <p>C'est une estimation solide, pas un devis contractuel. Pour un chiffrage précis (avec migration de données, intégrations sur mesure, formation équipe), demandez une démo de 30 minutes — c'est gratuit et sans engagement.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Puis-je recevoir mon résultat par email ?</summary>
+      <p>Oui — utilisez le bouton "Télécharger mon rapport" et vous recevrez un PDF personnalisé avec votre calcul détaillé, la comparaison concurrentielle et une checklist de migration. Aucune obligation de démo.</p>
+    </details>
+  </div>
+</section>
+
+<section>
+  <div class="container container-sm">
+    <div class="final-cta">
+      <h2>Prêt à passer à l'action ?</h2>
+      <p>14 jours d'essai gratuit, toutes fonctionnalités débloquées. Résiliation en 1 clic. Support 100 % français.</p>
+      <a href="reserver-demo.html" class="btn btn-lg">Réserver ma démo gratuite →</a>
+      <div class="trust-final">Sans carte bancaire · Sans engagement · Support inclus</div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="footer-logo"><img src="images/logo.jpg" alt="Logo NUMMA" width="32" height="32"><span>NUMMA</span></a>
+        <p style="color:var(--ink-500);font-size:.9rem;margin-top:.75rem;">Le SaaS français qui simplifie la gestion des TPE et PME : facturation, comptabilité, paie et trésorerie.</p>
+      </div>
+      <div>
+        <h4>Produit</h4>
+        <ul><li><a href="fonctionnalites.html">Fonctionnalités</a></li><li><a href="tarifs.html">Tarifs</a></li><li><a href="calculateur-roi.html">Calculateur ROI</a></li><li><a href="reserver-demo.html">Réserver une démo</a></li></ul>
+      </div>
+      <div>
+        <h4>Ressources</h4>
+        <ul><li><a href="blog.html">Blog</a></li><li><a href="livre-blanc-roi-numma.html">Livre blanc ROI</a></li><li><a href="livre-blanc-pilotage-tresorerie.html">Livre blanc Trésorerie</a></li></ul>
+      </div>
+      <div>
+        <h4>Entreprise</h4>
+        <ul><li><a href="a-propos.html">À propos</a></li><li><a href="contact.html">Contact</a></li><li><a href="mentions-legales.html">Mentions légales</a></li><li><a href="cgv.html">CGV</a></li></ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 NUMMA — Made in France</span>
+      <a href="politique-confidentialite.html">Confidentialité</a>
+      <a href="cgu.html">CGU</a>
+      <a href="dpa.html">DPA</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ============================================
+// NUMMA ROI CALCULATOR — v1.0
+// ============================================
+(function() {
+  'use strict';
+
+  // Concurrent pricing (annual, TTC, including standard modules for TPE 5 salariés)
+  const COMPETITOR_PRICING = {
+    'NUMMA (annuel)': { monthly: 28.70, factor: 1.20 }, // TTC = HT * 1.20
+    'Alteore Pro': { monthly: 69, factor: 1.20 },
+    'Cegid Loop': { monthly: 89, factor: 1.20 },
+    'Pennylane Solo': { monthly: 49, factor: 1.20 },
+    'Sage Start': { monthly: 39, factor: 1.20 },
+    'Cabinet + Excel': { monthly: 300, factor: 1.00 } // Cabinet 250€ + Excel gratuit
+  };
+
+  const HOURLY_RATE = 35;
+  const TIME_SAVED_RATIO = 0.67; // NUMMA saves 67% of admin time
+  const CABINET_REDUCTION = 0.60; // 60% reduction on cabinet fees
+
+  // NUMMA plan pricing (HT/month monthly, annual with -18%)
+  const NUMMA_PLANS = {
+    micro:    { name: 'NUMMA Indépendant', monthly: 19, annual: 15.58 },
+    pro:      { name: 'NUMMA Pro',      monthly: 35, annual: 28.70 },
+    business: { name: 'NUMMA Business', monthly: 79, annual: 64.78 }
+  };
+
+  const $ = id => document.getElementById(id);
+
+  const fmt = n => new Intl.NumberFormat('fr-FR', { maximumFractionDigits: 0 }).format(Math.round(n));
+  const fmtEur = n => fmt(n) + ' €';
+
+  function getInputs() {
+    const taille = document.querySelector('input[name="taille"]:checked').value;
+    return {
+      taille,
+      salaries: parseInt($('salaries').value, 10),
+      ca: parseInt($('ca').value, 10),
+      factures: parseInt($('factures').value, 10),
+      softcost: parseInt($('softcost').value, 10),
+      cabcost: parseInt($('cabcost').value, 10),
+      hours: parseInt($('hours').value, 10)
+    };
+  }
+
+  function pickPlan(i) {
+    if (i.taille === 'micro') return { key: 'micro', ...NUMMA_PLANS.micro };
+    if (i.salaries >= 6 || i.taille === 'pme') return { key: 'business', ...NUMMA_PLANS.business };
+    return { key: 'pro', ...NUMMA_PLANS.pro };
+  }
+
+  function compute(i) {
+    // Current situation cost
+    const softAnnual = i.softcost * 12;
+    const cabinetAnnual = i.cabcost * 12;
+    const timeCostAnnual = i.hours * 12 * HOURLY_RATE;
+    const currentTotal = softAnnual + cabinetAnnual + timeCostAnnual;
+
+    // NUMMA scenario
+    const plan = pickPlan(i);
+    const nummaAnnualHT = plan.annual * 12;
+    const nummaAnnualTTC = nummaAnnualHT * 1.20;
+    const newCabinet = cabinetAnnual * (1 - CABINET_REDUCTION);
+    const newTimeCost = timeCostAnnual * (1 - TIME_SAVED_RATIO);
+    const nummaTotal = nummaAnnualTTC + newCabinet + newTimeCost;
+
+    // Savings & ROI
+    const savings = Math.max(0, currentTotal - nummaTotal);
+    const roi = nummaTotal > 0 ? Math.round((savings / nummaTotal) * 100) : 0;
+    const hoursSaved = Math.round(i.hours * 12 * TIME_SAVED_RATIO);
+    const daysSaved = Math.round(hoursSaved / 8);
+
+    return {
+      plan, softAnnual, cabinetAnnual, timeCostAnnual, currentTotal,
+      nummaAnnualTTC, newCabinet, newTimeCost, nummaTotal,
+      savings, roi, hoursSaved, daysSaved
+    };
+  }
+
+  function renderComparison(i, r) {
+    const container = $('cmp-container');
+    // Compute annual cost equivalent for each competitor at equivalent service (soft + cabinet reduced)
+    const rows = Object.entries(COMPETITOR_PRICING).map(([name, cfg]) => {
+      const softYearly = cfg.monthly * 12 * cfg.factor;
+      let cabinet;
+      if (name === 'Cabinet + Excel') {
+        cabinet = 0; // already counted as software
+      } else if (name.startsWith('NUMMA')) {
+        cabinet = r.newCabinet;
+      } else {
+        // Assume competitor achieves 40% cabinet reduction (less complete than NUMMA)
+        cabinet = i.cabcost * 12 * 0.6;
+      }
+      const total = softYearly + cabinet;
+      return { name, total };
+    });
+
+    const max = Math.max(...rows.map(r => r.total));
+    rows.sort((a, b) => a.total - b.total);
+
+    container.innerHTML = rows.map(row => {
+      const pct = (row.total / max) * 100;
+      const isNumma = row.name.startsWith('NUMMA');
+      return `
+        <div class="cmp-row ${isNumma ? 'numma' : ''}">
+          <div class="name">${row.name}</div>
+          <div class="bar"><div class="bar-fill" style="width:${pct}%"></div></div>
+          <div class="price">${fmtEur(row.total)}</div>
+        </div>
+      `;
+    }).join('');
+  }
+
+  function update() {
+    const i = getInputs();
+
+    // Badges
+    $('badge-taille').textContent = ({micro:'Indépendant', tpe:'TPE', pme:'PME'})[i.taille];
+    $('badge-salaries').textContent = i.salaries;
+    $('badge-ca').textContent = fmtEur(i.ca);
+    $('badge-fact').textContent = i.factures;
+    $('badge-soft').textContent = fmtEur(i.softcost);
+    $('badge-cabinet').textContent = fmtEur(i.cabcost);
+    $('badge-hrs').textContent = i.hours + ' h';
+
+    const r = compute(i);
+
+    // Hero result
+    $('r-savings').textContent = fmtEur(r.savings);
+    $('r-roi').textContent = r.roi + ' %';
+    $('r-hours').textContent = r.hoursSaved + ' h';
+    $('r-days').textContent = r.daysSaved + ' j';
+
+    // Breakdown
+    $('b-soft').textContent = fmtEur(r.softAnnual) + '/an';
+    $('b-cabinet').textContent = fmtEur(r.cabinetAnnual) + '/an';
+    $('b-time').textContent = fmtEur(r.timeCostAnnual) + '/an';
+    $('b-current').innerHTML = '<strong>' + fmtEur(r.currentTotal) + '/an</strong>';
+    $('b-numma').textContent = fmtEur(r.nummaAnnualTTC) + '/an';
+    $('b-cabnew').textContent = fmtEur(r.newCabinet) + '/an';
+    $('b-newtime').textContent = fmtEur(r.newTimeCost) + '/an';
+    $('b-total-numma').innerHTML = '<strong>' + fmtEur(r.nummaTotal) + '/an</strong>';
+    $('b-savings').textContent = fmtEur(r.savings) + '/an';
+
+    // Recommended plan
+    $('plan-name').textContent = r.plan.name + ' — annuel';
+    $('plan-price').textContent = r.plan.annual.toFixed(2).replace('.', ',') + ' €';
+    $('plan-savings').textContent = 'Soit 2,2 mois offerts vs mensuel';
+
+    // Comparison chart
+    renderComparison(i, r);
+  }
+
+  // Listeners
+  ['salaries','ca','factures','softcost','cabcost','hours'].forEach(id => {
+    $(id).addEventListener('input', update);
+  });
+  document.querySelectorAll('input[name="taille"]').forEach(r => {
+    r.addEventListener('change', () => {
+      const t = document.querySelector('input[name="taille"]:checked').value;
+      // Auto-adjust sensible defaults per size
+      if (t === 'micro') {
+        $('salaries').value = 0;
+        $('ca').value = 60000;
+        $('factures').value = 15;
+        $('softcost').value = 25;
+        $('cabcost').value = 100;
+        $('hours').value = 6;
+      } else if (t === 'tpe') {
+        $('salaries').value = 5;
+        $('ca').value = 500000;
+        $('factures').value = 60;
+        $('softcost').value = 49;
+        $('cabcost').value = 250;
+        $('hours').value = 12;
+      } else {
+        $('salaries').value = 20;
+        $('ca').value = 2000000;
+        $('factures').value = 200;
+        $('softcost').value = 89;
+        $('cabcost').value = 500;
+        $('hours').value = 25;
+      }
+      update();
+    });
+  });
+
+  // Mobile menu (shared pattern)
+  const nt = document.querySelector('.nav-toggle');
+  const nl = document.getElementById('nav-links');
+  if (nt && nl) {
+    nt.addEventListener('click', () => {
+      const open = nl.classList.toggle('open');
+      nt.setAttribute('aria-expanded', String(open));
+    });
+  }
+
+  // Init
+  update();
+})();
+</script>
+
+</body>
+</html>

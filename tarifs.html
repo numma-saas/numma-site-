@@ -11,9 +11,9 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tarifs NUMMA — À partir de 19 €/mois (essai gratuit 14 jours)</title>
-  <meta name="description" content="Tarifs NUMMA : Indépendant 19 €/mois, Pro 35 €/mois, Business 79 €/mois, Enterprise sur devis. Sans engagement, support français inclus, expert-comptable invité gratuitement.">
-  <meta name="keywords" content="tarifs logiciel comptabilité, prix SaaS gestion entreprise, abonnement compta, prix facturation électronique, tarif paie">
+  <title>Tarifs NUMMA — À partir de 19 €/mois · 14 jours gratuits sans CB</title>
+  <meta name="description" content="Tarifs transparents NUMMA : Indépendant 19 €, Pro 35 € (28,70 € en annuel), Business 79 € (64,78 € en annuel), Enterprise sur devis. 14 jours d'essai gratuit, sans carte bancaire, sans engagement. −18 % en paiement annuel = 2,2 mois offerts.">
+  <meta name="keywords" content="tarifs logiciel comptabilité, prix SaaS gestion entreprise, abonnement compta, prix facturation électronique, tarif paie, calculateur ROI logiciel gestion">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.numma.eu/tarifs.html">
   <meta property="og:title" content="Tarifs NUMMA — Compta, paie, facturation à partir de 19 €/mois">
@@ -90,6 +90,50 @@
     .price-paie-detail[open] summary { color: var(--numma-purple-700); }
     .price-paie-detail .paie-body { background: var(--numma-purple-50); border-radius: var(--radius-sm); padding: 0.65rem 0.85rem; margin-top: 0.5rem; font-size: 0.82rem; color: var(--ink-600); line-height: 1.5; }
     .price-paie-detail .paie-body strong { color: var(--ink-800); }
+
+    /* Billing toggle */
+    .billing-toggle { display: flex; align-items: center; justify-content: center; gap: 0.85rem; margin: 0 0 2.25rem; flex-wrap: wrap; }
+    .billing-toggle .toggle-labels { display: flex; align-items: center; gap: 0.35rem; background: var(--ink-50); border: 1px solid var(--ink-100); border-radius: var(--radius-full); padding: 0.35rem; position: relative; }
+    .billing-toggle input[type="radio"] { display: none; }
+    .billing-toggle label { padding: 0.55rem 1.5rem; border-radius: var(--radius-full); font-weight: 700; font-size: 0.92rem; color: var(--ink-500); cursor: pointer; transition: color 0.2s, background 0.2s; margin: 0; }
+    .billing-toggle input[type="radio"]:checked + label { background: var(--white); color: var(--numma-purple-700); box-shadow: 0 2px 6px rgba(0,0,0,0.08); }
+    .billing-toggle .save-badge { background: linear-gradient(135deg, #22C55E, #16A34A); color: white; padding: 0.45rem 0.9rem; border-radius: var(--radius-full); font-size: 0.78rem; font-weight: 800; letter-spacing: 0.02em; box-shadow: 0 4px 12px rgba(34,197,94,0.25); animation: floaty 3s ease-in-out infinite; }
+    @keyframes floaty { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-3px)} }
+    .price-annual-note { display: block; font-size: 0.78rem; color: #16A34A; font-weight: 700; margin-top: 0.35rem; opacity: 0; height: 0; transition: opacity 0.3s; }
+    .billing-annual .price-annual-note { opacity: 1; height: auto; margin-top: 0.35rem; }
+
+    /* Trust bar reinforcement */
+    .trust-strip { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; margin: 1.5rem 0 0; padding: 1rem 1.5rem; background: linear-gradient(90deg, var(--numma-purple-50), var(--white), var(--numma-purple-50)); border-radius: var(--radius-lg); border: 1px solid var(--numma-purple-100); }
+    .trust-strip span { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.9rem; font-weight: 600; color: var(--ink-700); }
+    .trust-strip span::before { content: "✓"; color: #16A34A; font-weight: 800; font-size: 1.05rem; }
+
+    /* ROI CTA card */
+    .roi-cta-card { background: linear-gradient(135deg, #5B21B6 0%, #7C3AED 50%, #FB923C 100%); border-radius: var(--radius-xl); padding: 2.5rem 2rem; color: white; text-align: center; margin: 3rem 0 2rem; box-shadow: 0 20px 50px rgba(124,58,237,0.25); }
+    .roi-cta-card h3 { color: white; font-size: clamp(1.3rem, 2.5vw, 1.75rem); margin-bottom: 0.5rem; }
+    .roi-cta-card p { opacity: 0.95; max-width: 520px; margin: 0 auto 1.25rem; font-size: 0.98rem; }
+    .roi-cta-card .btn { background: white; color: var(--numma-purple-700); font-weight: 700; }
+    .roi-cta-card .btn:hover { background: #F5F3FF; }
+    .roi-cta-card .roi-badge { display: inline-block; background: rgba(255,255,255,0.2); padding: 0.35rem 0.85rem; border-radius: var(--radius-full); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 1rem; }
+
+    /* Competitor comparison table */
+    .versus-wrap { background: var(--white); border: 1px solid var(--ink-100); border-radius: var(--radius-xl); box-shadow: var(--shadow-sm); overflow: hidden; margin-top: 1.5rem; }
+    .versus-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .versus-tbl { width: 100%; border-collapse: collapse; min-width: 780px; }
+    .versus-tbl th, .versus-tbl td { padding: 0.9rem 1rem; text-align: center; border-bottom: 1px solid var(--ink-100); font-size: 0.9rem; }
+    .versus-tbl th:first-child, .versus-tbl td:first-child { text-align: left; font-weight: 600; color: var(--ink-700); position: sticky; left: 0; background: var(--white); z-index: 2; min-width: 220px; }
+    .versus-tbl thead th { background: var(--ink-50); font-weight: 700; font-size: 0.85rem; color: var(--ink-600); text-transform: uppercase; letter-spacing: 0.03em; padding-top: 1.15rem; padding-bottom: 1.15rem; border-bottom: 2px solid var(--ink-100); }
+    .versus-tbl thead th.numma-col { background: linear-gradient(135deg, #5B21B6, #7C3AED); color: white; position: relative; }
+    .versus-tbl thead th.numma-col::before { content: "★ Champion"; position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background: #FB923C; color: white; font-size: 0.7rem; padding: 0.15rem 0.55rem; border-radius: var(--radius-full); font-weight: 800; letter-spacing: 0.05em; }
+    .versus-tbl td.numma-cell { background: var(--numma-purple-50); font-weight: 700; color: var(--numma-purple-700); }
+    .versus-tbl td:first-child.numma-cell { background: var(--white); color: var(--ink-700); font-weight: 600; }
+    .versus-tbl tr.section-row td { background: var(--ink-50); font-weight: 800; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-500); text-align: left !important; padding: 0.65rem 1rem; }
+    .versus-tbl .yes { color: #16A34A; font-weight: 800; }
+    .versus-tbl .no { color: #DC2626; font-weight: 700; opacity: 0.7; }
+    .versus-tbl .partial { color: #F59E0B; font-weight: 700; font-size: 0.82rem; }
+    .versus-tbl .price-row td { font-weight: 800; }
+    .versus-tbl .price-row td.numma-cell { color: var(--numma-purple-700); font-size: 1rem; }
+    .versus-footer { padding: 1.25rem 1.5rem; background: var(--ink-50); font-size: 0.82rem; color: var(--ink-500); text-align: center; border-top: 1px solid var(--ink-100); }
+    .versus-footer a { color: var(--numma-purple-700); font-weight: 600; }
   </style>
 </head>
 <body>
@@ -143,12 +187,24 @@
       <a href="micro-entreprise.html" class="btn btn-primary btn-sm">Voir l'offre Indépendant →</a>
     </div>
 
-    <div class="pricing-grid">
+    <!-- Billing toggle Monthly / Annual -->
+    <div class="billing-toggle">
+      <div class="toggle-labels" role="radiogroup" aria-label="Choix de facturation">
+        <input type="radio" name="billing" id="bill-monthly" value="monthly" checked>
+        <label for="bill-monthly">Mensuel</label>
+        <input type="radio" name="billing" id="bill-annual" value="annual">
+        <label for="bill-annual">Annuel</label>
+      </div>
+      <span class="save-badge">🎁 2,2 mois offerts</span>
+    </div>
+
+    <div class="pricing-grid" id="pricing-grid">
       <article class="price-card">
         <div class="price-name">Pro</div>
         <div class="price-desc">Pour les TPE qui veulent tout piloter seules.</div>
-        <div class="price-amount"><span class="currency">€</span><span class="value">35</span><span class="period">/ mois HT</span></div>
-        <div class="price-billed">Sans engagement · Mensuel</div>
+        <div class="price-amount" data-monthly="35" data-annual="28,70"><span class="currency">€</span><span class="value">35</span><span class="period">/ mois HT</span></div>
+        <div class="price-billed" data-monthly="Sans engagement · Facturation mensuelle" data-annual="Facturation annuelle · 344,40 € HT/an">Sans engagement · Facturation mensuelle</div>
+        <span class="price-annual-note">→ économie de 74 € par an vs mensuel</span>
         <a href="reserver-demo.html" class="btn btn-secondary">Démarrer 14 jours gratuits</a>
         <ul class="price-features">
           <li>Facturation électronique illimitée</li>
@@ -174,8 +230,9 @@
         <div class="price-badge">Le plus choisi</div>
         <div class="price-name">Business</div>
         <div class="price-desc">Pour les PME et scale-ups en structuration.</div>
-        <div class="price-amount"><span class="currency">€</span><span class="value">79</span><span class="period">/ mois HT</span></div>
-        <div class="price-billed">Sans engagement · Mensuel</div>
+        <div class="price-amount" data-monthly="79" data-annual="64,78"><span class="currency">€</span><span class="value">79</span><span class="period">/ mois HT</span></div>
+        <div class="price-billed" data-monthly="Sans engagement · Facturation mensuelle" data-annual="Facturation annuelle · 777,36 € HT/an">Sans engagement · Facturation mensuelle</div>
+        <span class="price-annual-note">→ économie de 171 € par an vs mensuel</span>
         <a href="reserver-demo.html" class="btn btn-primary">Démarrer 14 jours gratuits</a>
         <ul class="price-features">
           <li>Tout ce qui est dans Pro</li>
@@ -216,10 +273,179 @@
       </article>
     </div>
 
-    <p class="text-center" style="margin-top:2rem; color:var(--ink-500);">
+    <!-- Trust strip: kill objections -->
+    <div class="trust-strip">
+      <span>14 jours d'essai gratuit</span>
+      <span>Sans carte bancaire</span>
+      <span>Sans engagement</span>
+      <span>Résiliation en 1 clic</span>
+      <span>Support 100% français</span>
+    </div>
+
+    <p class="text-center" style="margin-top:1.5rem; color:var(--ink-500);">
       Tous les prix s'entendent hors taxes. TVA 20 % applicable en France.
-      <br>Paiement par CB ou prélèvement SEPA. Annulation à tout moment. <strong>2 mois offerts</strong> en paiement annuel.
+      <br>Paiement par CB ou prélèvement SEPA. Annulation à tout moment. <strong>2,2 mois offerts</strong> en paiement annuel (−18 %).
     </p>
+
+    <!-- ROI Calculator CTA card -->
+    <div class="roi-cta-card">
+      <span class="roi-badge">Nouveau · Calculateur interactif</span>
+      <h3>Combien économisez-vous avec NUMMA ?</h3>
+      <p>Simulation honnête basée sur les prix publics de Pennylane, Sage, Cegid, Alteore et les honoraires cabinet. Résultat en 30 secondes.</p>
+      <a href="calculateur-roi.html" class="btn btn-lg">💰 Calculer mes économies →</a>
+    </div>
+  </div>
+</section>
+
+<!-- Competitor comparison -->
+<section>
+  <div class="container">
+    <header class="section-header">
+      <span class="eyebrow">Comparatif honnête 2026</span>
+      <h2>NUMMA vs les autres — <span class="gradient-text">le vrai match</span></h2>
+      <p class="lead" style="max-width:720px;">Ce que fait réellement chaque solution, module par module. Aucun jugement de goût — que des fonctions vérifiables sur les pages produit des concurrents.</p>
+    </header>
+
+    <div class="versus-wrap">
+      <div class="versus-scroll">
+        <table class="versus-tbl">
+          <thead>
+            <tr>
+              <th>Fonctionnalité</th>
+              <th class="numma-col">NUMMA</th>
+              <th>Alteore</th>
+              <th>Pennylane</th>
+              <th>Sage</th>
+              <th>Cegid</th>
+              <th>Excel</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="section-row"><td colspan="7">Facturation & conformité 2026</td></tr>
+            <tr>
+              <td>Facturation Factur-X (PDP/PPF)</td>
+              <td class="numma-cell yes">✓ Natif</td>
+              <td class="no">Non prévu</td>
+              <td class="yes">✓</td>
+              <td class="partial">Partiel</td>
+              <td class="yes">✓</td>
+              <td class="no">✗</td>
+            </tr>
+            <tr>
+              <td>Relances automatiques J+7/15/30</td>
+              <td class="numma-cell yes">✓ Séquence IA</td>
+              <td class="partial">Manuel</td>
+              <td class="yes">✓</td>
+              <td class="yes">✓</td>
+              <td class="yes">✓</td>
+              <td class="no">✗</td>
+            </tr>
+
+            <tr class="section-row"><td colspan="7">Comptabilité française</td></tr>
+            <tr>
+              <td>Grand livre, balance, préparation bilan</td>
+              <td class="numma-cell yes">✓ Complet</td>
+              <td class="no">Non — pilotage seulement</td>
+              <td class="yes">✓</td>
+              <td class="yes">✓</td>
+              <td class="yes">✓</td>
+              <td class="partial">Manuel</td>
+            </tr>
+            <tr>
+              <td>TVA CA3/CA12 assistée + export FEC</td>
+              <td class="numma-cell yes">✓ Export FEC</td>
+              <td class="no">Export basique</td>
+              <td class="yes">✓</td>
+              <td class="yes">✓</td>
+              <td class="yes">✓</td>
+              <td class="no">✗</td>
+            </tr>
+
+            <tr class="section-row"><td colspan="7">Paie & RH</td></tr>
+            <tr>
+              <td>Fiches de paie + DSN nominative</td>
+              <td class="numma-cell yes">✓ Pro/Business</td>
+              <td class="partial">169 €/mois add-on</td>
+              <td class="no">✗</td>
+              <td class="partial">Module séparé</td>
+              <td class="yes">✓</td>
+              <td class="no">✗</td>
+            </tr>
+            <tr>
+              <td>Documents RH générés par IA (CDI, CDD, attestations)</td>
+              <td class="numma-cell yes">✓ Claude natif</td>
+              <td class="partial">Master 169€</td>
+              <td class="no">✗</td>
+              <td class="no">✗</td>
+              <td class="no">✗</td>
+              <td class="no">✗</td>
+            </tr>
+
+            <tr class="section-row"><td colspan="7">Trésorerie & IA</td></tr>
+            <tr>
+              <td>Prévisions trésorerie IA rédigées (30/60/90j)</td>
+              <td class="numma-cell yes">✓ Langage naturel</td>
+              <td class="partial">Chat Léa</td>
+              <td class="partial">Basique</td>
+              <td class="no">✗</td>
+              <td class="partial">Add-on</td>
+              <td class="no">✗</td>
+            </tr>
+            <tr>
+              <td>Agrégation bancaire (Open Banking DSP2)</td>
+              <td class="numma-cell yes">✓ +2 000 banques</td>
+              <td class="yes">✓</td>
+              <td class="yes">✓</td>
+              <td class="yes">✓</td>
+              <td class="yes">✓</td>
+              <td class="no">✗</td>
+            </tr>
+
+            <tr class="section-row"><td colspan="7">Plateforme & confiance</td></tr>
+            <tr>
+              <td>Hébergement 100 % France</td>
+              <td class="numma-cell yes">✓ OVHcloud</td>
+              <td class="partial">Firebase / Google</td>
+              <td class="yes">✓</td>
+              <td class="partial">Multi-cloud</td>
+              <td class="yes">✓</td>
+              <td class="no">Dépend</td>
+            </tr>
+            <tr>
+              <td>Support 100 % français inclus</td>
+              <td class="numma-cell yes">✓</td>
+              <td class="yes">✓</td>
+              <td class="yes">✓</td>
+              <td class="partial">Payant</td>
+              <td class="partial">Payant</td>
+              <td class="no">✗</td>
+            </tr>
+            <tr>
+              <td>Interface unifiée (compta + paie + trésorerie + facturation)</td>
+              <td class="numma-cell yes">✓ Tout-en-un</td>
+              <td class="partial">Sans vraie compta</td>
+              <td class="no">Compta seulement</td>
+              <td class="no">Modules séparés</td>
+              <td class="no">Modules séparés</td>
+              <td class="no">✗</td>
+            </tr>
+
+            <tr class="price-row">
+              <td>Prix mensuel TPE 5 salariés (HT)</td>
+              <td class="numma-cell">35 € <small style="font-weight:500;">→ 28,70 € annuel</small></td>
+              <td>69 €</td>
+              <td>49 €</td>
+              <td>39 €</td>
+              <td>89 €</td>
+              <td>0 €<small style="font-weight:500;color:#DC2626;"> + 250 € cabinet</small></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="versus-footer">
+        Sources : pages tarifs publiques 2026 — <a href="https://alteore.com" rel="nofollow noopener" target="_blank">alteore.com</a>, <a href="https://pennylane.com" rel="nofollow noopener" target="_blank">pennylane.com</a>, <a href="https://sage.com/fr-fr" rel="nofollow noopener" target="_blank">sage.com</a>, <a href="https://cegid.com" rel="nofollow noopener" target="_blank">cegid.com</a>. Fonctionnalités vérifiées en juin 2026.
+      </div>
+    </div>
   </div>
 </section>
 
@@ -302,7 +528,7 @@
       </details>
       <details class="faq-item">
         <summary>Puis-je payer à l'année avec une réduction ?</summary>
-        <p>Oui. Le paiement annuel donne droit à 2 mois offerts (équivalent à -16 %). Cela s'active depuis l'espace de facturation.</p>
+        <p>Oui. Le paiement annuel donne droit à <strong>2,2 mois offerts (−18 %)</strong>. Concrètement : Pro passe de 35 € à 28,70 € HT/mois, Business de 79 € à 64,78 € HT/mois. Cela s'active en un clic depuis l'espace de facturation, et vous pouvez revenir en mensuel à tout moment lors du renouvellement.</p>
       </details>
       <details class="faq-item">
         <summary>Quels moyens de paiement acceptez-vous ?</summary>
@@ -358,5 +584,65 @@
 
 <script src="js/cookies.js" defer></script>
 <script src="js/main.js" defer></script>
+
+<script>
+// Billing toggle Monthly / Annual
+(function(){
+  const radios = document.querySelectorAll('input[name="billing"]');
+  const prices = document.querySelectorAll('.price-amount[data-monthly]');
+  const billed = document.querySelectorAll('.price-billed[data-monthly]');
+  const grid = document.getElementById('pricing-grid');
+  function update(mode) {
+    prices.forEach(p => {
+      const v = p.getAttribute('data-' + mode);
+      const valueEl = p.querySelector('.value');
+      if (v && valueEl) valueEl.textContent = v;
+      // Handle comma prices: annual has ',70' so span needs single wrapper
+      if (mode === 'annual' && v.includes(',')) {
+        valueEl.style.fontSize = 'clamp(2.2rem, 5vw, 3rem)';
+      } else {
+        valueEl.style.fontSize = '';
+      }
+    });
+    billed.forEach(b => {
+      const v = b.getAttribute('data-' + mode);
+      if (v) b.textContent = v;
+    });
+    if (grid) {
+      grid.classList.toggle('billing-annual', mode === 'annual');
+    }
+    // Analytics
+    if (typeof gtag === 'function') {
+      gtag('event', 'billing_toggle', { billing_mode: mode });
+    }
+  }
+  radios.forEach(r => r.addEventListener('change', () => update(r.value)));
+})();
+</script>
+
+<!-- Update FAQPage schema to include ROI + billing -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Puis-je payer à l'année avec une réduction ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Oui. Le paiement annuel donne droit à 2,2 mois offerts (−18 %). Pro passe de 35 € à 28,70 € HT/mois, Business de 79 € à 64,78 € HT/mois." }
+    },
+    {
+      "@type": "Question",
+      "name": "L'essai gratuit est-il vraiment sans engagement ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Oui. Pas de carte bancaire demandée, pas de prélèvement automatique. Au bout de 14 jours, l'accès passe en mode lecture jusqu'à votre activation manuelle." }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment fonctionne la tarification de la paie ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Facturée à l'usage : 7 €/employé sur Pro, 5 €/employé sur Business, illimité inclus sur Enterprise." }
+    }
+  ]
+}
+</script>
 </body>
 </html>

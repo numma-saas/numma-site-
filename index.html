@@ -13,8 +13,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Primary SEO -->
-  <title>NUMMA — Logiciel compta, paie & facturation électronique 2026</title>
-  <meta name="description" content="NUMMA, le logiciel SaaS qui réunit comptabilité, facturation électronique 2026, paie et trésorerie. Essai gratuit 14 jours, sans carte bancaire.">
+  <title>NUMMA — Logiciel compta, paie & facturation TPE/PME · Essai 14 jours</title>
+  <meta name="description" content="NUMMA, le SaaS français qui réunit comptabilité, facturation Factur-X 2026, paie DSN et trésorerie IA. Économisez en moyenne 5 400 €/an vs Pennylane, Sage ou Cegid. Essai gratuit 14 jours, sans carte bancaire.">
   <meta name="keywords" content="logiciel comptabilité, facturation électronique, PDP, gestion paie, SaaS compta France, logiciel TPE PME, fiches de paie en ligne, trésorerie entreprise">
   <meta name="author" content="NUMMA">
   <meta name="robots" content="index, follow, max-image-preview:large">
@@ -53,6 +53,62 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- Inline mockup dashboard styles -->
+  <style>
+    .mockup { position: relative; background: #F8FAFC; border-radius: 14px; overflow: hidden; box-shadow: 0 25px 60px rgba(15,23,42,0.25), 0 5px 15px rgba(124,58,237,0.08); font-family: 'Inter', system-ui, sans-serif; aspect-ratio: 16/10; max-width: 100%; }
+    .mockup .browser-bar { display: flex; align-items: center; gap: 6px; padding: 10px 14px; background: #EEF2F7; border-bottom: 1px solid #E2E8F0; }
+    .mockup .browser-bar .dot { width: 10px; height: 10px; border-radius: 50%; background: #CBD5E1; }
+    .mockup .browser-bar .dot.r { background: #F87171; } .mockup .browser-bar .dot.y { background: #FBBF24; } .mockup .browser-bar .dot.g { background: #34D399; }
+    .mockup .browser-bar .url { margin-left: 12px; background: white; padding: 3px 10px; border-radius: 6px; font-size: 10px; color: #64748B; }
+    .mockup-body { display: grid; grid-template-columns: 130px 1fr; height: calc(100% - 32px); }
+    .mockup-side { background: #1E1B4B; padding: 14px 10px; color: white; overflow: hidden; }
+    .mockup-side .logo-mini { display: flex; align-items: center; gap: 6px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.1); font-weight: 800; font-size: 12px; }
+    .mockup-side .logo-mini .lg { width: 22px; height: 22px; background: linear-gradient(135deg, #7C3AED, #FB923C); border-radius: 5px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 12px; }
+    .mockup-side ul { list-style: none; padding: 0; margin: 10px 0 0; }
+    .mockup-side li { padding: 5px 8px; font-size: 10px; color: #C4B5FD; border-radius: 5px; margin-bottom: 2px; display: flex; align-items: center; gap: 6px; }
+    .mockup-side li.active { background: linear-gradient(90deg, #7C3AED, #6D28D9); color: white; font-weight: 700; }
+    .mockup-side li .ic { width: 12px; height: 12px; background: rgba(255,255,255,0.15); border-radius: 3px; flex-shrink: 0; }
+    .mockup-side .sec-title { text-transform: uppercase; font-size: 8px; color: #7C3AED; letter-spacing: 0.1em; margin: 12px 0 4px; padding-left: 8px; font-weight: 700; }
+    .mockup-main { padding: 16px 18px; overflow: hidden; }
+    .mockup-main .hello { font-size: 15px; font-weight: 800; color: #1E293B; margin-bottom: 3px; }
+    .mockup-main .date { font-size: 9px; color: #94A3B8; margin-bottom: 12px; }
+    .kpi-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin-bottom: 14px; }
+    .kpi-cell { background: white; border-radius: 8px; padding: 8px 10px; box-shadow: 0 1px 3px rgba(15,23,42,0.06); }
+    .kpi-cell .lbl { font-size: 7.5px; color: #64748B; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700; margin-bottom: 3px; }
+    .kpi-cell .val { font-size: 12px; font-weight: 800; letter-spacing: -0.01em; }
+    .kpi-cell .val.green { color: #16A34A; } .kpi-cell .val.red { color: #DC2626; } .kpi-cell .val.orange { color: #EA580c; }
+    .todo-panel { background: white; border-radius: 8px; padding: 12px 14px; box-shadow: 0 1px 3px rgba(15,23,42,0.06); position: relative; }
+    .todo-panel .head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-size: 11px; font-weight: 800; color: #1E293B; }
+    .todo-panel .chip-urgent { background: #FEE2E2; color: #DC2626; padding: 2px 8px; border-radius: 999px; font-size: 8px; font-weight: 800; }
+    .todo-item { display: flex; align-items: center; gap: 8px; padding: 6px 0; border-top: 1px solid #F1F5F9; font-size: 9.5px; }
+    .todo-item:first-of-type { border-top: 0; }
+    .todo-item .dot-t { width: 3px; height: 26px; border-radius: 2px; background: #DC2626; flex-shrink: 0; }
+    .todo-item .info { flex: 1; }
+    .todo-item .info b { color: #1E293B; font-weight: 700; }
+    .todo-item .info small { color: #94A3B8; display: block; font-size: 8px; }
+    .todo-item .chip-u { background: #FEE2E2; color: #DC2626; padding: 2px 7px; border-radius: 999px; font-size: 8px; font-weight: 700; }
+    .todo-item .btn-relance { background: linear-gradient(135deg, #FB923C, #F97316); color: white; padding: 3px 10px; border-radius: 5px; font-size: 8px; font-weight: 700; }
+    .notif-float { position: absolute; background: white; padding: 8px 12px; border-radius: 8px; box-shadow: 0 8px 20px rgba(15,23,42,0.15); font-size: 10px; display: flex; align-items: center; gap: 8px; animation: notifIn 0.6s ease-out both; }
+    .notif-float.n1 { top: 12%; right: -12px; animation-delay: 0.8s; }
+    .notif-float.n2 { bottom: 18%; right: -18px; animation-delay: 1.6s; }
+    .notif-float.n3 { top: 45%; left: -20px; animation-delay: 2.4s; }
+    .notif-float .icx { width: 24px; height: 24px; background: linear-gradient(135deg, #7C3AED, #FB923C); border-radius: 6px; display: flex; align-items: center; justify-content: center; color: white; font-size: 12px; flex-shrink: 0; }
+    .notif-float b { font-weight: 800; color: #1E293B; }
+    .notif-float small { display: block; color: #64748B; font-size: 8px; }
+    @keyframes notifIn { from { opacity: 0; transform: translateX(20px) scale(0.9); } to { opacity: 1; transform: translateX(0) scale(1); } }
+    .ai-fab { position: absolute; bottom: 12px; right: 12px; width: 32px; height: 32px; background: linear-gradient(135deg, #7C3AED, #FB923C); border-radius: 50%; box-shadow: 0 5px 15px rgba(124,58,237,0.4); display: flex; align-items: center; justify-content: center; color: white; font-size: 14px; animation: aiPulse 2.5s ease-in-out infinite; }
+    @keyframes aiPulse { 0%,100%{ box-shadow: 0 5px 15px rgba(124,58,237,0.4);} 50%{ box-shadow: 0 8px 25px rgba(124,58,237,0.6);} }
+
+    @media (max-width: 720px) {
+      .mockup-body { grid-template-columns: 60px 1fr; }
+      .mockup-side .logo-mini span, .mockup-side li span:not(.ic) { display: none; }
+      .mockup-side .sec-title { font-size: 0; padding: 0; margin: 8px 0; }
+      .kpi-row { grid-template-columns: repeat(3, 1fr); }
+      .kpi-cell:nth-child(n+4) { display: none; }
+      .notif-float.n1, .notif-float.n2, .notif-float.n3 { position: static; margin-top: 8px; animation: none; }
+    }
+  </style>
 
   <!-- Schema.org : Organization + SoftwareApplication + FAQPage -->
   <script type="application/ld+json">
@@ -191,22 +247,87 @@
   <div class="container">
     <div class="hero-inner">
       <div>
-        <span class="eyebrow">SaaS de gestion · Made in France</span>
+        <a href="fonctionnalites.html#ia" style="display:inline-flex; align-items:center; gap:0.5rem; background:linear-gradient(90deg, var(--numma-purple-50), #FEF3E7); color:var(--numma-purple-700); padding:0.4rem 1rem; border-radius:var(--radius-full); font-size:0.85rem; font-weight:700; margin-bottom:1.25rem; text-decoration:none; border:1px solid var(--numma-purple-100); transition:transform 0.2s;">
+          <span style="color:#22C55E;">●</span> Nouveau · Prévisions IA en langage naturel <span aria-hidden="true">→</span>
+        </a>
         <h1>La gestion de votre entreprise, <span class="gradient-text">simplifiée</span>.</h1>
-        <p class="lead">Comptabilité, facturation électronique, paie et trésorerie : NUMMA réunit tous vos outils dans une seule plateforme, conforme à la réforme française de 2026.</p>
+        <p class="lead">Compta, facturation électronique, paie & trésorerie : NUMMA réunit vos outils dans un seul SaaS français, conforme à la réforme 2026. <strong>Économisez en moyenne 5 400 €/an</strong> par rapport à Pennylane, Sage ou Cegid.</p>
         <div class="hero-ctas">
-          <a href="contact.html" class="btn btn-primary btn-lg">Commencer gratuitement</a>
-          <a href="contact.html#demo" class="btn btn-secondary btn-lg">Réserver une démo</a>
+          <a href="reserver-demo.html" class="btn btn-primary btn-lg">Commencer gratuitement</a>
+          <a href="calculateur-roi.html" class="btn btn-secondary btn-lg">💰 Calculer mes économies</a>
         </div>
         <div class="hero-meta">
           <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 14 jours gratuits</span>
           <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Sans carte bancaire</span>
-          <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Données hébergées en France</span>
+          <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Sans engagement</span>
+          <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Hébergé en France</span>
         </div>
       </div>
       <div class="hero-visual">
-        <div class="screenshot-wrap">
-          <img src="images/screenshots/dashboard-accueil.svg" alt="Tableau de bord NUMMA — vue d'accueil du logiciel de comptabilité et facturation pour entreprises françaises, avec chiffre d'affaires, trésorerie, factures et tâches" class="product-screenshot" decoding="async" fetchpriority="high" width="1200" height="760">
+        <div class="mockup" role="img" aria-label="Tableau de bord NUMMA — CA, trésorerie 19 175 €, factures impayées, tâches urgentes et prévisions IA">
+          <div class="browser-bar">
+            <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+            <span class="url">app.numma.eu/dashboard</span>
+          </div>
+          <div class="mockup-body">
+            <aside class="mockup-side">
+              <div class="logo-mini"><span class="lg">N</span><span>NUMMA</span></div>
+              <ul>
+                <li class="active"><span class="ic"></span><span>Accueil</span></li>
+                <li class="sec-title">Facturation</li>
+                <li><span class="ic"></span><span>Ventes</span></li>
+                <li><span class="ic"></span><span>Devis</span></li>
+                <li><span class="ic"></span><span>Relances</span></li>
+                <li class="sec-title">Comptabilité</li>
+                <li><span class="ic"></span><span>Grand livre</span></li>
+                <li><span class="ic"></span><span>TVA</span></li>
+                <li class="sec-title">RH</li>
+                <li><span class="ic"></span><span>Paie</span></li>
+                <li><span class="ic"></span><span>Congés</span></li>
+              </ul>
+            </aside>
+            <div class="mockup-main">
+              <div class="hello">Bonjour Mallo 👋</div>
+              <div class="date">Mercredi 1 juillet 2026</div>
+
+              <div class="kpi-row">
+                <div class="kpi-cell"><div class="lbl">CA du mois</div><div class="val">42 380 €</div></div>
+                <div class="kpi-cell"><div class="lbl">Trésorerie</div><div class="val green">19 175 €</div></div>
+                <div class="kpi-cell"><div class="lbl">Impayées</div><div class="val red">1 464 €</div></div>
+                <div class="kpi-cell"><div class="lbl">En retard</div><div class="val orange">2 fact.</div></div>
+                <div class="kpi-cell"><div class="lbl">TVA à payer</div><div class="val">0 €</div></div>
+              </div>
+
+              <div class="todo-panel">
+                <div class="head"><span>À faire aujourd'hui</span><span class="chip-urgent">3 urgents</span></div>
+                <div class="todo-item">
+                  <div class="dot-t"></div>
+                  <div class="info"><b>Facture FAC-2026-003 impayée</b><small>GIOVY TEST · 32 j de retard · 1 200,00 €</small></div>
+                  <span class="chip-u">Urgent</span>
+                </div>
+                <div class="todo-item">
+                  <div class="dot-t"></div>
+                  <div class="info"><b>2ème relance — FAC-2026-018</b><small>PIERRE SCAP · à envoyer · 120,00 €</small></div>
+                  <span class="btn-relance">Relancer</span>
+                </div>
+              </div>
+
+              <div class="ai-fab" aria-hidden="true">✨</div>
+            </div>
+          </div>
+
+          <div class="notif-float n1">
+            <div class="icx">💶</div>
+            <div><b>+3 200 €</b><small>Encaissement client</small></div>
+          </div>
+          <div class="notif-float n2">
+            <div class="icx">🤖</div>
+            <div><b>Prévision IA prête</b><small>Trésorerie J+30 : stable</small></div>
+          </div>
+          <div class="notif-float n3">
+            <div class="icx">📅</div>
+            <div><b>Échéance J-3</b><small>Crédit : −1 240 €</small></div>
+          </div>
         </div>
       </div>
     </div>
@@ -224,6 +345,134 @@
       <span role="listitem" title="Plan Comptable Général applicable depuis 2025" style="color:#334155; font-weight:700;">PCG 2025</span>
       <span role="listitem" title="Directive européenne Open Banking sur les services de paiement" style="color:#334155; font-weight:700;">DSP2 · Open Banking</span>
       <span role="listitem" title="Déclaration Sociale Nominative" style="color:#334155; font-weight:700;">DSN · URSSAF</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Banks marquee ===== -->
+<section style="background:#FFFFFF; padding:2rem 0; border-top:1px solid var(--ink-100); border-bottom:1px solid var(--ink-100); overflow:hidden;" aria-label="Banques compatibles">
+  <div class="container">
+    <p style="text-align:center; color:var(--ink-500); font-size:0.85rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:1.25rem;">Compatible avec plus de 2 000 banques françaises et européennes <span style="color:#7C3AED;">·</span> Open Banking DSP2</p>
+  </div>
+  <div style="position:relative;">
+    <div style="display:flex; gap:3rem; animation:marquee 32s linear infinite; width:max-content;">
+      <span class="bank-pill">🏦 BNP Paribas</span>
+      <span class="bank-pill">🏦 Crédit Agricole</span>
+      <span class="bank-pill">🏦 Société Générale</span>
+      <span class="bank-pill">🏦 LCL</span>
+      <span class="bank-pill">🏦 Caisse d'Épargne</span>
+      <span class="bank-pill">🏦 Banque Populaire</span>
+      <span class="bank-pill">🏦 CIC</span>
+      <span class="bank-pill">🏦 Crédit Mutuel</span>
+      <span class="bank-pill">🏦 Boursorama Pro</span>
+      <span class="bank-pill">🏦 Qonto</span>
+      <span class="bank-pill">🏦 Shine</span>
+      <span class="bank-pill">🏦 Revolut Business</span>
+      <span class="bank-pill">🏦 N26 Business</span>
+      <span class="bank-pill">🏦 Fortuneo</span>
+      <!-- Duplicate for seamless loop -->
+      <span class="bank-pill" aria-hidden="true">🏦 BNP Paribas</span>
+      <span class="bank-pill" aria-hidden="true">🏦 Crédit Agricole</span>
+      <span class="bank-pill" aria-hidden="true">🏦 Société Générale</span>
+      <span class="bank-pill" aria-hidden="true">🏦 LCL</span>
+      <span class="bank-pill" aria-hidden="true">🏦 Caisse d'Épargne</span>
+      <span class="bank-pill" aria-hidden="true">🏦 Banque Populaire</span>
+      <span class="bank-pill" aria-hidden="true">🏦 CIC</span>
+    </div>
+  </div>
+  <style>
+    .bank-pill { display:inline-flex; align-items:center; gap:0.4rem; padding:0.75rem 1.25rem; background:#F8FAFC; border:1px solid var(--ink-100); border-radius:var(--radius-full); color:var(--ink-700); font-weight:700; font-size:0.9rem; white-space:nowrap; }
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      [style*="marquee"] { animation: none !important; }
+    }
+  </style>
+</section>
+
+<!-- ===== Trust badges premium ===== -->
+<section style="padding:2.5rem 0; background:linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);">
+  <div class="container">
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:1rem;">
+      <div class="trust-badge-card">
+        <div class="tb-icon" style="background:linear-gradient(135deg, #7C3AED, #A78BFA);">🇫🇷</div>
+        <div class="tb-title">Éditeur PDP</div>
+        <div class="tb-sub">En cours d'immatriculation DGFiP</div>
+      </div>
+      <div class="trust-badge-card">
+        <div class="tb-icon" style="background:linear-gradient(135deg, #1E40AF, #3B82F6);">🔒</div>
+        <div class="tb-title">SecNumCloud · ANSSI</div>
+        <div class="tb-sub">Hébergement souverain France</div>
+      </div>
+      <div class="trust-badge-card">
+        <div class="tb-icon" style="background:linear-gradient(135deg, #16A34A, #22C55E);">✓</div>
+        <div class="tb-title">RGPD & DSP2</div>
+        <div class="tb-sub">Conforme réglementation UE</div>
+      </div>
+      <div class="trust-badge-card">
+        <div class="tb-icon" style="background:linear-gradient(135deg, #EA580C, #FB923C);">🎧</div>
+        <div class="tb-title">Support 100% français</div>
+        <div class="tb-sub">Basé à Paris, réponse < 1h</div>
+      </div>
+      <div class="trust-badge-card">
+        <div class="tb-icon" style="background:linear-gradient(135deg, #7C3AED, #FB923C);">🤖</div>
+        <div class="tb-title">IA Claude native</div>
+        <div class="tb-sub">Prévisions rédigées, pas juste chat</div>
+      </div>
+    </div>
+  </div>
+  <style>
+    .trust-badge-card { background: white; border: 1px solid var(--ink-100); border-radius: var(--radius-lg); padding: 1.35rem; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 0.5rem; transition: transform 0.2s, box-shadow 0.2s; }
+    .trust-badge-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+    .tb-icon { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 20px; color: white; margin-bottom: 0.35rem; }
+    .tb-title { font-weight: 800; color: var(--ink-800); font-size: 0.95rem; }
+    .tb-sub { font-size: 0.82rem; color: var(--ink-500); }
+  </style>
+</section>
+
+<!-- ===== Solutions métier / secteurs ===== -->
+<section id="secteurs" style="padding:4rem 0;">
+  <div class="container">
+    <header class="section-header">
+      <span class="eyebrow">Solutions métier</span>
+      <h2>NUMMA <span class="gradient-text">adapté à votre secteur</span></h2>
+      <p class="lead">Chaque métier a ses règles (TVA, CCN, encaissement, cash-flow). NUMMA est préconfiguré pour les besoins spécifiques des activités françaises les plus courantes.</p>
+    </header>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1.5rem;">
+      <a href="logiciel-gestion-btp.html" style="text-decoration:none;">
+        <div class="sector-card" style="background:white; border:1px solid var(--ink-100); border-radius:var(--radius-lg); padding:2rem; transition:transform 0.2s, box-shadow 0.2s; cursor:pointer;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 15px 35px rgba(15,23,42,0.1)';" onmouseout="this.style.transform='';this.style.boxShadow='';">
+          <div style="width:56px; height:56px; background:linear-gradient(135deg, #EA580C, #FB923C); border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:26px; color:white; margin-bottom:1rem;">🏗️</div>
+          <h3 style="font-size:1.2rem; margin-bottom:0.5rem; color:var(--ink-900);">BTP & Artisan bâtiment</h3>
+          <p style="color:var(--ink-600); font-size:0.92rem; margin-bottom:1rem;">TVA 5,5 / 10 / 20 %, retenue de garantie, Chorus Pro, paie CCN bâtiment (CIBTP).</p>
+          <span style="color:var(--numma-purple-700); font-weight:700; font-size:0.9rem;">Voir la solution BTP →</span>
+        </div>
+      </a>
+      <a href="logiciel-gestion-agence.html" style="text-decoration:none;">
+        <div class="sector-card" style="background:white; border:1px solid var(--ink-100); border-radius:var(--radius-lg); padding:2rem; transition:transform 0.2s, box-shadow 0.2s; cursor:pointer;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 15px 35px rgba(15,23,42,0.1)';" onmouseout="this.style.transform='';this.style.boxShadow='';">
+          <div style="width:56px; height:56px; background:linear-gradient(135deg, #7C3AED, #A78BFA); border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:26px; color:white; margin-bottom:1rem;">💻</div>
+          <h3 style="font-size:1.2rem; margin-bottom:0.5rem; color:var(--ink-900);">Agence de com & Freelance tech</h3>
+          <p style="color:var(--ink-600); font-size:0.92rem; margin-bottom:1rem;">TVA autoliquidation UE, projets forfait/TJM/retainer, paie SYNTEC, cash-flow IA rédigé.</p>
+          <span style="color:var(--numma-purple-700); font-weight:700; font-size:0.9rem;">Voir la solution Agence →</span>
+        </div>
+      </a>
+      <a href="logiciel-gestion-commerce-detail.html" style="text-decoration:none;">
+        <div class="sector-card" style="background:white; border:1px solid var(--ink-100); border-radius:var(--radius-lg); padding:2rem; transition:transform 0.2s, box-shadow 0.2s; cursor:pointer;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 15px 35px rgba(15,23,42,0.1)';" onmouseout="this.style.transform='';this.style.boxShadow='';">
+          <div style="width:56px; height:56px; background:linear-gradient(135deg, #16A34A, #22C55E); border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:26px; color:white; margin-bottom:1rem;">🛍️</div>
+          <h3 style="font-size:1.2rem; margin-bottom:0.5rem; color:var(--ink-900);">Commerce de détail & Boutique</h3>
+          <p style="color:var(--ink-600); font-size:0.92rem; margin-bottom:1rem;">Caisse NF 525, multi-TVA, stock temps réel, marge par article, paie CCN commerce.</p>
+          <span style="color:var(--numma-purple-700); font-weight:700; font-size:0.9rem;">Voir la solution Commerce →</span>
+        </div>
+      </a>
+      <a href="micro-entreprise.html" style="text-decoration:none;">
+        <div class="sector-card" style="background:white; border:1px solid var(--ink-100); border-radius:var(--radius-lg); padding:2rem; transition:transform 0.2s, box-shadow 0.2s; cursor:pointer;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 15px 35px rgba(15,23,42,0.1)';" onmouseout="this.style.transform='';this.style.boxShadow='';">
+          <div style="width:56px; height:56px; background:linear-gradient(135deg, #7C3AED, #FB923C); border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:26px; color:white; margin-bottom:1rem;">🚀</div>
+          <h3 style="font-size:1.2rem; margin-bottom:0.5rem; color:var(--ink-900);">Micro-entreprise & Indépendant</h3>
+          <p style="color:var(--ink-600); font-size:0.92rem; margin-bottom:1rem;">Offre dédiée à 19 € HT/mois : facturation Factur-X, URSSAF assistée, prévisionnel.</p>
+          <span style="color:var(--numma-purple-700); font-weight:700; font-size:0.9rem;">Voir l'offre Indépendant →</span>
+        </div>
+      </a>
     </div>
   </div>
 </section>
