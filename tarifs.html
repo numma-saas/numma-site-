@@ -21,6 +21,9 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.numma.eu/tarifs.html">
   <meta property="og:image" content="https://www.numma.eu/images/og-cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="NUMMA — Compta, paie & facturation 2026">
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
   <meta name="theme-color" content="#7C3AED">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -91,15 +94,20 @@
     .price-paie-detail .paie-body { background: var(--numma-purple-50); border-radius: var(--radius-sm); padding: 0.65rem 0.85rem; margin-top: 0.5rem; font-size: 0.82rem; color: var(--ink-600); line-height: 1.5; }
     .price-paie-detail .paie-body strong { color: var(--ink-800); }
 
-    /* Billing toggle */
-    .billing-toggle { display: flex; align-items: center; justify-content: center; gap: 0.85rem; margin: 0 0 2.25rem; flex-wrap: wrap; }
-    .billing-toggle .toggle-labels { display: flex; align-items: center; gap: 0.35rem; background: var(--ink-50); border: 1px solid var(--ink-100); border-radius: var(--radius-full); padding: 0.35rem; position: relative; }
-    .billing-toggle input[type="radio"] { display: none; }
-    .billing-toggle label { padding: 0.55rem 1.5rem; border-radius: var(--radius-full); font-weight: 700; font-size: 0.92rem; color: var(--ink-500); cursor: pointer; transition: color 0.2s, background 0.2s; margin: 0; }
-    .billing-toggle input[type="radio"]:checked + label { background: var(--white); color: var(--numma-purple-700); box-shadow: 0 2px 6px rgba(0,0,0,0.08); }
-    .billing-toggle .save-badge { background: linear-gradient(135deg, #22C55E, #16A34A); color: white; padding: 0.45rem 0.9rem; border-radius: var(--radius-full); font-size: 0.78rem; font-weight: 800; letter-spacing: 0.02em; box-shadow: 0 4px 12px rgba(34,197,94,0.25); animation: floaty 3s ease-in-out infinite; }
-    @keyframes floaty { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-3px)} }
-    .price-annual-note { display: block; font-size: 0.78rem; color: #16A34A; font-weight: 700; margin-top: 0.35rem; opacity: 0; height: 0; transition: opacity 0.3s; }
+    /* Billing toggle — premium ON/OFF slider */
+    .billing-toggle-wrap { display: flex; flex-direction: column; align-items: center; gap: 0.75rem; margin: 0 0 2.5rem; }
+    .billing-toggle { position: relative; display: inline-flex; align-items: center; background: white; border: 2px solid var(--numma-purple-100); border-radius: var(--radius-full); padding: 6px; box-shadow: 0 4px 20px rgba(124, 58, 237, 0.12); overflow: hidden; }
+    .billing-toggle input[type="radio"] { position: absolute; opacity: 0; pointer-events: none; }
+    .billing-toggle label { position: relative; z-index: 2; padding: 0.75rem 2.2rem; border-radius: var(--radius-full); font-weight: 700; font-size: 0.95rem; color: var(--ink-500); cursor: pointer; margin: 0; transition: color 0.3s ease; user-select: none; display: flex; align-items: center; gap: 0.4rem; }
+    .billing-toggle input[type="radio"]:checked + label { color: white; }
+    .billing-toggle::before { content: ""; position: absolute; top: 6px; bottom: 6px; left: 6px; width: calc(50% - 6px); background: linear-gradient(135deg, #7C3AED 0%, #6D28D9 100%); border-radius: var(--radius-full); transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 4px 12px rgba(124, 58, 237, 0.35); z-index: 1; }
+    .billing-toggle.is-annual::before { transform: translateX(100%); }
+    .billing-toggle .save-badge-inline { display: inline-flex; align-items: center; gap: 0.3rem; background: rgba(34,197,94,0.18); color: #059669; padding: 0.15rem 0.55rem; border-radius: var(--radius-full); font-size: 0.7rem; font-weight: 800; letter-spacing: 0.02em; margin-left: 0.2rem; }
+    .billing-toggle input[type="radio"]:checked + label .save-badge-inline { background: rgba(255,255,255,0.25); color: white; }
+    .billing-tagline { font-size: 0.85rem; color: var(--ink-500); text-align: center; }
+    .billing-tagline strong { color: #16A34A; font-weight: 800; }
+
+    .price-annual-note { display: block; font-size: 0.78rem; color: #16A34A; font-weight: 700; margin-top: 0.35rem; opacity: 0; height: 0; overflow: hidden; transition: opacity 0.3s, height 0.3s; }
     .billing-annual .price-annual-note { opacity: 1; height: auto; margin-top: 0.35rem; }
 
     /* Trust bar reinforcement */
@@ -110,7 +118,7 @@
     /* ROI CTA card */
     .roi-cta-card { background: linear-gradient(135deg, #5B21B6 0%, #7C3AED 50%, #FB923C 100%); border-radius: var(--radius-xl); padding: 2.5rem 2rem; color: white; text-align: center; margin: 3rem 0 2rem; box-shadow: 0 20px 50px rgba(124,58,237,0.25); }
     .roi-cta-card h3 { color: white; font-size: clamp(1.3rem, 2.5vw, 1.75rem); margin-bottom: 0.5rem; }
-    .roi-cta-card p { opacity: 0.95; max-width: 520px; margin: 0 auto 1.25rem; font-size: 0.98rem; }
+    .roi-cta-card p { color: rgba(255,255,255,0.95); max-width: 520px; margin: 0 auto 1.25rem; font-size: 0.98rem; }
     .roi-cta-card .btn { background: white; color: var(--numma-purple-700); font-weight: 700; }
     .roi-cta-card .btn:hover { background: #F5F3FF; }
     .roi-cta-card .roi-badge { display: inline-block; background: rgba(255,255,255,0.2); padding: 0.35rem 0.85rem; border-radius: var(--radius-full); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 1rem; }
@@ -187,15 +195,15 @@
       <a href="micro-entreprise.html" class="btn btn-primary btn-sm">Voir l'offre Indépendant →</a>
     </div>
 
-    <!-- Billing toggle Monthly / Annual -->
-    <div class="billing-toggle">
-      <div class="toggle-labels" role="radiogroup" aria-label="Choix de facturation">
+    <!-- Billing toggle Monthly / Annual — premium ON/OFF slider -->
+    <div class="billing-toggle-wrap">
+      <div class="billing-toggle" id="billing-toggle" role="radiogroup" aria-label="Choix de facturation">
         <input type="radio" name="billing" id="bill-monthly" value="monthly" checked>
         <label for="bill-monthly">Mensuel</label>
         <input type="radio" name="billing" id="bill-annual" value="annual">
-        <label for="bill-annual">Annuel</label>
+        <label for="bill-annual">Annuel <span class="save-badge-inline">−18%</span></label>
       </div>
-      <span class="save-badge">🎁 2,2 mois offerts</span>
+      <div class="billing-tagline">🎁 Passez à l'annuel et récupérez <strong>2,2 mois offerts</strong> par an</div>
     </div>
 
     <div class="pricing-grid" id="pricing-grid">
@@ -297,8 +305,113 @@
   </div>
 </section>
 
-<!-- Competitor comparison -->
 <section>
+  <div class="container">
+    <header class="section-header">
+      <span class="eyebrow">Comparatif détaillé</span>
+      <h2>Tout ce qui est inclus, <span class="gradient-text">par plan</span></h2>
+    </header>
+
+    <div style="overflow-x:auto;">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th style="width:36%;">Fonctionnalité</th>
+            <th style="text-align:center;">Indépendant<br><span style="font-weight:400; color:var(--ink-500); font-size:0.85rem;">19 €/mois</span></th>
+            <th style="text-align:center;">Pro<br><span style="font-weight:400; color:var(--ink-500); font-size:0.85rem;">35 €/mois</span></th>
+            <th style="text-align:center;">Business<br><span style="font-weight:400; color:var(--ink-500); font-size:0.85rem;">79 €/mois</span></th>
+            <th style="text-align:center;">Enterprise<br><span style="font-weight:400; color:var(--ink-500); font-size:0.85rem;">Sur devis</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="section-row"><td colspan="5">Facturation électronique</td></tr>
+          <tr><td>Factures, devis, avoirs illimités</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+          <tr><td>Format Factur-X, UBL, CII</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+          <tr><td>Transmission via PPF / PDP</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+          <tr><td>Relances automatiques</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+          <tr><td>Lien de paiement intégré</td><td class="x">—</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+
+          <tr class="section-row"><td colspan="5">Pré-comptabilité</td></tr>
+          <tr><td>Compta micro (recettes/dépenses)</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+          <tr><td>Plan comptable général PCG 2025</td><td class="x">—</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+          <tr><td>Grand livre, balance, préparation bilan</td><td class="x">—</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+          <tr><td>Déclarations TVA (CA3, CA12) assistées</td><td class="x">—</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+          <tr><td>Export FEC pour cabinet</td><td class="x">—</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+          <tr><td>Multi-sociétés / consolidation</td><td class="x">—</td><td class="x">—</td><td class="x">—</td><td class="check">✓</td></tr>
+
+          <tr class="section-row"><td colspan="5">Paie &amp; RH</td></tr>
+          <tr><td>Fiches de paie</td><td class="x">—</td><td><strong>7 €/employé</strong></td><td><strong>5 €/employé</strong></td><td class="check">Illimité inclus</td></tr>
+          <tr><td>DSN automatisée</td><td class="x">—</td><td class="check">Avec module paie</td><td class="check">✓</td><td class="check">✓</td></tr>
+          <tr><td>Self-service employés</td><td class="x">—</td><td class="check">Avec module paie</td><td class="check">✓</td><td class="check">✓</td></tr>
+          <tr><td>Notes de frais &amp; congés</td><td class="x">—</td><td class="x">—</td><td class="check">✓</td><td class="check">✓</td></tr>
+
+          <tr class="section-row"><td colspan="5">Trésorerie</td></tr>
+          <tr><td>Agrégation bancaire</td><td class="check">1 compte</td><td class="check">3 comptes</td><td class="check">Illimité</td><td class="check">Illimité</td></tr>
+          <tr><td>Rapprochement automatique</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+          <tr><td>Prévisionnel cash-flow</td><td class="x">—</td><td class="check">12 mois</td><td class="check">12 mois</td><td class="check">36 mois</td></tr>
+          <tr><td>Module caisse</td><td class="x">—</td><td class="x">—</td><td class="check">✓</td><td class="check">✓</td></tr>
+
+          <tr class="section-row"><td colspan="5">Plateforme</td></tr>
+          <tr><td>Utilisateurs inclus</td><td class="check">1</td><td class="check">1</td><td class="check">5</td><td class="check">Illimité</td></tr>
+          <tr><td>Export FEC pour votre cabinet</td><td class="x">—</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+          <tr><td>API REST &amp; webhooks</td><td class="x">—</td><td class="x">—</td><td class="check">✓</td><td class="check">✓</td></tr>
+          <tr><td>SSO SAML / Azure AD</td><td class="x">—</td><td class="x">—</td><td class="x">—</td><td class="check">✓</td></tr>
+          <tr><td>Support</td><td class="check">Email</td><td class="check">Email + Chat</td><td class="check">Prioritaire &lt; 1 h</td><td class="check">CSM dédié + SLA</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container container-xs">
+    <header class="section-header">
+      <span class="eyebrow">Questions fréquentes</span>
+      <h2>Vos questions sur les tarifs</h2>
+    </header>
+    <div class="faq">
+      <details class="faq-item">
+        <summary>Je suis indépendant ou auto-entrepreneur, quelle offre choisir ?</summary>
+        <p>L'offre <a href="micro-entreprise.html"><strong>Indépendant à 19 € HT/mois</strong></a> est faite pour vous : facturation Factur-X, pré-compta micro (recettes/dépenses), agrégation bancaire et déclaration URSSAF assistée. Vous ne payez pas pour de la paie ou des modules dont vous n'avez pas besoin.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Comment fonctionne la tarification de la paie ?</summary>
+        <p>La paie est facturée à l'usage selon le nombre d'employés actifs dans le mois. Sur le plan <strong>Pro</strong>, c'est <strong>7 € HT par employé</strong>. Sur le plan <strong>Business</strong>, le tarif descend à <strong>5 € HT par employé</strong>. Sur le plan <strong>Enterprise</strong>, la paie est incluse en illimité. Aucun engagement de volume : si un mois vous n'avez qu'un seul salarié, vous ne payez qu'un seul forfait.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Y a-t-il une période d'engagement ?</summary>
+        <p>Non. Tous nos plans sont mensuels et sans engagement. Vous pouvez changer de plan ou résilier à tout moment depuis votre espace.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Puis-je payer à l'année avec une réduction ?</summary>
+        <p>Oui. Le paiement annuel donne droit à <strong>2,2 mois offerts (−18 %)</strong>. Concrètement : Pro passe de 35 € à 28,70 € HT/mois, Business de 79 € à 64,78 € HT/mois. Cela s'active en un clic depuis l'espace de facturation, et vous pouvez revenir en mensuel à tout moment lors du renouvellement.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Quels moyens de paiement acceptez-vous ?</summary>
+        <p>Carte bancaire (Visa, Mastercard, AmEx) et prélèvement SEPA. Pour les contrats Enterprise, virement annuel possible sur facture.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Puis-je passer d'un plan à l'autre ?</summary>
+        <p>Oui, à tout moment et sans frais. Le prorata est calculé automatiquement. Vous démarrez en Indépendant et passez en Pro quand votre activité grandit, sans rupture.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Et si je dépasse les 25 salariés sur le plan Business ?</summary>
+        <p>Vous pouvez ajouter des salariés supplémentaires à 5 €/mois/salarié, ou passer en plan Enterprise pour un volume illimité inclus.</p>
+      </details>
+      <details class="faq-item">
+        <summary>L'essai gratuit est-il vraiment sans engagement ?</summary>
+        <p>Oui. Pas de carte bancaire demandée, pas de prélèvement automatique. Au bout de 14 jours, l'accès passe en mode lecture jusqu'à votre activation manuelle.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Proposez-vous un tarif pour les associations ou organismes publics ?</summary>
+        <p>Oui, nous offrons -30 % sur tous les plans pour les associations loi 1901 et les organismes publics. Contactez-nous pour bénéficier de ce tarif.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- Competitor comparison (moved to end) -->
+<section id="comparateur-concurrents">
   <div class="container">
     <header class="section-header">
       <span class="eyebrow">Comparatif honnête 2026</span>
@@ -451,111 +564,6 @@
 
 <section>
   <div class="container">
-    <header class="section-header">
-      <span class="eyebrow">Comparatif détaillé</span>
-      <h2>Tout ce qui est inclus, <span class="gradient-text">par plan</span></h2>
-    </header>
-
-    <div style="overflow-x:auto;">
-      <table class="compare-table">
-        <thead>
-          <tr>
-            <th style="width:36%;">Fonctionnalité</th>
-            <th style="text-align:center;">Indépendant<br><span style="font-weight:400; color:var(--ink-500); font-size:0.85rem;">19 €/mois</span></th>
-            <th style="text-align:center;">Pro<br><span style="font-weight:400; color:var(--ink-500); font-size:0.85rem;">35 €/mois</span></th>
-            <th style="text-align:center;">Business<br><span style="font-weight:400; color:var(--ink-500); font-size:0.85rem;">79 €/mois</span></th>
-            <th style="text-align:center;">Enterprise<br><span style="font-weight:400; color:var(--ink-500); font-size:0.85rem;">Sur devis</span></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="section-row"><td colspan="5">Facturation électronique</td></tr>
-          <tr><td>Factures, devis, avoirs illimités</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
-          <tr><td>Format Factur-X, UBL, CII</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
-          <tr><td>Transmission via PPF / PDP</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
-          <tr><td>Relances automatiques</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
-          <tr><td>Lien de paiement intégré</td><td class="x">—</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
-
-          <tr class="section-row"><td colspan="5">Pré-comptabilité</td></tr>
-          <tr><td>Compta micro (recettes/dépenses)</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
-          <tr><td>Plan comptable général PCG 2025</td><td class="x">—</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
-          <tr><td>Grand livre, balance, préparation bilan</td><td class="x">—</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
-          <tr><td>Déclarations TVA (CA3, CA12) assistées</td><td class="x">—</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
-          <tr><td>Export FEC pour cabinet</td><td class="x">—</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
-          <tr><td>Multi-sociétés / consolidation</td><td class="x">—</td><td class="x">—</td><td class="x">—</td><td class="check">✓</td></tr>
-
-          <tr class="section-row"><td colspan="5">Paie &amp; RH</td></tr>
-          <tr><td>Fiches de paie</td><td class="x">—</td><td><strong>7 €/employé</strong></td><td><strong>5 €/employé</strong></td><td class="check">Illimité inclus</td></tr>
-          <tr><td>DSN automatisée</td><td class="x">—</td><td class="check">Avec module paie</td><td class="check">✓</td><td class="check">✓</td></tr>
-          <tr><td>Self-service employés</td><td class="x">—</td><td class="check">Avec module paie</td><td class="check">✓</td><td class="check">✓</td></tr>
-          <tr><td>Notes de frais &amp; congés</td><td class="x">—</td><td class="x">—</td><td class="check">✓</td><td class="check">✓</td></tr>
-
-          <tr class="section-row"><td colspan="5">Trésorerie</td></tr>
-          <tr><td>Agrégation bancaire</td><td class="check">1 compte</td><td class="check">3 comptes</td><td class="check">Illimité</td><td class="check">Illimité</td></tr>
-          <tr><td>Rapprochement automatique</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
-          <tr><td>Prévisionnel cash-flow</td><td class="x">—</td><td class="check">12 mois</td><td class="check">12 mois</td><td class="check">36 mois</td></tr>
-          <tr><td>Module caisse</td><td class="x">—</td><td class="x">—</td><td class="check">✓</td><td class="check">✓</td></tr>
-
-          <tr class="section-row"><td colspan="5">Plateforme</td></tr>
-          <tr><td>Utilisateurs inclus</td><td class="check">1</td><td class="check">1</td><td class="check">5</td><td class="check">Illimité</td></tr>
-          <tr><td>Export FEC pour votre cabinet</td><td class="x">—</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
-          <tr><td>API REST &amp; webhooks</td><td class="x">—</td><td class="x">—</td><td class="check">✓</td><td class="check">✓</td></tr>
-          <tr><td>SSO SAML / Azure AD</td><td class="x">—</td><td class="x">—</td><td class="x">—</td><td class="check">✓</td></tr>
-          <tr><td>Support</td><td class="check">Email</td><td class="check">Email + Chat</td><td class="check">Prioritaire &lt; 1 h</td><td class="check">CSM dédié + SLA</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="container container-xs">
-    <header class="section-header">
-      <span class="eyebrow">Questions fréquentes</span>
-      <h2>Vos questions sur les tarifs</h2>
-    </header>
-    <div class="faq">
-      <details class="faq-item">
-        <summary>Je suis indépendant ou auto-entrepreneur, quelle offre choisir ?</summary>
-        <p>L'offre <a href="micro-entreprise.html"><strong>Indépendant à 19 € HT/mois</strong></a> est faite pour vous : facturation Factur-X, pré-compta micro (recettes/dépenses), agrégation bancaire et déclaration URSSAF assistée. Vous ne payez pas pour de la paie ou des modules dont vous n'avez pas besoin.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Comment fonctionne la tarification de la paie ?</summary>
-        <p>La paie est facturée à l'usage selon le nombre d'employés actifs dans le mois. Sur le plan <strong>Pro</strong>, c'est <strong>7 € HT par employé</strong>. Sur le plan <strong>Business</strong>, le tarif descend à <strong>5 € HT par employé</strong>. Sur le plan <strong>Enterprise</strong>, la paie est incluse en illimité. Aucun engagement de volume : si un mois vous n'avez qu'un seul salarié, vous ne payez qu'un seul forfait.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Y a-t-il une période d'engagement ?</summary>
-        <p>Non. Tous nos plans sont mensuels et sans engagement. Vous pouvez changer de plan ou résilier à tout moment depuis votre espace.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Puis-je payer à l'année avec une réduction ?</summary>
-        <p>Oui. Le paiement annuel donne droit à <strong>2,2 mois offerts (−18 %)</strong>. Concrètement : Pro passe de 35 € à 28,70 € HT/mois, Business de 79 € à 64,78 € HT/mois. Cela s'active en un clic depuis l'espace de facturation, et vous pouvez revenir en mensuel à tout moment lors du renouvellement.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Quels moyens de paiement acceptez-vous ?</summary>
-        <p>Carte bancaire (Visa, Mastercard, AmEx) et prélèvement SEPA. Pour les contrats Enterprise, virement annuel possible sur facture.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Puis-je passer d'un plan à l'autre ?</summary>
-        <p>Oui, à tout moment et sans frais. Le prorata est calculé automatiquement. Vous démarrez en Indépendant et passez en Pro quand votre activité grandit, sans rupture.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Et si je dépasse les 25 salariés sur le plan Business ?</summary>
-        <p>Vous pouvez ajouter des salariés supplémentaires à 5 €/mois/salarié, ou passer en plan Enterprise pour un volume illimité inclus.</p>
-      </details>
-      <details class="faq-item">
-        <summary>L'essai gratuit est-il vraiment sans engagement ?</summary>
-        <p>Oui. Pas de carte bancaire demandée, pas de prélèvement automatique. Au bout de 14 jours, l'accès passe en mode lecture jusqu'à votre activation manuelle.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Proposez-vous un tarif pour les associations ou organismes publics ?</summary>
-        <p>Oui, nous offrons -30 % sur tous les plans pour les associations loi 1901 et les organismes publics. Contactez-nous pour bénéficier de ce tarif.</p>
-      </details>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="container">
     <div class="cta-final">
       <h2>Pas encore convaincu ?</h2>
       <p>Réservez une démo de 30 minutes avec un expert NUMMA pour vous projeter dans l'outil.</p>
@@ -586,19 +594,19 @@
 <script src="js/main.js" defer></script>
 
 <script>
-// Billing toggle Monthly / Annual
+// Billing toggle Monthly / Annual — premium slider
 (function(){
   const radios = document.querySelectorAll('input[name="billing"]');
   const prices = document.querySelectorAll('.price-amount[data-monthly]');
   const billed = document.querySelectorAll('.price-billed[data-monthly]');
   const grid = document.getElementById('pricing-grid');
+  const toggle = document.getElementById('billing-toggle');
   function update(mode) {
     prices.forEach(p => {
       const v = p.getAttribute('data-' + mode);
       const valueEl = p.querySelector('.value');
       if (v && valueEl) valueEl.textContent = v;
-      // Handle comma prices: annual has ',70' so span needs single wrapper
-      if (mode === 'annual' && v.includes(',')) {
+      if (mode === 'annual' && v && v.includes(',')) {
         valueEl.style.fontSize = 'clamp(2.2rem, 5vw, 3rem)';
       } else {
         valueEl.style.fontSize = '';
@@ -608,10 +616,8 @@
       const v = b.getAttribute('data-' + mode);
       if (v) b.textContent = v;
     });
-    if (grid) {
-      grid.classList.toggle('billing-annual', mode === 'annual');
-    }
-    // Analytics
+    if (grid) grid.classList.toggle('billing-annual', mode === 'annual');
+    if (toggle) toggle.classList.toggle('is-annual', mode === 'annual');
     if (typeof gtag === 'function') {
       gtag('event', 'billing_toggle', { billing_mode: mode });
     }
