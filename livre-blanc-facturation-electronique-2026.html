@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Livre blanc gratuit : Facturation électronique 2026 pour dirigeants TPE/PME</title>
+  <meta name="description" content="Téléchargez le livre blanc NUMMA : le guide complet de la facturation électronique 2026 pour les dirigeants de TPE et PME. PDP, PPF, Factur-X, calendrier, cas types.">
+  <meta name="keywords" content="livre blanc facturation electronique, guide reforme e-facturation 2026, PDP DGFiP dirigeant, Factur-X UBL CII, calendrier reforme facturation">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.numma.eu/livre-blanc-facturation-electronique-2026.html">
+  <meta property="og:title" content="Livre blanc gratuit — Facturation électronique 2026 pour dirigeants">
+  <meta property="og:description" content="Le guide complet de la réforme e-facturation : PDP, PPF, Factur-X, calendrier, cas types. Téléchargement gratuit.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.numma.eu/livre-blanc-facturation-electronique-2026.html">
+  <meta property="og:image" content="https://www.numma.eu/images/og-cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="NUMMA — Compta, paie & facturation 2026">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.numma.eu/images/og-cover.png">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <meta name="theme-color" content="#7C3AED">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7LBVCJ4GZG"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-7LBVCJ4GZG');</script>
+
+  <style>
+    .lb-hero { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 3rem; align-items: center; padding: 1rem 0 2rem; }
+    .lb-hero h2 { font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 1rem; }
+    .lb-mockup { position: relative; perspective: 1000px; }
+    .lb-mockup-cover { background: linear-gradient(135deg, #1E40AF 0%, #7C3AED 50%, #FB923C 100%); border-radius: var(--radius-lg); padding: 2.5rem 2rem; color: white; transform: rotateY(-8deg) rotateX(2deg); box-shadow: 0 30px 60px rgba(30,64,175,0.35); aspect-ratio: 3/4; display: flex; flex-direction: column; justify-content: space-between; max-width: 380px; margin: 0 auto; }
+    .lb-mockup-cover .badge { display: inline-block; background: rgba(255,255,255,0.2); padding: 0.4rem 0.8rem; border-radius: var(--radius-full); font-size: 0.75rem; letter-spacing: 0.05em; text-transform: uppercase; font-weight: 700; margin-bottom: 1rem; align-self: flex-start; }
+    .lb-mockup-cover h3 { color: white; font-size: 1.6rem; line-height: 1.2; margin-bottom: 0.75rem; }
+    .lb-mockup-cover .tagline { font-size: 0.95rem; opacity: 0.92; }
+    .lb-mockup-cover .footer-info { font-size: 0.78rem; opacity: 0.7; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 1rem; }
+    .lb-mockup-cover .logo { font-weight: 800; font-size: 1.25rem; }
+    .lb-reasons { list-style: none; padding: 0; margin: 1.5rem 0 2rem; }
+    .lb-reasons li { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1rem; }
+    .lb-reasons .reason-num { flex: 0 0 32px; height: 32px; border-radius: var(--radius-full); background: var(--numma-purple-100); color: var(--numma-purple-700); font-weight: 800; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; }
+    .lb-reasons strong { color: var(--ink-900); }
+    .lb-reasons p { font-size: 0.95rem; color: var(--ink-600); margin: 0.2rem 0 0; }
+    .lb-form-card { background: var(--white); border: 1px solid var(--ink-100); border-radius: var(--radius-xl); padding: 2rem; box-shadow: var(--shadow-md); }
+    .lb-form-card h3 { margin-bottom: 0.5rem; }
+    .lb-form-card .form-note { font-size: 0.85rem; color: var(--ink-500); margin-bottom: 1.5rem; }
+    .lb-thanks { text-align: center; padding: 2rem 0; display: none; }
+    .lb-thanks h3 { color: var(--numma-purple-700); margin-bottom: 1rem; }
+    .lb-toc-preview { background: var(--ink-50); border: 1px solid var(--ink-100); border-radius: var(--radius-lg); padding: 1.5rem 1.75rem; margin: 2rem 0; }
+    .lb-toc-preview h3 { font-size: 1rem; margin-bottom: 1rem; color: var(--numma-purple-700); text-transform: uppercase; letter-spacing: 0.05em; }
+    .lb-toc-preview ol { padding-left: 1.5rem; margin: 0; }
+    .lb-toc-preview ol li { margin-bottom: 0.5rem; font-size: 0.95rem; color: var(--ink-700); }
+    @media (max-width: 860px) { .lb-hero { grid-template-columns: 1fr; } }
+    .form-field { margin-bottom: 1rem; }
+    .form-field label { display: block; font-weight: 600; font-size: 0.9rem; margin-bottom: 0.35rem; color: var(--ink-700); }
+    .form-field input, .form-field select { width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--ink-200); border-radius: var(--radius-md); font-size: 0.95rem; font-family: inherit; transition: border 0.2s; }
+    .form-field input:focus, .form-field select:focus { outline: none; border-color: var(--numma-purple-500); box-shadow: 0 0 0 3px rgba(124,58,237,0.1); }
+    .form-consent { font-size: 0.78rem; color: var(--ink-500); margin: 0.75rem 0 1rem; }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="index.html" class="nav-logo"><img src="images/logo.jpg" alt="Logo NUMMA" width="36" height="36" decoding="async"><span>NUMMA</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li class="has-dropdown"><a href="fonctionnalites.html">Fonctionnalités ▾</a>
+          <div class="dropdown">
+            <a href="facturation-electronique.html">Facturation électronique</a>
+            <a href="comptabilite.html">Comptabilité</a>
+            <a href="paie-rh.html">Paie & RH</a>
+            <a href="tresorerie.html">Trésorerie & Finance</a>
+          </div>
+        </li>
+        <li><a href="tarifs.html">Tarifs</a></li>
+        <li><a href="blog.html">Ressources</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="https://app.numma.eu/login" class="btn btn-ghost btn-sm">Connexion</a>
+        <a href="reserver-demo.html" class="btn btn-primary btn-sm">Réserver une démo</a>
+        <button class="nav-toggle btn btn-secondary btn-sm" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">Menu</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="page-header">
+  <div class="container">
+    <nav class="breadcrumb"><a href="index.html">Accueil</a> / <span>Livre blanc Facturation 2026</span></nav>
+    <span class="eyebrow">Livre blanc gratuit · 28 pages</span>
+    <h1>Facturation électronique 2026 : <span class="gradient-text">le guide complet</span> du dirigeant TPE/PME</h1>
+    <p class="lead">Réforme, PDP, PPF, Factur-X, calendrier officiel, cas types par métier et checklist de conformité. Tout ce qu'un dirigeant doit savoir en 2026 pour ne pas être pris de court le 1er septembre 2026.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="lb-hero">
+
+      <div>
+        <h2>La réforme qui change tout en 2026, <span class="gradient-text">expliquée simplement</span></h2>
+        <p style="font-size: 1.05rem; color: var(--ink-600); line-height: 1.6; margin-bottom: 1.5rem;">
+          Le 1er septembre 2026, toutes les entreprises françaises devront émettre et recevoir leurs factures B2B au format électronique via une PDP (Plateforme de Dématérialisation Partenaire) ou le PPF (Portail Public de Facturation). Ce livre blanc explique <strong>ce qu'il faut vraiment faire</strong>, dans le bon ordre, sans jargon.
+        </p>
+
+        <ul class="lb-reasons">
+          <li>
+            <span class="reason-num">1</span>
+            <div>
+              <strong>Le calendrier officiel expliqué en 1 page.</strong>
+              <p>Qui doit passer en e-facturation quand, selon la taille de l'entreprise et son statut.</p>
+            </div>
+          </li>
+          <li>
+            <span class="reason-num">2</span>
+            <div>
+              <strong>PDP vs PPF : comment choisir.</strong>
+              <p>Les 3 critères pour trancher, avec un arbre de décision imprimable.</p>
+            </div>
+          </li>
+          <li>
+            <span class="reason-num">3</span>
+            <div>
+              <strong>Une checklist de conformité en 12 points.</strong>
+              <p>À imprimer et à cocher pour être prêt le jour J, sans stress.</p>
+            </div>
+          </li>
+        </ul>
+
+        <div class="lb-toc-preview">
+          <h3>Ce que vous trouverez dans ce guide</h3>
+          <ol>
+            <li>La réforme en 5 minutes : contexte européen et calendrier</li>
+            <li>Les 3 formats obligatoires : Factur-X, UBL, CII</li>
+            <li>PDP vs PPF : comparatif et arbre de décision</li>
+            <li>Chorus Pro pour les marchés publics</li>
+            <li>Les 4 étapes de mise en conformité</li>
+            <li>Cas type 1 : Indépendant / freelance</li>
+            <li>Cas type 2 : TPE B2B 8 salariés</li>
+            <li>Cas type 3 : PME multi-clients 25 salariés</li>
+            <li>Checklist de conformité en 12 points</li>
+            <li>Sanctions et amendes prévues par la DGFiP</li>
+          </ol>
+        </div>
+      </div>
+
+      <div>
+        <div class="lb-mockup">
+          <div class="lb-mockup-cover">
+            <div>
+              <span class="badge">Livre blanc 2026</span>
+              <h3>Facturation électronique 2026 pour dirigeants TPE/PME</h3>
+              <p class="tagline">Le guide complet · Réforme, PDP, PPF, Factur-X, calendrier et checklist.</p>
+            </div>
+            <div class="footer-info">
+              <div class="logo">NUMMA</div>
+              <div>28 pages · Édition 2026</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lb-form-card" id="lb-form" style="margin-top: 2rem;">
+          <h3>Téléchargez gratuitement</h3>
+          <p class="form-note">Recevez le livre blanc par email en moins d'1 minute.</p>
+
+          <form id="lb-download-form" onsubmit="return submitLbForm(event)">
+            <div class="form-field">
+              <label for="lb-firstname">Prénom</label>
+              <input type="text" id="lb-firstname" name="firstName" required autocomplete="given-name">
+            </div>
+            <div class="form-field">
+              <label for="lb-email">Email professionnel</label>
+              <input type="email" id="lb-email" name="email" required autocomplete="email">
+            </div>
+            <div class="form-field">
+              <label for="lb-role">Votre rôle</label>
+              <select id="lb-role" name="role" required>
+                <option value="">— Choisir —</option>
+                <option value="dirigeant">Dirigeant / gérant</option>
+                <option value="daf">DAF / Responsable financier</option>
+                <option value="compta">Comptable / EC</option>
+                <option value="autre">Autre</option>
+              </select>
+            </div>
+            <div class="form-consent">
+              En téléchargeant, j'accepte de recevoir occasionnellement des ressources de NUMMA. Je peux me désinscrire en 1 clic. Voir la <a href="politique-confidentialite.html">politique de confidentialité</a>.
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Télécharger le livre blanc →</button>
+          </form>
+        </div>
+
+        <div class="lb-thanks" id="lb-thanks">
+          <h3>✓ Merci !</h3>
+          <p>Vous êtes redirigé vers le livre blanc dans quelques secondes…</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="footer-logo-text"><img src="images/logo.jpg" alt="Logo NUMMA" width="32" height="32" loading="lazy"><span>NUMMA</span></div><p>Le logiciel de gestion tout-en-un pour TPE, PME et scale-ups françaises.</p></div>
+      <div class="footer-col"><h4>Produit</h4><ul><li><a href="fonctionnalites.html">Fonctionnalités</a></li><li><a href="tarifs.html">Tarifs</a></li><li><a href="calculateur-roi.html">Calculateur ROI</a></li></ul></div>
+      <div class="footer-col"><h4>Ressources</h4><ul><li><a href="blog.html">Blog</a></li><li><a href="livre-blanc-roi-numma.html">Livre blanc ROI</a></li><li><a href="livre-blanc-pilotage-tresorerie.html">Livre blanc Trésorerie</a></li></ul></div>
+      <div class="footer-col"><h4>Entreprise</h4><ul><li><a href="a-propos.html">À propos</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Légal</h4><ul><li><a href="mentions-legales.html">Mentions légales</a></li><li><a href="cgv.html">CGV</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><div>© 2025–2026 NUMMA SAS · Made in France</div></div>
+  </div>
+</footer>
+
+<script>
+function submitLbForm(e) {
+  e.preventDefault();
+  const form = document.getElementById('lb-download-form');
+  const thanks = document.getElementById('lb-thanks');
+  const formCard = document.getElementById('lb-form');
+  const data = new FormData(form);
+  const payload = {
+    type: 'livre-blanc-facturation-2026',
+    firstName: data.get('firstName'),
+    email: data.get('email'),
+    role: data.get('role')
+  };
+  // Apps Script endpoint (same as other livres blancs)
+  fetch('https://script.google.com/macros/s/AKfycbwLb-Placeholder/exec', {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
+  }).catch(() => {});
+  formCard.style.display = 'none';
+  thanks.style.display = 'block';
+  if (typeof gtag === 'function') {
+    gtag('event', 'lead_generation', { livre_blanc: 'facturation-electronique-2026' });
+  }
+  setTimeout(() => { window.location.href = 'livre-blanc-facturation-electronique-2026-contenu.html'; }, 1500);
+  return false;
+}
+</script>
+
+<script src="js/cookies.js" defer></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>
