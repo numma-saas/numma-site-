@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7LBVCJ4GZG"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-7LBVCJ4GZG');
+    window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+    gtag('js',new Date());gtag('config','G-7LBVCJ4GZG');
+    addEventListener('load',function(){var s=document.createElement('script');s.async=true;
+    s.src='https://www.googletagmanager.com/gtag/js?id=G-7LBVCJ4GZG';document.head.appendChild(s);},{once:true});
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -124,24 +122,6 @@
     .roi-cta-card .roi-badge { display: inline-block; background: rgba(255,255,255,0.2); padding: 0.35rem 0.85rem; border-radius: var(--radius-full); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 1rem; }
 
     /* Competitor comparison table */
-    .versus-wrap { background: var(--white); border: 1px solid var(--ink-100); border-radius: var(--radius-xl); box-shadow: var(--shadow-sm); overflow: hidden; margin-top: 1.5rem; }
-    .versus-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-    .versus-tbl { width: 100%; border-collapse: collapse; min-width: 780px; }
-    .versus-tbl th, .versus-tbl td { padding: 0.9rem 1rem; text-align: center; border-bottom: 1px solid var(--ink-100); font-size: 0.9rem; }
-    .versus-tbl th:first-child, .versus-tbl td:first-child { text-align: left; font-weight: 600; color: var(--ink-700); position: sticky; left: 0; background: var(--white); z-index: 2; min-width: 220px; }
-    .versus-tbl thead th { background: var(--ink-50); font-weight: 700; font-size: 0.85rem; color: var(--ink-600); text-transform: uppercase; letter-spacing: 0.03em; padding-top: 1.15rem; padding-bottom: 1.15rem; border-bottom: 2px solid var(--ink-100); }
-    .versus-tbl thead th.numma-col { background: linear-gradient(135deg, #5B21B6, #7C3AED); color: white; position: relative; }
-    .versus-tbl thead th.numma-col::before { content: "★ Champion"; position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background: #FB923C; color: white; font-size: 0.7rem; padding: 0.15rem 0.55rem; border-radius: var(--radius-full); font-weight: 800; letter-spacing: 0.05em; }
-    .versus-tbl td.numma-cell { background: var(--numma-purple-50); font-weight: 700; color: var(--numma-purple-700); }
-    .versus-tbl td:first-child.numma-cell { background: var(--white); color: var(--ink-700); font-weight: 600; }
-    .versus-tbl tr.section-row td { background: var(--ink-50); font-weight: 800; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-500); text-align: left !important; padding: 0.65rem 1rem; }
-    .versus-tbl .yes { color: #16A34A; font-weight: 800; }
-    .versus-tbl .no { color: #DC2626; font-weight: 700; opacity: 0.7; }
-    .versus-tbl .partial { color: #F59E0B; font-weight: 700; font-size: 0.82rem; }
-    .versus-tbl .price-row td { font-weight: 800; }
-    .versus-tbl .price-row td.numma-cell { color: var(--numma-purple-700); font-size: 1rem; }
-    .versus-footer { padding: 1.25rem 1.5rem; background: var(--ink-50); font-size: 0.82rem; color: var(--ink-500); text-align: center; border-top: 1px solid var(--ink-100); }
-    .versus-footer a { color: var(--numma-purple-700); font-weight: 600; }
   </style>
 </head>
 <body>
@@ -149,14 +129,37 @@
 <header class="site-header">
   <div class="container">
     <nav class="nav" aria-label="Navigation principale">
-      <a href="index.html" class="nav-logo"><img src="images/logo-96.png" alt="Logo NUMMA" width="36" height="36" decoding="async"><span>NUMMA</span></a>
+      <a href="index.html" class="nav-logo"><img src="images/logo-72.png" alt="Logo NUMMA" width="36" height="36" decoding="async"><span>NUMMA</span></a>
       <ul class="nav-links" id="nav-links">
-        <li class="has-dropdown"><a href="fonctionnalites.html">Fonctionnalités ▾</a>
-          <div class="dropdown">
-            <a href="facturation-electronique.html">Facturation électronique <small>Conforme réforme 2026</small></a>
-            <a href="comptabilite.html">Comptabilité <small>Grand livre, balance, TVA, bilan</small></a>
-            <a href="paie-rh.html">Paie & RH <small>Fiches de paie, DSN, employés</small></a>
-            <a href="tresorerie.html">Trésorerie & Finance <small>Banque, caisse, prévisionnel</small></a>
+        <li class="has-dropdown"><a href="fonctionnalites.html">Solutions ▾</a>
+          <div class="dropdown megamenu">
+            <div class="mm-col">
+              <p class="mm-title">Par profil</p>
+              <a href="micro-entreprise.html">Indépendant &amp; micro<small>1 personne — dès 19 €</small></a>
+              <a href="tarifs.html">TPE — 2 à 10 salariés<small>Le cas le plus fréquent</small></a>
+              <a href="tarifs.html">PME — 11 à 49 salariés<small>Paie et multi-conventions</small></a>
+              <a href="contact.html">Enterprise — 50+<small>Multi-sociétés, sur devis</small></a>
+            </div>
+            <div class="mm-col">
+              <p class="mm-title">Par secteur</p>
+              <a href="logiciel-gestion-btp.html">BTP &amp; artisan<small>TVA 5,5/10/20, CIBTP, Chorus</small></a>
+              <a href="logiciel-gestion-agence.html">Agence &amp; freelance tech<small>SYNTEC, TJM, autoliquidation UE</small></a>
+              <a href="logiciel-gestion-commerce-detail.html">Commerce de détail<small>Caisse NF 525, stock, marge</small></a>
+            </div>
+            <div class="mm-col">
+              <p class="mm-title">Le produit</p>
+              <a href="facturation-electronique.html">Facturation électronique<small>Factur-X, UBL, CII</small></a>
+              <a href="comptabilite.html">Comptabilité<small>Grand livre, balance, TVA</small></a>
+              <a href="paie-rh.html">Paie &amp; RH<small>Bulletins, DSN, documents</small></a>
+              <a href="tresorerie.html">Trésorerie<small>Banque, prévisionnel IA</small></a>
+            </div>
+            <div class="mm-col">
+              <p class="mm-title">Choisir NUMMA</p>
+              <a href="calculateur-roi.html">Calculateur d'économies<small>Sur votre cas réel</small></a>
+              <a href="securite.html">Sécurité &amp; conformité<small>RGPD, hébergement France</small></a>
+              <a href="blog/pennylane-vs-numma-2026.html">Comparatifs<small>Pennylane, Sage, Cegid</small></a>
+              <a href="blog.html">Ressources<small>Guides et livres blancs</small></a>
+            </div>
           </div>
         </li>
         <li><a href="tarifs.html">Tarifs</a></li>
@@ -203,7 +206,7 @@
         <input type="radio" name="billing" id="bill-annual" value="annual">
         <label for="bill-annual">Annuel <span class="save-badge-inline">−18%</span></label>
       </div>
-      <div class="billing-tagline">🎁 Passez à l'annuel et récupérez <strong>2,2 mois offerts</strong> par an</div>
+      <div class="billing-tagline">Passez à l'annuel et récupérez <strong>2,2 mois offerts</strong> par an</div>
     </div>
 
     <div class="pricing-grid" id="pricing-grid">
@@ -300,7 +303,7 @@
       <span class="roi-badge">Nouveau · Calculateur interactif</span>
       <h3>Combien économisez-vous avec NUMMA ?</h3>
       <p>Simulation honnête basée sur les prix publics de Pennylane, Sage, Cegid, Alteore et les honoraires cabinet. Résultat en 30 secondes.</p>
-      <a href="calculateur-roi.html" class="btn btn-lg">💰 Calculer mes économies →</a>
+      <a href="calculateur-roi.html" class="btn btn-lg">Calculer mes économies →</a>
     </div>
   </div>
 </section>
@@ -309,7 +312,7 @@
   <div class="container">
     <header class="section-header">
       <span class="eyebrow">Comparatif détaillé</span>
-      <h2>Tout ce qui est inclus, <span class="gradient-text">par plan</span></h2>
+      <h2>Tout ce qui est inclus, par plan</h2>
     </header>
 
     <div style="overflow-x:auto;">
@@ -409,155 +412,15 @@
     </div>
   </div>
 </section>
-
-<!-- Competitor comparison (moved to end) -->
-<section id="comparateur-concurrents">
-  <div class="container">
-    <header class="section-header">
-      <span class="eyebrow">Comparatif honnête 2026</span>
-      <h2>NUMMA vs les autres — <span class="gradient-text">le vrai match</span></h2>
-      <p class="lead" style="max-width:720px;">Ce que fait réellement chaque solution, module par module. Aucun jugement de goût — que des fonctions vérifiables sur les pages produit des concurrents.</p>
-    </header>
-
-    <div class="versus-wrap">
-      <div class="versus-scroll">
-        <table class="versus-tbl">
-          <thead>
-            <tr>
-              <th>Fonctionnalité</th>
-              <th class="numma-col">NUMMA</th>
-              <th>Alteore</th>
-              <th>Pennylane</th>
-              <th>Sage</th>
-              <th>Cegid</th>
-              <th>Excel</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="section-row"><td colspan="7">Facturation & conformité 2026</td></tr>
-            <tr>
-              <td>Facturation Factur-X (PDP/PPF)</td>
-              <td class="numma-cell yes">✓ Natif</td>
-              <td class="no">Non prévu</td>
-              <td class="yes">✓</td>
-              <td class="partial">Partiel</td>
-              <td class="yes">✓</td>
-              <td class="no">✗</td>
-            </tr>
-            <tr>
-              <td>Relances automatiques J+7/15/30</td>
-              <td class="numma-cell yes">✓ Séquence IA</td>
-              <td class="partial">Manuel</td>
-              <td class="yes">✓</td>
-              <td class="yes">✓</td>
-              <td class="yes">✓</td>
-              <td class="no">✗</td>
-            </tr>
-
-            <tr class="section-row"><td colspan="7">Comptabilité française</td></tr>
-            <tr>
-              <td>Grand livre, balance, préparation bilan</td>
-              <td class="numma-cell yes">✓ Complet</td>
-              <td class="no">Non — pilotage seulement</td>
-              <td class="yes">✓</td>
-              <td class="yes">✓</td>
-              <td class="yes">✓</td>
-              <td class="partial">Manuel</td>
-            </tr>
-            <tr>
-              <td>TVA CA3/CA12 assistée + export FEC</td>
-              <td class="numma-cell yes">✓ Export FEC</td>
-              <td class="no">Export basique</td>
-              <td class="yes">✓</td>
-              <td class="yes">✓</td>
-              <td class="yes">✓</td>
-              <td class="no">✗</td>
-            </tr>
-
-            <tr class="section-row"><td colspan="7">Paie & RH</td></tr>
-            <tr>
-              <td>Fiches de paie + DSN nominative</td>
-              <td class="numma-cell yes">✓ Pro/Business</td>
-              <td class="partial">169 €/mois add-on</td>
-              <td class="no">✗</td>
-              <td class="partial">Module séparé</td>
-              <td class="yes">✓</td>
-              <td class="no">✗</td>
-            </tr>
-            <tr>
-              <td>Documents RH générés par IA (CDI, CDD, attestations)</td>
-              <td class="numma-cell yes">✓ Claude natif</td>
-              <td class="partial">Master 169€</td>
-              <td class="no">✗</td>
-              <td class="no">✗</td>
-              <td class="no">✗</td>
-              <td class="no">✗</td>
-            </tr>
-
-            <tr class="section-row"><td colspan="7">Trésorerie & IA</td></tr>
-            <tr>
-              <td>Prévisions trésorerie IA rédigées (30/60/90j)</td>
-              <td class="numma-cell yes">✓ Langage naturel</td>
-              <td class="partial">Chat Léa</td>
-              <td class="partial">Basique</td>
-              <td class="no">✗</td>
-              <td class="partial">Add-on</td>
-              <td class="no">✗</td>
-            </tr>
-            <tr>
-              <td>Agrégation bancaire (Open Banking DSP2)</td>
-              <td class="numma-cell yes">✓ +2 000 banques</td>
-              <td class="yes">✓</td>
-              <td class="yes">✓</td>
-              <td class="yes">✓</td>
-              <td class="yes">✓</td>
-              <td class="no">✗</td>
-            </tr>
-
-            <tr class="section-row"><td colspan="7">Plateforme & confiance</td></tr>
-            <tr>
-              <td>Hébergement 100 % France</td>
-              <td class="numma-cell yes">✓ OVHcloud</td>
-              <td class="partial">Firebase / Google</td>
-              <td class="yes">✓</td>
-              <td class="partial">Multi-cloud</td>
-              <td class="yes">✓</td>
-              <td class="no">Dépend</td>
-            </tr>
-            <tr>
-              <td>Support 100 % français inclus</td>
-              <td class="numma-cell yes">✓</td>
-              <td class="yes">✓</td>
-              <td class="yes">✓</td>
-              <td class="partial">Payant</td>
-              <td class="partial">Payant</td>
-              <td class="no">✗</td>
-            </tr>
-            <tr>
-              <td>Interface unifiée (compta + paie + trésorerie + facturation)</td>
-              <td class="numma-cell yes">✓ Tout-en-un</td>
-              <td class="partial">Sans vraie compta</td>
-              <td class="no">Compta seulement</td>
-              <td class="no">Modules séparés</td>
-              <td class="no">Modules séparés</td>
-              <td class="no">✗</td>
-            </tr>
-
-            <tr class="price-row">
-              <td>Prix mensuel TPE 5 salariés (HT)</td>
-              <td class="numma-cell">35 € <small style="font-weight:500;">→ 28,70 € annuel</small></td>
-              <td>69 €</td>
-              <td>49 €</td>
-              <td>39 €</td>
-              <td>89 €</td>
-              <td>0 €<small style="font-weight:500;color:#DC2626;"> + 250 € cabinet</small></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="versus-footer">
-        Sources : pages tarifs publiques 2026 — <a href="https://alteore.com" rel="nofollow noopener" target="_blank">alteore.com</a>, <a href="https://pennylane.com" rel="nofollow noopener" target="_blank">pennylane.com</a>, <a href="https://sage.com/fr-fr" rel="nofollow noopener" target="_blank">sage.com</a>, <a href="https://cegid.com" rel="nofollow noopener" target="_blank">cegid.com</a>. Fonctionnalités vérifiées en juin 2026.
-      </div>
+<!-- Renvoi vers les comparatifs détaillés (le tableau vivait ici, il est désormais sur le blog) -->
+<section>
+  <div class="container container-sm" style="text-align:center;">
+    <h2 style="font-size:1.45rem;margin-bottom:.6rem;">Vous comparez avec une autre solution ?</h2>
+    <p class="lead" style="margin-bottom:1.5rem;">Nous avons écrit un comparatif détaillé pour chacune, fonctionnalité par fonctionnalité.</p>
+    <div class="hero-ctas" style="justify-content:center;flex-wrap:wrap;">
+      <a href="blog/pennylane-vs-numma-2026.html" class="btn btn-secondary">Pennylane vs NUMMA</a>
+      <a href="blog/sage-vs-numma-2026.html" class="btn btn-secondary">Sage vs NUMMA</a>
+      <a href="blog/7-criteres-choisir-logiciel-comptable-2026.html" class="btn btn-secondary">Les 7 critères de choix</a>
     </div>
   </div>
 </section>
@@ -580,7 +443,7 @@
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
-      <div class="footer-brand"><div class="footer-logo-text"><img src="images/logo-96.png" alt="Logo NUMMA" width="32" height="32" loading="lazy"><span>NUMMA</span></div><p>Le logiciel de gestion tout-en-un pour TPE, PME et scale-ups françaises.</p></div>
+      <div class="footer-brand"><div class="footer-logo-text"><img src="images/logo-72.png" alt="Logo NUMMA" width="32" height="32" loading="lazy"><span>NUMMA</span></div><p>Le logiciel de gestion tout-en-un pour TPE, PME et scale-ups françaises.</p></div>
       <div class="footer-col"><p class="footer-h">Produit</p><ul><li><a href="fonctionnalites.html">Fonctionnalités</a></li><li><a href="facturation-electronique.html">Facturation électronique</a></li><li><a href="comptabilite.html">Comptabilité</a></li><li><a href="paie-rh.html">Paie & RH</a></li><li><a href="tresorerie.html">Trésorerie</a></li><li><a href="tarifs.html">Tarifs</a></li><li><a href="micro-entreprise.html">Micro-entreprise</a></li></ul></div>
       <div class="footer-col"><p class="footer-h">Ressources</p><ul><li><a href="blog.html">Blog</a></li><li><a href="blog/facturation-electronique-2026.html">Guide facturation 2026</a></li><li><a href="blog/choisir-logiciel-compta.html">Choisir son logiciel</a></li></ul></div>
       <div class="footer-col"><p class="footer-h">Entreprise</p><ul><li><a href="a-propos.html">À propos</a></li><li><a href="reserver-demo.html">Réserver une démo</a></li><li><a href="contact.html">Contact</a></li></ul></div>
