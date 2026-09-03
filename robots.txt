@@ -41,3 +41,6 @@ Disallow: /login/
 Disallow: /api/
 
 Sitemap: https://www.numma.eu/sitemap.xml
+
+# Résumé du site pour les agents IA
+# https://www.numma.eu/llms.txt

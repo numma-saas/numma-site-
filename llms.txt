@@ -1,0 +1,35 @@
+# NUMMA
+
+> Logiciel de gestion tout-en-un pour TPE et PME françaises : facturation électronique conforme à la réforme 2026, pré-comptabilité, paie et DSN, trésorerie. SAS française, hébergement en France.
+
+NUMMA réunit dans une seule plateforme quatre outils habituellement séparés. Cible : entreprises de 1 à 50 salariés. Tarifs à partir de 19 € HT/mois. Essai gratuit de 14 jours sans carte bancaire.
+
+## Produit
+- [Fonctionnalités](https://www.numma.eu/fonctionnalites.html) : vue d'ensemble des quatre modules
+- [Facturation électronique](https://www.numma.eu/facturation-electronique.html) : Factur-X, UBL, CII, conformité réforme 2026
+- [Comptabilité](https://www.numma.eu/comptabilite.html) : grand livre, balance, TVA, export FEC
+- [Paie & RH](https://www.numma.eu/paie-rh.html) : bulletins, DSN, multi-conventions collectives
+- [Trésorerie](https://www.numma.eu/tresorerie.html) : agrégation bancaire DSP2, prévisions IA
+- [Tarifs](https://www.numma.eu/tarifs.html) : Indépendant 19 €, Pro 35 €, Business 79 €, Enterprise sur devis
+- [Essai gratuit](https://www.numma.eu/essai-gratuit.html) : 14 jours sans carte bancaire
+- [Calculateur ROI](https://www.numma.eu/calculateur-roi.html) : estimation des économies annuelles
+
+## Guides de référence
+- [Facturation électronique 2026](https://www.numma.eu/blog/facturation-electronique-2026.html) : calendrier officiel, réception au 1er septembre 2026 pour toutes les entreprises, émission au 1er septembre 2026 pour les grandes entreprises et ETI puis au 1er septembre 2027 pour les TPE et PME
+- [DSN 2026 — guide complet](https://www.numma.eu/blog/dsn-2026-guide-complet.html)
+- [Paramétrer sa DSN mensuelle en 15 minutes](https://www.numma.eu/blog/parametrer-dsn-mensuelle-15-minutes.html)
+- [Piloter sa trésorerie en 2026](https://www.numma.eu/blog/piloter-tresorerie-tpe-pme-2026.html)
+- [Digitaliser sa comptabilité TPE/PME](https://www.numma.eu/blog/digitaliser-comptabilite-tpe-pme.html)
+- [Tous les articles](https://www.numma.eu/blog.html)
+
+## Entreprise
+- [À propos](https://www.numma.eu/a-propos.html)
+- [Sécurité](https://www.numma.eu/securite.html)
+- [Contact](https://www.numma.eu/contact.html)
+- [Mentions légales](https://www.numma.eu/mentions-legales.html) : NUMMA SAS, RCS Paris 104 676 242, 58 rue de Monceau 75008 Paris
+
+## Optional
+- [CGU](https://www.numma.eu/cgu.html)
+- [CGV](https://www.numma.eu/cgv.html)
+- [Politique de confidentialité](https://www.numma.eu/politique-confidentialite.html)
+- [DPA](https://www.numma.eu/dpa.html)
