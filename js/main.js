@@ -107,3 +107,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+/* ===== Mega-menu : ouverture pilotée par intention, sans dépendre de la géométrie =====
+   pointerleave sur le <li> ne se déclenche qu'en quittant l'onglet ET tous ses
+   descendants — panneau compris. Un délai de 260 ms absorbe le trajet de la souris. */
+document.addEventListener('DOMContentLoaded', function () {
+  var fine = window.matchMedia('(hover:hover) and (pointer:fine)').matches;
+  if (!fine) return;                       // tactile : on garde le comportement natif
+  document.querySelectorAll('.has-dropdown').forEach(function (li) {
+    var t = null;
+    function open()  { clearTimeout(t); li.classList.add('is-open'); }
+    function close() { clearTimeout(t); t = setTimeout(function () { li.classList.remove('is-open'); }, 260); }
+    li.addEventListener('pointerenter', open);
+    li.addEventListener('pointerleave', close);
+    li.addEventListener('focusin',  open);
+    li.addEventListener('focusout', function (e) {
+      if (!li.contains(e.relatedTarget)) close();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') { clearTimeout(t); li.classList.remove('is-open'); }
+    });
+  });
+});

@@ -202,6 +202,10 @@
               <a href="blog/pennylane-vs-numma-2026.html">Comparatifs<small>Pennylane, Sage, Cegid</small></a>
               <a href="blog.html">Ressources<small>Guides et livres blancs</small></a>
             </div>
+            <div class="mm-foot">
+              <span>Pas sûr du plan qu'il vous faut ?</span>
+              <a href="essai-gratuit.html">Essayer gratuitement 14 jours &rarr;</a>
+            </div>
           </div>
         </li>
         <li><a href="tarifs.html">Tarifs</a></li>
@@ -475,9 +479,9 @@
 
   // NUMMA plan pricing (HT/month monthly, annual with -18%)
   const NUMMA_PLANS = {
-    micro:    { name: 'NUMMA Indépendant', monthly: 19, annual: 15.58 },
-    pro:      { name: 'NUMMA Pro',      monthly: 35, annual: 28.70 },
-    business: { name: 'NUMMA Business', monthly: 79, annual: 64.78 }
+    micro:    { name: 'NUMMA Indépendant', monthly: 19, annual: 15.58, payslip: 0  },
+    pro:      { name: 'NUMMA Pro',      monthly: 35, annual: 28.70, payslip: 15 },
+    business: { name: 'NUMMA Business', monthly: 79, annual: 64.78, payslip: 10 }
   };
 
   const $ = id => document.getElementById(id);
@@ -513,7 +517,9 @@
 
     // NUMMA scenario
     const plan = pickPlan(i);
-    const nummaAnnualHT = plan.annual * 12;
+    // abonnement + paie facturée au bulletin (1 bulletin par salarié et par mois)
+    const payslipAnnualHT = plan.payslip * i.salaries * 12;
+    const nummaAnnualHT = plan.annual * 12 + payslipAnnualHT;
     const nummaAnnualTTC = nummaAnnualHT * 1.20;
     const newCabinet = cabinetAnnual * (1 - CABINET_REDUCTION);
     const newTimeCost = timeCostAnnual * (1 - TIME_SAVED_RATIO);
@@ -526,7 +532,7 @@
     const daysSaved = Math.round(hoursSaved / 8);
 
     return {
-      plan, softAnnual, cabinetAnnual, timeCostAnnual, currentTotal,
+      plan, payslipAnnualHT, softAnnual, cabinetAnnual, timeCostAnnual, currentTotal,
       nummaAnnualTTC, newCabinet, newTimeCost, nummaTotal,
       savings, roi, hoursSaved, daysSaved
     };
