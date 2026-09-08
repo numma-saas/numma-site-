@@ -13,6 +13,7 @@ NUMMA réunit dans une seule plateforme quatre outils habituellement séparés. 
 - [Tarifs](https://www.numma.eu/tarifs.html) : Indépendant 19 €, Pro 35 €, Business 79 €, Enterprise sur devis
 - [Essai gratuit](https://www.numma.eu/essai-gratuit.html) : 14 jours sans carte bancaire
 - [Calculateur ROI](https://www.numma.eu/calculateur-roi.html) : estimation des économies annuelles
+- [Simulateur salaire brut net 2026](https://www.numma.eu/simulateur-salaire-brut-net.html) : conversion brut/net avec le détail des cotisations et le coût employeur.
 
 ## Guides de référence
 - [Facturation électronique 2026](https://www.numma.eu/blog/facturation-electronique-2026.html) : calendrier officiel, réception au 1er septembre 2026 pour toutes les entreprises, émission au 1er septembre 2026 pour les grandes entreprises et ETI puis au 1er septembre 2027 pour les TPE et PME
