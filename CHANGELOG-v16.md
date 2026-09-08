@@ -3,6 +3,9 @@
 **Simulateur salaire brut / net + corrections tarifaires**
 8 septembre 2026
 
+> Ce dossier contient l'intégralité du site (54 pages + CSS + JS). Dépose-le comme d'habitude.
+> Il inclut le **correctif de la bascule mois / an** du simulateur, ajouté après un test en ligne.
+
 ---
 
 ## 1. Nouvelle page : `simulateur-salaire-brut-net.html`
@@ -27,7 +30,7 @@ Un outil gratuit, sans inscription. C'est le levier SEO le plus fort identifié 
 
 ## 2. Fiabilité des calculs
 
-Le modèle a été écrit et validé en Python **avant** d'être porté en JavaScript, puis les deux ont été comparés ligne à ligne. Résultats identiques.
+Le modèle a été écrit et validé en Python **avant** d'être porté en JavaScript, puis les deux ont été comparés ligne à ligne. Ensuite l'outil a été testé **en direct sur le site en ligne**, pas seulement en local.
 
 Bases 2026 : **PMSS 4 005 €/mois**, **PASS 48 060 €/an**, **SMIC 1 747,20 €/mois**.
 
@@ -40,6 +43,10 @@ Bases 2026 : **PMSS 4 005 €/mois**, **PASS 48 060 €/an**, **SMIC 1 747,20 �
 | 5 000 € | cadre | 3 907,16 € | 6 816,97 € (×1,36) |
 
 Le point de contrôle : **1 747,20 € brut donne 1 383 € net**, ce qui correspond au SMIC net officiel 2026. Le modèle est bon.
+
+### Correctif après test en ligne
+
+Le bouton « Par an » ne convertissait pas le montant saisi : en tapant 2 500 puis en cliquant sur « Par an », l'outil comprenait *2 500 € annuels* au lieu de *30 000 €*. Le net s'effondrait à l'écran et ça ressemblait à un bug. La bascule multiplie maintenant par 12 (ou divise) le montant saisi.
 
 ### Deux réserves à connaître
 
@@ -91,8 +98,8 @@ Le simulateur est accessible depuis **toutes les pages** :
 - 51 pages HTML — **0 lien interne mort**
 - Tous les blocs JSON-LD — **0 erreur de syntaxe**
 - Toutes les variables et classes CSS du simulateur — présentes dans `style.css`
-- Rendu testé — **aucune erreur JavaScript**
 - Modèle JS comparé au modèle Python — **résultats identiques**
+- Simulateur testé **en ligne**, valeurs relevées dans le DOM réel — conformes
 
 ---
 
@@ -110,6 +117,6 @@ Le simulateur est accessible depuis **toutes les pages** :
 
 ## Déploiement
 
-Contenu du dossier à déposer sur GitHub Pages comme d'habitude. **`js/main.js` est inclus** — il porte le correctif de survol du mega-menu.
+Dépose le contenu du dossier sur GitHub Pages comme d'habitude. **`js/main.js` est inclus** — il porte le correctif de survol du mega-menu.
 
-Après mise en ligne : Search Console → **Demander une indexation** sur `simulateur-salaire-brut-net.html`. Une page outil qui répond à une requête à fort volume peut se positionner en quelques semaines.
+Après mise en ligne : Search Console → **Demander une indexation** sur `simulateur-salaire-brut-net.html`.

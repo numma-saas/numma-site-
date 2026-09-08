@@ -422,6 +422,12 @@
 
   function paire(a,b,key,valA){
     function set(v){
+      if(state[key] === v) return;
+      // Bascule mois/an : on convertit le montant saisi au lieu de le réinterpréter.
+      if(key === 'annuel'){
+        var cur = parseFloat($('brut').value);
+        if(cur > 0) $('brut').value = Math.round(v ? cur*12 : cur/12);
+      }
       state[key]=v;
       $(a).setAttribute('aria-pressed', String(v===valA));
       $(b).setAttribute('aria-pressed', String(v!==valA));
