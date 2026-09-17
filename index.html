@@ -102,7 +102,7 @@
       {"@type":"Question","name":"NUMMA remplace-t-il mon expert-comptable ?","acceptedAnswer":{"@type":"Answer","text":"Non. NUMMA prépare votre comptabilité au quotidien et produit un export FEC que votre cabinet reprend directement. Vous gagnez du temps sur la saisie, votre expert-comptable garde la validation et le bilan."}},
       {"@type":"Question","name":"Suis-je conforme à la facturation électronique 2026 ?","acceptedAnswer":{"@type":"Answer","text":"NUMMA génère vos factures aux formats Factur-X, UBL et CII. Depuis le 1er septembre 2026, toutes les entreprises doivent pouvoir recevoir des factures électroniques ; l'obligation d'émission arrive au 1er septembre 2027 pour les TPE et PME."}},
       {"@type":"Question","name":"Puis-je migrer depuis Excel ou un autre logiciel ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Nous reprenons vos bases clients, fournisseurs et votre catalogue au format CSV pendant la configuration de votre compte. C'est inclus dans l'essai gratuit, quel que soit votre point de départ."}},
-      {"@type":"Question","name":"Combien coûte NUMMA avec des salariés ?","acceptedAnswer":{"@type":"Answer","text":"La paie est facturée 15 € HT par bulletin sur le plan Pro et 10 € HT par bulletin sur le plan Business. Elle est sans supplément sur Enterprise. Le reste des modules est inclus dans l'abonnement."}},
+      {"@type":"Question","name":"Combien coûte NUMMA avec des salariés ?","acceptedAnswer":{"@type":"Answer","text":"La paie est facturée 27 € HT par bulletin sur le plan Pro et 25 € HT par bulletin sur le plan Business. Elle est sans supplément sur Enterprise. Le tarif inclut la gestion RH du collaborateur : demandes de congés, répartition par équipe, DSN et documents du salarié. Le reste des modules est inclus dans l'abonnement."}},
       {"@type":"Question","name":"Mes données sont-elles hébergées en France ?","acceptedAnswer":{"@type":"Answer","text":"Oui. L'hébergement est assuré en France chez OVH et Scaleway. NUMMA est une SAS française immatriculée au RCS de Paris, à capital français."}}
     ]
   }
@@ -224,6 +224,8 @@
     .readbar{position:fixed;top:0;left:0;height:2px;width:100%;transform:scaleX(0);transform-origin:0 50%;background:linear-gradient(90deg,#7C3AED,#FB923C);z-index:9999;pointer-events:none}
     /* titre du hero, mot par mot */
     .js .w{display:inline-block;opacity:0;transform:translateY(16px)}
+    /* Le H1 du hero est l'element LCP : on ne le masque jamais sur petit ecran. */
+    @media(max-width:768px){.js .w{opacity:1!important;transform:none!important}}
     .js .w.in{opacity:1;transform:none;transition:opacity .5s cubic-bezier(.16,1,.3,1),transform .5s cubic-bezier(.16,1,.3,1)}
     /* bandeau clients : défilement continu */
     .logos-view{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
@@ -283,6 +285,7 @@
               <a href="comptabilite.html">Comptabilité<small>Grand livre, balance, TVA</small></a>
               <a href="paie-rh.html">Paie &amp; RH<small>Bulletins, DSN, documents</small></a>
               <a href="tresorerie.html">Trésorerie<small>Banque, prévisionnel IA</small></a>
+              <a href="e-reporting.html">E-reporting 2027<small>Le 2e volet de la réforme</small></a>
             </div>
             <div class="mm-col">
               <p class="mm-title">Outils gratuits</p>
@@ -590,7 +593,7 @@
 
     <div style="text-align:center;margin-top:2rem;">
       <a href="calculateur-roi.html" class="btn btn-primary">Calculer mes économies sur mon cas réel</a>
-      <p style="margin-top:.75rem;font-size:.85rem;color:var(--ink-500);">Prix publics constatés en 2026 pour une configuration équivalente. La paie s'ajoute des deux côtés : chez NUMMA, 15 € HT par bulletin sur le plan Pro et 10 € sur Business — contre 25 à 35 € HT en moyenne chez un cabinet d'expertise comptable.</p>
+      <p style="margin-top:.75rem;font-size:.85rem;color:var(--ink-500);">Prix publics constatés en 2026 pour une configuration équivalente. La paie s'ajoute des deux côtés : chez NUMMA, 27 € HT par bulletin sur Pro et 23 € sur Business, gestion RH du collaborateur comprise — un cabinet facture 25 à 35 € HT pour le seul bulletin.</p>
     </div>
   </div>
 </section>
@@ -618,7 +621,7 @@
       </details>
       <details>
         <summary>Combien coûte NUMMA avec des salariés ?</summary>
-        <p>La paie est facturée 15 € HT par bulletin sur le plan Pro et 10 € HT par bulletin sur le plan Business. Elle est sans supplément sur Enterprise. Le reste des modules est inclus dans l'abonnement. <a href="tarifs.html">Voir la grille complète</a>.</p>
+        <p>La paie est facturée 27 € HT par bulletin sur le plan Pro et 25 € HT par bulletin sur le plan Business. Elle est sans supplément sur Enterprise. Le tarif inclut la gestion RH du collaborateur : demandes de congés, répartition par équipe, DSN et documents du salarié. Le reste des modules est inclus dans l'abonnement. <a href="tarifs.html">Voir la grille complète</a>.</p>
       </details>
       <details>
         <summary>Mes données sont-elles hébergées en France ?</summary>
@@ -715,7 +718,8 @@
 
   // titre du hero mot par mot
   var h1=document.querySelector('[data-split]');
-  if(h1 && !reduce){
+  var petitEcran = window.matchMedia('(max-width:768px)').matches;
+  if(h1 && !reduce && !petitEcran){
     h1.querySelectorAll('*').forEach(function(n){ if(n.tagName!=='BR') n.dataset.keep=1; });
     var html=h1.innerHTML.replace(/([^\s<>]+)(?![^<]*>)/g, function(w){ return '<span class="w">'+w+'</span>'; });
     h1.innerHTML=html;
