@@ -37,3 +37,6 @@ NUMMA réunit dans une seule plateforme quatre outils habituellement séparés. 
 - [CGV](https://www.numma.eu/cgv.html)
 - [Politique de confidentialité](https://www.numma.eu/politique-confidentialite.html)
 - [DPA](https://www.numma.eu/dpa.html)
+- [Facture électronique : définition, formats et exemple concret](https://www.numma.eu/blog/facture-electronique-definition-exemple.html) : Ce qui distingue une facture électronique d'un PDF, les trois formats autorisés, les nouvelles mentions et le parcours d'une facture pas à pas.
+- [Comment lire une fiche de paie, ligne par ligne](https://www.numma.eu/blog/comment-lire-fiche-de-paie.html) : Brut, cotisations, net social, net avant impôt, net payé : chaque bloc du bulletin expliqué, avec un exemple chiffré à 2 500 € brut.
+- [Logiciel de gestion d'entreprise : comment choisir le bon en 2026](https://www.numma.eu/blog/logiciel-de-gestion-entreprise.html) : Tout-en-un ou outils séparés, les six critères qui comptent avant 2027 et les pièges du prix affiché.
