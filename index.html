@@ -18,12 +18,15 @@
   <meta property="og:description" content="Facturation électronique, pré-comptabilité, paie et trésorerie. Logiciel français à partir de 19 € HT/mois.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.numma.eu/">
-  <meta property="og:image" content="https://www.numma.eu/images/og-cover.png">
+  <meta property="og:image" content="https://www.numma.eu/images/og/home.jpg">
+  <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="NUMMA - Compta, paie & facturation 2026">
+  <meta property="og:image:alt" content="NUMMA - Logiciel de gestion tout-en-un pour TPE et PME">
+  <meta name="twitter:image" content="https://www.numma.eu/images/og/home.jpg">
+  <meta property="og:site_name" content="NUMMA">
+  <meta property="og:locale" content="fr_FR">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://www.numma.eu/images/og-cover.png">
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
   <meta name="theme-color" content="#7C3AED">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -963,10 +966,25 @@
   var h1=document.querySelector('[data-split]');
   var petitEcran = window.matchMedia('(max-width:768px)').matches;
   if(h1 && !reduce && !petitEcran){
-    h1.querySelectorAll('*').forEach(function(n){ if(n.tagName!=='BR') n.dataset.keep=1; });
-    var html=h1.innerHTML.replace(/([^\s<>]+)(?![^<]*>)/g, function(w){ return '<span class="w">'+w+'</span>'; });
-    h1.innerHTML=html;
-    h1.querySelectorAll('.w').forEach(function(w,i){ setTimeout(function(){ w.classList.add('in'); }, 60+i*55); });
+    // Le texte en dégradé (background-clip:text) ne doit PAS être découpé en sous-éléments :
+    // un enfant inline-block animé n'est pas peint par le dégradé du parent et devient invisible.
+    // On anime donc le bloc en dégradé d'un seul tenant, et les autres mots un par un.
+    h1.querySelectorAll('.gradient-text').forEach(function(g){
+      var w=document.createElement('span'); w.className='w'; g.parentNode.insertBefore(w,g); w.appendChild(g);
+    });
+    [].slice.call(h1.childNodes).forEach(function(n){
+      if(n.nodeType!==3 || !n.textContent.trim()) return;
+      var frag=document.createDocumentFragment();
+      n.textContent.split(/(\s+)/).forEach(function(p){
+        if(!p) return;
+        if(/^\s+$/.test(p)){ frag.appendChild(document.createTextNode(p)); return; }
+        var s=document.createElement('span'); s.className='w'; s.textContent=p; frag.appendChild(s);
+      });
+      h1.replaceChild(frag,n);
+    });
+    h1.querySelectorAll('.w').forEach(function(w,i){ setTimeout(function(){ w.classList.add('in'); }, 60+i*70); });
+    // filet de sécurité : quoi qu'il arrive, tout le titre est visible après 1,5 s
+    setTimeout(function(){ h1.querySelectorAll('.w').forEach(function(w){ w.classList.add('in'); }); }, 1500);
   }
 
 })();
