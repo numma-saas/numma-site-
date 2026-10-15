@@ -40,7 +40,7 @@ Disallow: /admin/
 Disallow: /login/
 Disallow: /api/
 
-Sitemap: https://www.numma.eu/sitemap.xml
+Sitemap: https://numma.eu/sitemap.xml
 
 # Résumé du site pour les agents IA
-# https://www.numma.eu/llms.txt
+# https://numma.eu/llms.txt
