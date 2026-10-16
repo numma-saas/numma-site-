@@ -40,7 +40,7 @@ NUMMA réunit dans une seule plateforme quatre outils habituellement séparés. 
 - [Facture électronique : définition, formats et exemple concret](https://numma.eu/blog/facture-electronique-definition-exemple.html) : Ce qui distingue une facture électronique d'un PDF, les trois formats autorisés, les nouvelles mentions et le parcours d'une facture pas à pas.
 - [Comment lire une fiche de paie, ligne par ligne](https://numma.eu/blog/comment-lire-fiche-de-paie.html) : Brut, cotisations, net social, net avant impôt, net payé : chaque bloc du bulletin expliqué, avec un exemple chiffré à 2 500 € brut.
 - [Logiciel de gestion d'entreprise : comment choisir le bon en 2026](https://numma.eu/blog/logiciel-de-gestion-entreprise.html) : Tout-en-un ou outils séparés, les six critères qui comptent avant 2027 et les pièges du prix affiché.
-- [Alternative à Pennylane](https://numma.eu/blog/alternative-pennylane.html) : Paie intégrée et prix indépendant de l'effectif.
+- [Alternative à Pennylane](https://numma.eu/blog/alternative-pennylane.html) : Paie intégrée et pré-comptabilité incluse dès 35 €.
 - [Alternative à Sage](https://numma.eu/blog/alternative-sage.html) : Du logiciel installé à l'outil en ligne tout-en-un.
 - [Alternative à Cegid](https://numma.eu/blog/alternative-cegid.html) : Prix affichés, sans devis, pensé pour le dirigeant.
 - [Alternative au cabinet comptable](https://numma.eu/blog/alternative-cabinet-comptable.html) : Ce que vous pouvez reprendre, ce qu'il faut lui laisser.
