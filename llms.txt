@@ -44,3 +44,10 @@ NUMMA réunit dans une seule plateforme quatre outils habituellement séparés. 
 - [Alternative à Sage](https://numma.eu/blog/alternative-sage.html) : Du logiciel installé à l'outil en ligne tout-en-un.
 - [Alternative à Cegid](https://numma.eu/blog/alternative-cegid.html) : Prix affichés, sans devis, pensé pour le dirigeant.
 - [Alternative au cabinet comptable](https://numma.eu/blog/alternative-cabinet-comptable.html) : Ce que vous pouvez reprendre, ce qu'il faut lui laisser.
+
+## Électriciens et installateurs de bornes
+- [Logiciel de gestion pour électricien](https://numma.eu/logiciel-gestion-electricien.html) : devis, factures électroniques, TVA 5,5/10/20 %, paie du bâtiment, trésorerie.
+- [Logiciel pour installateur de bornes IRVE](https://numma.eu/logiciel-installateur-borne-recharge.html) : TVA 5,5 % ou 20 %, ADVENIR, clients pros et particuliers.
+- [TVA borne de recharge : 5,5 % ou 20 % ? Les vraies conditions en 2026](https://numma.eu/blog/tva-borne-de-recharge.html) : Ce que dit vraiment le CGI : logement neuf ou ancien, borne conforme, installateur IRVE. Cas pratiques et mentions de facture.
+- [Facture électronique : ce qui change pour les électriciens en 2027](https://numma.eu/blog/facture-electronique-electricien-2027.html) : Clients pros et particuliers, sous-traitance, multi-taux : pourquoi les électriciens sont touchés deux fois.
+- [Paie d'un électricien : convention du bâtiment, CIBTP et déplacements](https://numma.eu/blog/paie-electricien-convention-collective-batiment.html) : IDCC 1596, 1597, 2609, 2420, caisse de congés payés et indemnités de petits déplacements.
