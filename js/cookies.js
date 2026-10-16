@@ -27,12 +27,26 @@
     } catch (e) { /* fail silently */ }
   }
 
+  // Google Analytics 4 : chargé UNIQUEMENT après consentement « mesure d'audience »
+  // (CNIL : GA n'est pas exempté de consentement). Rien n'est chargé avant.
+  var GA_ID = 'G-7LBVCJ4GZG';
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+  function loadGA() {
+    if (window.__nummaGA) return;
+    window.__nummaGA = true;
+    window.gtag('js', new Date());
+    window.gtag('config', GA_ID, { anonymize_ip: true });
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(s);
+  }
+
   function applyConsent(consent) {
-    // Hooks pour activer / désactiver les services tiers selon le consentement.
-    // Placeholders — pas de tag tiers actif aujourd'hui sur le site marketing.
     window.NUMMA_CONSENT = consent;
-    // Exemple : if (consent.analytics) { /* charger Plausible / GA4 anonymisé */ }
-    // Exemple : if (consent.marketing) { /* charger pixel LinkedIn Insight */ }
+    if (consent && consent.analytics) loadGA();
+    // consent.marketing : aucun traceur marketing actif aujourd'hui.
   }
 
   function styleNode() {
@@ -87,7 +101,7 @@
     w.innerHTML = ''
       + '<div>'
       + '<h2>Vos cookies, votre choix.</h2>'
-      + '<p>NUMMA utilise uniquement des cookies strictement nécessaires au bon fonctionnement du service. Avec votre accord, nous pouvons aussi mesurer l\'audience de manière anonyme et améliorer votre expérience. <a href="politique-confidentialite.html">En savoir plus</a>.</p>'
+      + '<p>Nous utilisons des cookies nécessaires au fonctionnement du site. Avec votre accord, nous mesurons aussi l\'audience avec Google Analytics pour améliorer le site. Rien n\'est déposé tant que vous n\'avez pas choisi. <a href="politique-confidentialite.html">En savoir plus</a>.</p>'
       + '</div>'
       + '<div class="cookie-actions">'
       + '<button type="button" class="c-custom" data-act="custom">Personnaliser</button>'
@@ -109,7 +123,7 @@
       + '<h2>Préférences cookies</h2>'
       + '<p>Choisissez les catégories de cookies que vous autorisez. Vous pourrez modifier ce choix à tout moment depuis le pied de page.</p>'
       + '<div class="cookie-cat"><div><h3>Strictement nécessaires</h3><small>Indispensables au fonctionnement du site et de votre session NUMMA. Ne peuvent pas être désactivés.</small></div><label class="cookie-switch"><input type="checkbox" data-cat="necessary" checked disabled><span class="slider"></span></label></div>'
-      + '<div class="cookie-cat"><div><h3>Mesure d\'audience anonyme</h3><small>Statistiques de fréquentation agrégées (Plausible-like). Aucun identifiant personnel n\'est collecté, IP anonymisée.</small></div><label class="cookie-switch"><input type="checkbox" data-cat="analytics"' + (c.analytics ? ' checked' : '') + '><span class="slider"></span></label></div>'
+      + '<div class="cookie-cat"><div><h3>Mesure d\'audience anonyme</h3><small>Google Analytics 4 : pages vues, provenance des visites, durée. Cookies déposés uniquement avec votre accord, conservés 13 mois maximum.</small></div><label class="cookie-switch"><input type="checkbox" data-cat="analytics"' + (c.analytics ? ' checked' : '') + '><span class="slider"></span></label></div>'
       + '<div class="cookie-cat"><div><h3>Marketing & contenu personnalisé</h3><small>Traçage publicitaire (LinkedIn Insight, etc.) pour mesurer l\'efficacité des campagnes. Désactivé par défaut.</small></div><label class="cookie-switch"><input type="checkbox" data-cat="marketing"' + (c.marketing ? ' checked' : '') + '><span class="slider"></span></label></div>'
       + '<div class="cookie-modal-actions">'
       + '<button type="button" class="cancel" data-act="cancel">Annuler</button>'
