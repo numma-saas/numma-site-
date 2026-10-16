@@ -1,3 +1,30 @@
+/* ===== Attribution : d'où vient chaque visiteur (premier contact de la session) =====
+   Stocké en sessionStorage, transmis avec chaque formulaire, et aux événements GA4
+   (GA4 ne se charge qu'après consentement : voir js/cookies.js). */
+(function () {
+  try {
+    var q = new URLSearchParams(location.search);
+    var KEY = 'numma_ft';
+    var ft = JSON.parse(sessionStorage.getItem(KEY) || 'null');
+    var metierPage = (location.pathname.match(/electricien|borne|btp|agence|commerce|plombier|micro-entreprise/) || [''])[0];
+    if (!ft) {
+      var ref = document.referrer && document.referrer.indexOf(location.host) === -1 ? document.referrer : '';
+      ft = {
+        landing: location.pathname,
+        referrer: ref,
+        utm_source: q.get('utm_source') || (ref ? new URL(ref).hostname : 'direct'),
+        utm_medium: q.get('utm_medium') || (ref ? 'referral' : ''),
+        utm_campaign: q.get('utm_campaign') || '',
+        metier: q.get('metier') || metierPage || ''
+      };
+    } else if (!ft.metier && (q.get('metier') || metierPage)) {
+      ft.metier = q.get('metier') || metierPage;
+    }
+    sessionStorage.setItem(KEY, JSON.stringify(ft));
+    window.NUMMA_FT = ft;
+  } catch (e) { window.NUMMA_FT = {}; }
+})();
+
 // NUMMA — menu mobile, formulaire, état actif
 document.addEventListener('DOMContentLoaded', () => {
   const toggle = document.querySelector('.nav-toggle');
@@ -96,6 +123,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const data = new URLSearchParams();
       new FormData(form).forEach((value, key) => data.append(key, value));
       data.append('source', window.location.pathname);
+      var ft = window.NUMMA_FT || {};
+      ['landing','referrer','utm_source','utm_medium','utm_campaign','metier'].forEach(function (k) {
+        if (!data.has(k)) data.append(k, ft[k] || '');
+      });
 
       fetch(endpoint, { method: 'POST', body: data })
         .then((r) => r.json().catch(() => ({ result: 'success' })))
@@ -128,4 +159,49 @@ document.addEventListener('DOMContentLoaded', function () {
       if (e.key === 'Escape') { clearTimeout(t); li.classList.remove('is-open'); }
     });
   });
+});
+
+/* ===== Événements de conversion (envoyés seulement si GA4 est autorisé) ===== */
+document.addEventListener('click', function (e) {
+  var a = e.target.closest && e.target.closest('a[href]');
+  if (!a || typeof window.gtag !== 'function') return;
+  var h = a.getAttribute('href') || '';
+  var ft = window.NUMMA_FT || {};
+  var p = { page: location.pathname, metier: ft.metier || '', source: ft.utm_source || '' };
+  if (h.indexOf('reserver-demo') !== -1) window.gtag('event', 'clic_demo', p);
+  else if (h.indexOf('essai-gratuit') !== -1) window.gtag('event', 'clic_essai', p);
+  else if (h.indexOf('tel:') === 0) window.gtag('event', 'clic_telephone', p);
+});
+
+/* ===== Page démo : message adapté au métier d'origine ===== */
+document.addEventListener('DOMContentLoaded', function () {
+  if (location.pathname.indexOf('reserver-demo') === -1) return;
+  var m = (window.NUMMA_FT || {}).metier;
+  var labels = { electricien: 'électriciens', 'borne-irve': 'installateurs de bornes de recharge', borne: 'installateurs de bornes de recharge', btp: 'entreprises du bâtiment', plombier: 'plombiers-chauffagistes', agence: 'agences', commerce: 'commerçants' };
+  var lead = document.querySelector('.page-header .lead');
+  if (m && labels[m] && lead) {
+    var p = document.createElement('p');
+    p.className = 'demo-metier';
+    p.style.cssText = 'display:inline-block;margin-top:.75rem;padding:.4rem .9rem;border-radius:999px;background:var(--numma-purple-50);color:var(--numma-purple-700);font-weight:600;font-size:.9rem';
+    p.textContent = 'Démo adaptée aux ' + labels[m] + ' : on part de vos devis, de vos taux de TVA et de vos salariés.';
+    lead.insertAdjacentElement('afterend', p);
+  }
+});
+
+/* ===== Mobile : barre « Réserver une démo » collante ===== */
+document.addEventListener('DOMContentLoaded', function () {
+  if (/reserver-demo|essai-gratuit|contact|mentions-legales|cgu|cgv|dpa|politique-confidentialite/.test(location.pathname)) return;
+  var m = (window.NUMMA_FT || {}).metier || '';
+  var pre = location.pathname.indexOf('/blog/') !== -1 ? '../' : '';
+  var q = m ? '?metier=' + encodeURIComponent(m) : '';
+  var bar = document.createElement('div');
+  bar.className = 'sticky-demo';
+  bar.innerHTML = '<a class="sd-p" href="' + pre + 'reserver-demo.html' + q + '">Réserver une démo</a><a class="sd-s" href="' + pre + 'essai-gratuit.html' + q + '">Essai gratuit</a>';
+  document.body.appendChild(bar);
+  document.body.classList.add('has-sticky');
+  var shown = false;
+  window.addEventListener('scroll', function () {
+    var on = window.scrollY > 500;
+    if (on !== shown) { shown = on; bar.classList.toggle('on', on); }
+  }, { passive: true });
 });
