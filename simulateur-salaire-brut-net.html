@@ -50,7 +50,7 @@
       {"@type":"Question","name":"Comment passer du brut au net en 2026 ?","acceptedAnswer":{"@type":"Answer","text":"On retire du salaire brut les cotisations salariales : vieillesse, retraite complémentaire Agirc-Arrco, contribution d'équilibre général, CSG et CRDS. En 2026, cela représente environ 21 % du brut pour un non-cadre et 22 à 23 % pour un cadre. Un non-cadre conserve donc à peu près 79 % de son brut en net avant impôt."}},
       {"@type":"Question","name":"Quelle différence entre net avant impôt et net à payer ?","acceptedAnswer":{"@type":"Answer","text":"Le net avant impôt est le salaire après cotisations sociales. Le net à payer est ce qui arrive sur le compte bancaire, une fois déduit le prélèvement à la source, calculé avec le taux transmis par la DGFiP."}},
       {"@type":"Question","name":"Pourquoi un cadre a-t-il un net plus faible à brut égal ?","acceptedAnswer":{"@type":"Answer","text":"Un cadre cotise en plus à l'APEC (0,024 %) et à une prévoyance obligatoire de 1,50 % sur la tranche 1. À 3 000 € brut, l'écart représente environ 45 € de net en moins par mois."}},
-      {"@type":"Question","name":"Combien coûte réellement un salarié à l'employeur ?","acceptedAnswer":{"@type":"Answer","text":"Entre 1,03 et 1,42 fois le salaire brut selon le niveau de rémunération. Au niveau du SMIC, la réduction générale des cotisations patronales annule presque toutes les charges. Au-delà de 1,6 SMIC, cette réduction disparaît et le coût employeur se stabilise autour de 35 à 40 % du brut."}},
+      {"@type":"Question","name":"Combien coûte réellement un salarié à l'employeur ?","acceptedAnswer":{"@type":"Answer","text":"Entre 1,03 et 1,43 fois le salaire brut selon le niveau de rémunération. Au niveau du SMIC, la réduction générale des cotisations patronales annule presque toutes les charges. Depuis 2026, cette réduction diminue progressivement jusqu'à 3 SMIC (environ 5 600 € brut par mois) ; au-delà, le coût employeur se stabilise autour de 42 à 43 % du brut."}},
       {"@type":"Question","name":"Qu'est-ce que le plafond de la Sécurité sociale ?","acceptedAnswer":{"@type":"Answer","text":"Le PMSS est de 4 005 € par mois en 2026, soit 48 060 € par an. Certaines cotisations, dont la retraite complémentaire, changent de taux au-dessus de ce seuil : c'est la distinction entre tranche 1 et tranche 2."}},
       {"@type":"Question","name":"Ce simulateur est-il exact au centime près ?","acceptedAnswer":{"@type":"Answer","text":"Non, c'est une estimation. Il applique les taux légaux 2026 du secteur privé mais ne connaît ni votre convention collective, ni votre mutuelle d'entreprise, ni votre taux réel d'accidents du travail, ni les heures supplémentaires. Pour un calcul opposable, référez-vous à votre bulletin ou au simulateur officiel de l'URSSAF."}}
     ]
@@ -227,8 +227,8 @@
           <div class="res-grid">
             <div class="res-box"><p>Net avant impôt</p><b id="r-brutnet">1 979 €</b></div>
             <div class="res-box"><p>Cotisations salariales</p><b id="r-cot">521 €</b></div>
-            <div class="res-box"><p>Coût employeur</p><b id="r-cout">3 221 €</b></div>
-            <div class="res-box"><p>Charges patronales</p><b id="r-pat">721 €</b></div>
+            <div class="res-box"><p>Coût employeur</p><b id="r-cout">3 117 €</b></div>
+            <div class="res-box"><p>Charges patronales</p><b id="r-pat">617 €</b></div>
           </div>
           <p class="res-note" id="r-note"></p>
         </div>
@@ -276,7 +276,7 @@
 
       <h3>Ce que le poste coûte vraiment à l'employeur</h3>
       <p>L'employeur paie des cotisations en plus du brut : maladie, allocations familiales, accidents du travail, chômage, retraite complémentaire, formation. Sans allègement, cela représente environ 40 % du brut.</p>
-      <p>Mais une <strong>réduction générale</strong> s'applique jusqu'à 1,6 SMIC, soit environ 2 796 € brut en 2026. Elle est dégressive et maximale au niveau du SMIC, où elle annule presque toutes les charges patronales. Concrètement, <strong>un salarié au SMIC coûte à peine plus que son brut</strong>, tandis qu'un salarié à 3 500 € coûte environ 1,35 fois son brut. C'est le mécanisme le plus mal connu des dirigeants de TPE, et celui qui change le plus le calcul d'une embauche.</p>
+      <p>Mais une <strong>réduction générale</strong> s'applique jusqu'à 3 SMIC depuis le 1<sup>er</sup> janvier 2026, soit environ 5 600 € brut par mois depuis la revalorisation du SMIC au 1<sup>er</sup> juin 2026. Elle est dégressive et maximale au niveau du SMIC, où elle annule presque toutes les charges patronales. Concrètement, <strong>un salarié au SMIC coûte à peine plus que son brut</strong>, tandis qu'un salarié à 3 500 € coûte environ 1,36 fois son brut. C'est le mécanisme le plus mal connu des dirigeants de TPE, et celui qui change le plus le calcul d'une embauche.</p>
     </div>
   </div>
 </section>
@@ -298,7 +298,7 @@
       </details>
       <details>
         <summary>Combien coûte réellement un salarié ?</summary>
-        <p>Entre 1,03 et 1,42 fois le brut selon le niveau de salaire. Au SMIC, la réduction générale annule presque toutes les charges patronales. Au-delà de 1,6 SMIC, elle disparaît et le coût se stabilise autour de 35 à 40 % du brut.</p>
+        <p>Entre 1,03 et 1,43 fois le brut selon le niveau de salaire. Au SMIC, la réduction générale annule presque toutes les charges patronales. Elle diminue ensuite jusqu'à 3 SMIC ; au-delà, le coût se stabilise autour de 42 à 43 % du brut.</p>
       </details>
       <details>
         <summary>Le simulateur tient-il compte de ma convention collective ?</summary>
@@ -341,7 +341,7 @@
 <script>
 (function(){
   var PMSS = 4005.00;      // plafond mensuel Sécurité sociale 2026
-  var SMIC = 1747.20;      // SMIC mensuel brut 2026 (35 h)
+  var SMIC = 1867.02;      // SMIC mensuel brut au 1er juin 2026 (35 h)
 
   var SAL_T1 = [["Sécurité sociale — vieillesse plafonnée",6.90],
                 ["Retraite complémentaire Agirc-Arrco T1",3.15],
@@ -353,7 +353,7 @@
 
   var PAT_T1 = [8.55,4.72,1.29];                       // vieillesse plaf., Agirc T1, CEG T1
   var PAT_T2 = [12.95,1.62];                           // Agirc T2, CEG T2
-  var PAT_TT = [7.00,2.02,3.45,2.00,4.00,0.25,0.10,0.30,0.55,0.68,0.016,0.21];
+  var PAT_TT = [13.00,2.11,5.25,2.00,4.00,0.25,0.10,0.30,0.55,0.68,0.016,0.21];
 
   var $ = function(id){ return document.getElementById(id); };
   var eur = function(n){ return Math.round(n).toLocaleString('fr-FR') + ' €'; };
@@ -380,9 +380,11 @@
     PAT_TT.forEach(function(tx){ pat += brutMensuel*tx/100; });
     if(cadre) pat += t1*1.50/100;
     var reduc = 0;
-    if(brutMensuel > 0 && brutMensuel < 1.6*SMIC){
-      var coef = (0.3194/0.6)*((1.6*SMIC/brutMensuel)-1);
-      reduc = brutMensuel * Math.max(0, Math.min(coef, 0.3194));
+    if(brutMensuel > 0 && brutMensuel < 3*SMIC){
+      // Réduction générale dégressive unique 2026 (décret 2025-1446), employeur < 50 salariés
+      var x = Math.min(1, 0.5*((3*SMIC/brutMensuel)-1));
+      var coef = 0.02 + 0.3773*Math.pow(Math.max(0,x),1.75);
+      reduc = brutMensuel * Math.min(coef, 0.3973);
     }
     var patNet = Math.max(0, pat - reduc);
     return { lignes:L, cot:cot, net:brutMensuel-cot, pat:patNet, cout:brutMensuel+patNet };
@@ -408,7 +410,7 @@
       ? 'Le salarié conserve <b>'+(r.net/brutM*100).toFixed(1).replace('.',',')+' %</b> de son brut avant impôt. '
         + 'Le poste coûte <b>'+(r.cout/brutM).toFixed(2).replace('.',',')+' fois</b> le salaire brut à l\'employeur.'
       : '';
-    if(brutM>0 && brutM < 1.6*SMIC) note += ' La réduction générale des cotisations patronales s\'applique à ce niveau de salaire.';
+    if(brutM>0 && brutM < 3*SMIC) note += ' La réduction générale des cotisations patronales s\'applique à ce niveau de salaire.';
     $('r-note').innerHTML = note;
 
     var html = '';
