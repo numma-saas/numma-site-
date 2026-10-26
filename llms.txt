@@ -69,3 +69,7 @@ NUMMA réunit dans une seule plateforme quatre outils habituellement séparés. 
 - [Facture électronique refusée ou rejetée : que faire ?](https://numma.eu/blog/facture-electronique-refusee-que-faire.html) : statuts, rejet technique, refus du client, avoir.
 - [Coût d'un premier salarié en 2026](https://numma.eu/blog/cout-premier-salarie-2026.html) : coût employeur avec la réduction générale 2026, formalités, aides.
 - [Relancer une facture impayée](https://numma.eu/blog/relancer-facture-impayee.html) : calendrier, modèles, pénalités et recours.
+
+## Secteurs
+- [Logiciel de gestion hôtel et restaurant](https://numma.eu/logiciel-gestion-hotel-restaurant.html) : TVA 10/20 %, paie HCR, factures fournisseurs électroniques, trésorerie saisonnière.
+- [Logiciel de gestion PME industrielle](https://numma.eu/logiciel-gestion-industrie.html) : facture électronique B2B, achats, export, paie de branche, trésorerie.

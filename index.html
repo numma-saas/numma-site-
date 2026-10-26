@@ -126,7 +126,7 @@
     .seg li::before{content:"✓";position:absolute;left:0;color:var(--success);font-weight:800}
     .seg-note{font-size:.8rem;color:var(--ink-500);margin:-.9rem 0 1.4rem;padding-left:.1rem}
     .seg .btn{margin-top:auto}
-    .metier-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem}
+    .metier-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
     @media(max-width:1050px){.metier-grid{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:600px){.metier-grid{grid-template-columns:1fr}}
     .metier{display:flex;flex-direction:column;background:var(--white);border:1px solid var(--ink-100);border-radius:var(--radius-lg);padding:1.75rem 1.5rem;text-decoration:none;transition:border-color .18s,transform .18s}
@@ -354,11 +354,11 @@
             </div>
             <div class="mm-col">
               <p class="mm-title">Par secteur</p>
-              <a href="logiciel-gestion-btp.html">BTP &amp; artisan<small>TVA 5,5/10/20, CIBTP, Chorus</small></a>
-              <a href="logiciel-gestion-electricien.html">Électricien &amp; bornes IRVE<small>TVA 5,5 %, paie bâtiment, 2027</small></a>
-              <a href="logiciel-gestion-plombier-chauffagiste.html">Plombier-chauffagiste<small>PAC 5,5 %, chaudière 20 %, paie</small></a>
-              <a href="logiciel-gestion-agence.html">Agence &amp; freelance tech<small>SYNTEC, TJM, autoliquidation UE</small></a>
-              <a href="logiciel-gestion-commerce-detail.html">Commerce de détail<small>Caisse NF 525, stock, marge</small></a>
+              <a href="logiciel-gestion-btp.html">Bâtiment &amp; Construction<small>BTP, artisans, travaux et rénovation</small></a>
+              <a href="logiciel-gestion-commerce-detail.html">Commerce &amp; Distribution<small>Commerces, e-commerce, vente et négoce</small></a>
+              <a href="logiciel-gestion-agence.html">Services &amp; Conseil<small>Consultants, agences, freelances et prestations</small></a>
+              <a href="logiciel-gestion-industrie.html">Industrie &amp; Production<small>Fabrication, production et activités industrielles</small></a>
+              <a href="logiciel-gestion-hotel-restaurant.html">Hôtellerie &amp; Restauration<small>Restaurants, hôtels et établissements touristiques</small></a>
             </div>
             <div class="mm-col">
               <p class="mm-title">Le produit</p>
@@ -628,31 +628,45 @@
     </header>
 
     <div class="metier-grid">
-      <a class="metier reveal " href="logiciel-gestion-btp.html">
+      <a class="metier reveal" href="logiciel-gestion-btp.html">
         <span class="metier-ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h18M5 20V9l7-5 7 5v11M9 20v-6h6v6"/><path d="M12 4v5"/></svg></span>
-        <h3>BTP &amp; artisan du bâtiment</h3>
-        <p>TVA 5,5 / 10 / 20 %, retenue de garantie, Chorus Pro, paie CCN Bâtiment (CIBTP).</p>
-        <span class="metier-go">Voir la solution BTP →</span>
+        <h3>Bâtiment &amp; Construction</h3>
+        <p>BTP, artisans, électriciens, plombiers-chauffagistes : TVA 5,5 / 10 / 20 %, paie du bâtiment, Chorus Pro.</p>
+        <span class="metier-go">Voir la solution Bâtiment →</span>
       </a>
 
-      <a class="metier reveal d1" href="logiciel-gestion-agence.html">
-        <span class="metier-ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4" width="19" height="12.5" rx="1.6"/><path d="M8 20.5h8M12 16.5v4M9.5 8.5 7.5 10.2l2 1.7M14.5 8.5l2 1.7-2 1.7"/></svg></span>
-        <h3>Agence de com &amp; freelance tech</h3>
-        <p>Autoliquidation de TVA UE, projets au forfait, TJM ou retainer, paie SYNTEC, prévisions rédigées.</p>
-        <span class="metier-go">Voir la solution Agence →</span>
-      </a>
-
-      <a class="metier reveal d2" href="logiciel-gestion-commerce-detail.html">
+      <a class="metier reveal d1" href="logiciel-gestion-commerce-detail.html">
         <span class="metier-ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h16l-1.2 11.2a1.5 1.5 0 0 1-1.5 1.3H6.7a1.5 1.5 0 0 1-1.5-1.3z"/><path d="M8.5 8V6a3.5 3.5 0 0 1 7 0v2"/></svg></span>
-        <h3>Commerce de détail &amp; boutique</h3>
-        <p>Caisse NF 525, multi-TVA, stock en temps réel, marge par article, paie CCN Commerce.</p>
+        <h3>Commerce &amp; Distribution</h3>
+        <p>Boutiques, e-commerce, vente et négoce : TVA multi-taux, ventes aux particuliers et e-reporting 2027.</p>
         <span class="metier-go">Voir la solution Commerce →</span>
       </a>
 
-      <a class="metier reveal d3" href="micro-entreprise.html">
+      <a class="metier reveal d2" href="logiciel-gestion-agence.html">
+        <span class="metier-ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4" width="19" height="12.5" rx="1.6"/><path d="M8 20.5h8M12 16.5v4M9.5 8.5 7.5 10.2l2 1.7M14.5 8.5l2 1.7-2 1.7"/></svg></span>
+        <h3>Services &amp; Conseil</h3>
+        <p>Consultants, agences, freelances : forfait ou TJM, autoliquidation UE, paie SYNTEC.</p>
+        <span class="metier-go">Voir la solution Services →</span>
+      </a>
+
+      <a class="metier reveal d3" href="logiciel-gestion-industrie.html">
+        <span class="metier-ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20V10l5 3V10l5 3V7l8 4v9z"/><path d="M3 20h18M7 16h2M12 16h2M17 16h2"/></svg></span>
+        <h3>Industrie &amp; Production</h3>
+        <p>PME de fabrication : factures électroniques B2B, achats, export, paie de branche.</p>
+        <span class="metier-go">Voir la solution Industrie →</span>
+      </a>
+
+      <a class="metier reveal d1" href="logiciel-gestion-hotel-restaurant.html">
+        <span class="metier-ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3v8a2 2 0 0 0 2 2h0a2 2 0 0 0 2-2V3M9 13v8"/><path d="M17 3c-1.7 0-3 2-3 5s1.3 4 3 4v9"/></svg></span>
+        <h3>Hôtellerie &amp; Restauration</h3>
+        <p>Restaurants et hôtels : TVA 10 / 20 %, paie HCR, trésorerie saisonnière.</p>
+        <span class="metier-go">Voir la solution HCR →</span>
+      </a>
+
+      <a class="metier reveal d2" href="micro-entreprise.html">
         <span class="metier-ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20.5a7.5 7.5 0 0 1 15 0"/></svg></span>
         <h3>Micro-entreprise &amp; indépendant</h3>
-        <p>Offre dédiée à 19 € HT/mois : facturation Factur-X, URSSAF assistée, prévisionnel.</p>
+        <p>Offre dédiée à 19 € HT/mois : facturation, facture électronique, prévisionnel.</p>
         <span class="metier-go">Voir l'offre Indépendant →</span>
       </a>
     </div>
