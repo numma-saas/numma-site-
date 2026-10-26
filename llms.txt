@@ -56,12 +56,14 @@ NUMMA réunit dans une seule plateforme quatre outils habituellement séparés. 
 - [Alternative à Indy quand on a des salariés](https://numma.eu/blog/alternative-indy.html) : comparatif honnête, paie et RH intégrées.
 
 ## Paie du bâtiment
-- [Indemnités de petits déplacements BTP 2026](https://numma.eu/blog/indemnites-petits-deplacements-btp-2026.html) : repas, trajet, transport, zones, cotisations et comparatif de cinq régions.
+- [Indemnités de petits déplacements BTP 2026](https://numma.eu/blog/indemnites-petits-deplacements-btp-2026.html) : repas, trajet, transport, zones, cotisations et comparatif de sept territoires.
 - [IPD bâtiment Île-de-France 2026](https://numma.eu/blog/ipd-batiment-ile-de-france-2026.html) : barème régional zone par zone, vérifié sur l'accord signé.
 - [IPD bâtiment Nouvelle-Aquitaine 2026](https://numma.eu/blog/ipd-batiment-nouvelle-aquitaine-2026.html) : barème régional zone par zone, vérifié sur l'accord signé.
 - [IPD bâtiment Occitanie 2026](https://numma.eu/blog/ipd-batiment-occitanie-2026.html) : barème régional zone par zone, vérifié sur l'accord signé.
 - [IPD bâtiment Normandie 2026](https://numma.eu/blog/ipd-batiment-normandie-2026.html) : barème régional zone par zone, vérifié sur l'accord signé.
 - [IPD bâtiment Auvergne 2026](https://numma.eu/blog/ipd-batiment-auvergne-2026.html) : barème régional zone par zone, vérifié sur l'accord signé.
+- [IPD bâtiment Centre-Val de Loire 2026](https://numma.eu/blog/ipd-batiment-centre-val-de-loire-2026.html) : barème régional zone par zone, deux grilles selon la taille.
+- [IPD bâtiment Loire 2026](https://numma.eu/blog/ipd-batiment-loire-2026.html) : barème départemental zone par zone.
 
 ## Gestion courante
 - [Facture électronique refusée ou rejetée : que faire ?](https://numma.eu/blog/facture-electronique-refusee-que-faire.html) : statuts, rejet technique, refus du client, avoir.
