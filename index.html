@@ -334,7 +334,48 @@
     }
 
   </style>
-<style>.hero-proof{display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem 1.25rem;margin-top:1.1rem;font-size:.82rem;color:var(--ink-600)}.hero-proof span{display:inline-flex;align-items:center;gap:.4rem}.hero-proof span:before{content:"";width:16px;height:16px;border-radius:50%;background:#DCFCE7 url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27%2316A34A%27 stroke-width=%273.5%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3Cpath d=%27m5 12 5 5 9-10%27/%3E%3C/svg%3E") center/10px no-repeat}@media(max-width:640px){.hero-proof span:nth-child(n+2){display:none}}</style></head>
+<style>.hero-proof{display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem 1.25rem;margin-top:1.1rem;font-size:.82rem;color:var(--ink-600)}.hero-proof span{display:inline-flex;align-items:center;gap:.4rem}.hero-proof span:before{content:"";width:16px;height:16px;border-radius:50%;background:#DCFCE7 url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27%2316A34A%27 stroke-width=%273.5%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3Cpath d=%27m5 12 5 5 9-10%27/%3E%3C/svg%3E") center/10px no-repeat}@media(max-width:640px){.hero-proof span:nth-child(n+2){display:none}}</style><style>
+.prod-dark{background:radial-gradient(900px 420px at 50% -60px,rgba(167,139,250,.45),transparent 70%),linear-gradient(180deg,#3B1E6D 0,#1E1240 320px,#0F0A1F 760px);color:#fff;margin:1.5rem 16px 0;border-radius:32px;overflow:hidden;position:relative;box-shadow:0 -30px 80px -30px rgba(124,58,237,.35)}
+.logos-band{background:linear-gradient(180deg,#fff 0,#FAF8FF 100%)}
+@supports (animation-timeline:view()){@media (prefers-reduced-motion:no-preference){
+.prod-dark{animation:prodIn linear both;animation-timeline:view();animation-range:entry 0% entry 70%}
+@keyframes prodIn{from{transform:scale(.93) translateY(40px);opacity:.35;border-radius:56px}to{transform:none;opacity:1;border-radius:32px}}}}
+.prod-dark .eyebrow{color:#C4B5FD}.prod-dark h2,.prod-dark .mod h3{color:#fff}
+.prod-dark .lead,.prod-dark .mod p{color:#C9C3DA}.prod-dark .mod li{color:#E4E0EE}.prod-dark .mod li::before{color:#A78BFA}
+.prod-dark .mod{border-top-color:rgba(255,255,255,.09)}
+.prod-dark .mod img{border-color:rgba(255,255,255,.12);box-shadow:0 30px 60px -24px rgba(0,0,0,.6),0 0 0 1px rgba(167,139,250,.15)}
+.prod-dark .btn-secondary{background:transparent;color:#fff;border-color:rgba(255,255,255,.3)}
+.prod-dark .btn-secondary:hover{background:rgba(255,255,255,.08);color:#fff}
+@media(max-width:640px){.prod-dark{margin:0 8px;border-radius:20px}}
+</style><style>
+@media(min-width:1024px){.hero-proof{flex-wrap:nowrap;white-space:nowrap;width:max-content;margin-left:50%;transform:translateX(-50%)}}
+@media(max-width:640px){
+.metier-grid{gap:.6rem}
+.metier{display:grid;grid-template-columns:40px 1fr 14px;column-gap:.85rem;align-items:center;padding:.85rem 1rem}
+.metier-ico{width:40px;height:40px;margin:0;grid-row:1/3}
+.metier-ico svg{width:21px;height:21px}
+.metier h3{font-size:.95rem;margin:0}
+.metier p{grid-column:2;font-size:.8rem;margin:.15rem 0 0;line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.metier-go{grid-column:3;grid-row:1/3;font-size:0;margin:0}
+.metier-go::after{content:"›";font-size:1.4rem;line-height:1;color:var(--numma-purple-500)}
+}
+</style><style>
+.sc-badge{position:absolute;left:-34px;top:150px;z-index:3;background:#fff;border-radius:14px;padding:8px 12px;box-shadow:0 18px 40px -16px rgba(15,10,31,.35),0 0 0 1px rgba(15,10,31,.06);line-height:0}
+.sc-badge img{width:119px;height:auto;display:block}
+@media(max-width:900px){.sc-badge{position:static;width:max-content;margin:14px auto 0;box-shadow:0 0 0 1px rgba(15,10,31,.08)}.sc-badge img{width:104px}}
+.mod-sc{display:block;margin:0 0 1.1rem;line-height:0}.mod-sc img{width:104px;height:auto;border-radius:8px;background:#fff;padding:5px 8px;box-sizing:content-box}
+</style><style>
+.sc-lock{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:1.6rem}
+.sc-lock>img{width:28px;height:28px;border-radius:7px;background:#fff}
+.sc-lock b{color:#fff;font-size:1.05rem;letter-spacing:-.01em}
+.sc-lock i{width:1px;height:30px;background:rgba(255,255,255,.3)}
+.sc-chip{background:#fff;border-radius:10px;padding:5px 8px;line-height:0}.sc-chip img{width:99px;height:auto}
+</style><style>
+.logos-track{align-items:center}
+.logos-track .lg{display:inline-flex;align-items:center;height:52px;opacity:.72;transition:opacity .3s}
+.logos-track .lg:hover{opacity:1}
+.logos-track .lg img{width:auto;display:block}
+</style></head>
 <body>
 <div class="readbar" aria-hidden="true"></div>
 
@@ -407,7 +448,7 @@
         <a href="reserver-demo.html" class="btn btn-primary btn-lg">Réserver une démo</a>
         <a href="essai-gratuit.html" class="btn btn-secondary btn-lg">Essai gratuit 14 jours</a>
       </div>
-      <div class="hero-proof"><span>Factures via SEQINO, Plateforme Agréée DGFiP</span><span>Démo de 30 min avec le fondateur</span><span>Essai sans carte bancaire</span></div>
+      <div class="hero-proof"><span>Factures via SEQINO, Plateforme Agréée DGFiP</span><span>Démo de 30 min avec Mallory, cofondateur</span><span>Essai sans carte bancaire</span></div>
     </div>
 
     <div class="hero-shot-wrap" style="max-width:1080px;margin:2rem auto 0;position:relative;">
@@ -487,6 +528,8 @@
           </div>
         </div>
       </div>
+
+      <div class="sc-badge"><picture><source srcset="images/label-solution-compatible.webp" type="image/webp"><img src="images/label-solution-compatible.jpg" alt="Label officiel « Solution compatible – Facturation électronique »" width="119" height="48"></picture></div>
 
       <div class="nd-float nd-donut" aria-hidden="true">
         <div class="nd-fh"><b>Répartition des dépenses</b><span>Septembre</span></div>
@@ -601,16 +644,16 @@
     <p class="lb-title">Ils gèrent leur entreprise avec NUMMA</p>
     <div class="logos-view">
       <div class="logos-track">
-        <span>VESPERA GROUP</span>
-        <span>SANCY RESORT</span>
-        <span>SCAP</span>
-        <span>KW LUXURY</span>
+        <span class="lg"><picture><source srcset="images/clients/vespera-group.webp" type="image/webp"><img src="images/clients/vespera-group.png" alt="Vespera Group" width="118" height="80" style="height:42px" loading="lazy"></picture></span>
+        <span class="lg"><picture><source srcset="images/clients/sancy-resort.webp" type="image/webp"><img src="images/clients/sancy-resort.png" alt="Sancy Resort" width="170" height="80" style="height:50px" loading="lazy"></picture></span>
+        <span class="lg"><picture><source srcset="images/clients/scap.webp" type="image/webp"><img src="images/clients/scap.png" alt="SCAP" width="164" height="56" style="height:30px" loading="lazy"></picture></span>
+        <span class="lg"><picture><source srcset="images/clients/kw-luxury.webp" type="image/webp"><img src="images/clients/kw-luxury.png" alt="Keller Williams Luxury" width="262" height="80" style="height:44px" loading="lazy"></picture></span>
         <span>LEASING CONSULTING</span>
         <span>CDS LOGISTIQUE</span>
-        <span>VESPERA GROUP</span>
-        <span>SANCY RESORT</span>
-        <span>SCAP</span>
-        <span>KW LUXURY</span>
+        <span class="lg"><picture><source srcset="images/clients/vespera-group.webp" type="image/webp"><img src="images/clients/vespera-group.png" alt="" width="118" height="80" style="height:42px" loading="lazy"></picture></span>
+        <span class="lg"><picture><source srcset="images/clients/sancy-resort.webp" type="image/webp"><img src="images/clients/sancy-resort.png" alt="" width="170" height="80" style="height:50px" loading="lazy"></picture></span>
+        <span class="lg"><picture><source srcset="images/clients/scap.webp" type="image/webp"><img src="images/clients/scap.png" alt="" width="164" height="56" style="height:30px" loading="lazy"></picture></span>
+        <span class="lg"><picture><source srcset="images/clients/kw-luxury.webp" type="image/webp"><img src="images/clients/kw-luxury.png" alt="" width="262" height="80" style="height:44px" loading="lazy"></picture></span>
         <span>LEASING CONSULTING</span>
         <span>CDS LOGISTIQUE</span>
       </div>
@@ -618,120 +661,8 @@
   </div>
 </section>
 
-<!-- ===== 3. Solutions métier ===== -->
-<section>
-  <div class="container">
-    <header class="section-header reveal">
-      <span class="eyebrow">Solutions métier</span>
-      <h2>NUMMA adapté à votre secteur</h2>
-      <p class="lead">Chaque métier a ses règles : taux de TVA, convention collective, mode d'encaissement. NUMMA est préconfiguré pour les activités françaises les plus courantes.</p>
-    </header>
-
-    <div class="metier-grid">
-      <a class="metier reveal" href="logiciel-gestion-btp.html">
-        <span class="metier-ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h18M5 20V9l7-5 7 5v11M9 20v-6h6v6"/><path d="M12 4v5"/></svg></span>
-        <h3>Bâtiment &amp; Construction</h3>
-        <p>BTP, artisans, électriciens, plombiers-chauffagistes : TVA 5,5 / 10 / 20 %, paie du bâtiment, Chorus Pro.</p>
-        <span class="metier-go">Voir la solution Bâtiment →</span>
-      </a>
-
-      <a class="metier reveal d1" href="logiciel-gestion-commerce-detail.html">
-        <span class="metier-ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h16l-1.2 11.2a1.5 1.5 0 0 1-1.5 1.3H6.7a1.5 1.5 0 0 1-1.5-1.3z"/><path d="M8.5 8V6a3.5 3.5 0 0 1 7 0v2"/></svg></span>
-        <h3>Commerce &amp; Distribution</h3>
-        <p>Boutiques, e-commerce, vente et négoce : TVA multi-taux, ventes aux particuliers et e-reporting 2027.</p>
-        <span class="metier-go">Voir la solution Commerce →</span>
-      </a>
-
-      <a class="metier reveal d2" href="logiciel-gestion-agence.html">
-        <span class="metier-ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4" width="19" height="12.5" rx="1.6"/><path d="M8 20.5h8M12 16.5v4M9.5 8.5 7.5 10.2l2 1.7M14.5 8.5l2 1.7-2 1.7"/></svg></span>
-        <h3>Services &amp; Conseil</h3>
-        <p>Consultants, agences, freelances : forfait ou TJM, autoliquidation UE, paie SYNTEC.</p>
-        <span class="metier-go">Voir la solution Services →</span>
-      </a>
-
-      <a class="metier reveal d3" href="logiciel-gestion-industrie.html">
-        <span class="metier-ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20V10l5 3V10l5 3V7l8 4v9z"/><path d="M3 20h18M7 16h2M12 16h2M17 16h2"/></svg></span>
-        <h3>Industrie &amp; Production</h3>
-        <p>PME de fabrication : factures électroniques B2B, achats, export, paie de branche.</p>
-        <span class="metier-go">Voir la solution Industrie →</span>
-      </a>
-
-      <a class="metier reveal d1" href="logiciel-gestion-hotel-restaurant.html">
-        <span class="metier-ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3v8a2 2 0 0 0 2 2h0a2 2 0 0 0 2-2V3M9 13v8"/><path d="M17 3c-1.7 0-3 2-3 5s1.3 4 3 4v9"/></svg></span>
-        <h3>Hôtellerie &amp; Restauration</h3>
-        <p>Restaurants et hôtels : TVA 10 / 20 %, paie HCR, trésorerie saisonnière.</p>
-        <span class="metier-go">Voir la solution HCR →</span>
-      </a>
-
-      <a class="metier reveal d2" href="micro-entreprise.html">
-        <span class="metier-ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20.5a7.5 7.5 0 0 1 15 0"/></svg></span>
-        <h3>Micro-entreprise &amp; indépendant</h3>
-        <p>Offre dédiée à 19 € HT/mois : facturation, facture électronique, prévisionnel.</p>
-        <span class="metier-go">Voir l'offre Indépendant →</span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== 4. Segmentation par taille ===== -->
-<section>
-  <div class="container">
-    <header class="section-header reveal">
-      <span class="eyebrow">Vous êtes…</span>
-      <h2>Un tarif par taille d'entreprise</h2>
-      <p class="lead">Pas de fonctionnalités bridées. Vous payez selon votre effectif, pas selon ce que vous utilisez.</p>
-    </header>
-
-    <div class="seg-grid">
-      <article class="seg reveal">
-        <div class="seg-tag">Indépendant</div>
-        <h3>Seul aux commandes</h3>
-        <p class="seg-who">EURL, SASU, micro-entreprise</p>
-        <div class="seg-price">19 €<small> HT / mois</small></div>
-        <ul>
-          <li>Facturation, TVA, trésorerie</li>
-          <li>Export FEC pour votre cabinet</li>
-        </ul>
-        <a href="micro-entreprise.html" class="btn btn-secondary">Voir l'offre Indépendant</a>
-      </article>
-
-      <article class="seg is-featured reveal d1">
-        <div class="seg-tag">TPE · 2 à 10 salariés</div>
-        <h3>Une petite équipe</h3>
-        <p class="seg-who">Le cas le plus fréquent</p>
-        <div class="seg-price">35 €<small> HT / mois</small></div>
-        <ul>
-          <li>Tout l'Indépendant, plus :</li>
-          <li>Paie, DSN et documents RH</li>
-          <li>Relances clients automatiques</li>
-        </ul>
-        <p class="seg-note">Fiche de paie &amp; RH en option — <b>27 € HT</b> le bulletin <span class="vs-cab">congés et équipes compris</span></p>
-        <a href="tarifs.html" class="btn btn-primary">Voir le détail du plan Pro</a>
-      </article>
-
-      <article class="seg reveal d2">
-        <div class="seg-tag">PME · 11 à 49 salariés</div>
-        <h3>Une structure établie</h3>
-        <p class="seg-who">Plusieurs pôles, plusieurs métiers</p>
-        <div class="seg-price">79 €<small> HT / mois</small></div>
-        <ul>
-          <li>Tout le Pro, plus :</li>
-          <li>Plus de 600 conventions collectives</li>
-          <li>Prévisions de trésorerie par IA</li>
-        </ul>
-        <p class="seg-note">Fiche de paie &amp; RH en option — <b>25 € HT</b> le bulletin <span class="vs-cab">congés et équipes compris</span></p>
-        <a href="tarifs.html" class="btn btn-secondary">Voir le détail du plan Business</a>
-      </article>
-    </div>
-
-    <p style="text-align:center;margin-top:1.5rem;font-size:.92rem;color:var(--ink-500);">
-      Plus de 50 salariés ou plusieurs sociétés ? <a href="contact.html" style="font-weight:600;">Parlons de l'offre Enterprise →</a>
-    </p>
-  </div>
-</section>
-
-<!-- ===== 4. Le produit en écrans ===== -->
-<section style="background:var(--ink-50);">
+<!-- ===== 3. Le produit en écrans ===== -->
+<section class="prod-dark">
   <div class="container">
     <header class="section-header reveal">
       <span class="eyebrow">Le produit</span>
@@ -749,6 +680,7 @@
             <li>Relances automatiques à J+7, J+15 et J+30</li>
             <li>Conforme à la réforme 2026</li>
           </ul>
+          <span class="mod-sc"><picture><source srcset="images/label-solution-compatible.webp" type="image/webp"><img src="images/label-solution-compatible.jpg" alt="Label officiel « Solution compatible – Facturation électronique »" width="104" height="42" loading="lazy"></picture></span>
           <a href="facturation-electronique.html" class="btn btn-secondary btn-sm">En savoir plus</a>
         </div>
         <div>
@@ -819,8 +751,63 @@
   </div>
 </section>
 
-<!-- ===== 5. Un abonnement au lieu de trois ===== -->
+<!-- ===== 3. Solutions métier ===== -->
 <section>
+  <div class="container">
+    <header class="section-header reveal">
+      <span class="eyebrow">Solutions métier</span>
+      <h2>NUMMA adapté à votre secteur</h2>
+      <p class="lead">Chaque métier a ses règles : taux de TVA, convention collective, mode d'encaissement. NUMMA est préconfiguré pour les activités françaises les plus courantes.</p>
+    </header>
+
+    <div class="metier-grid">
+      <a class="metier reveal" href="logiciel-gestion-btp.html">
+        <span class="metier-ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h18M5 20V9l7-5 7 5v11M9 20v-6h6v6"/><path d="M12 4v5"/></svg></span>
+        <h3>Bâtiment &amp; Construction</h3>
+        <p>BTP, artisans, électriciens, plombiers-chauffagistes : TVA 5,5 / 10 / 20 %, paie du bâtiment, Chorus Pro.</p>
+        <span class="metier-go">Voir la solution Bâtiment →</span>
+      </a>
+
+      <a class="metier reveal d1" href="logiciel-gestion-commerce-detail.html">
+        <span class="metier-ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h16l-1.2 11.2a1.5 1.5 0 0 1-1.5 1.3H6.7a1.5 1.5 0 0 1-1.5-1.3z"/><path d="M8.5 8V6a3.5 3.5 0 0 1 7 0v2"/></svg></span>
+        <h3>Commerce &amp; Distribution</h3>
+        <p>Boutiques, e-commerce, vente et négoce : TVA multi-taux, ventes aux particuliers et e-reporting 2027.</p>
+        <span class="metier-go">Voir la solution Commerce →</span>
+      </a>
+
+      <a class="metier reveal d2" href="logiciel-gestion-agence.html">
+        <span class="metier-ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4" width="19" height="12.5" rx="1.6"/><path d="M8 20.5h8M12 16.5v4M9.5 8.5 7.5 10.2l2 1.7M14.5 8.5l2 1.7-2 1.7"/></svg></span>
+        <h3>Services &amp; Conseil</h3>
+        <p>Consultants, agences, freelances : forfait ou TJM, autoliquidation UE, paie SYNTEC.</p>
+        <span class="metier-go">Voir la solution Services →</span>
+      </a>
+
+      <a class="metier reveal d3" href="logiciel-gestion-industrie.html">
+        <span class="metier-ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20V10l5 3V10l5 3V7l8 4v9z"/><path d="M3 20h18M7 16h2M12 16h2M17 16h2"/></svg></span>
+        <h3>Industrie &amp; Production</h3>
+        <p>PME de fabrication : factures électroniques B2B, achats, export, paie de branche.</p>
+        <span class="metier-go">Voir la solution Industrie →</span>
+      </a>
+
+      <a class="metier reveal d1" href="logiciel-gestion-hotel-restaurant.html">
+        <span class="metier-ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3v8a2 2 0 0 0 2 2h0a2 2 0 0 0 2-2V3M9 13v8"/><path d="M17 3c-1.7 0-3 2-3 5s1.3 4 3 4v9"/></svg></span>
+        <h3>Hôtellerie &amp; Restauration</h3>
+        <p>Restaurants et hôtels : TVA 10 / 20 %, paie HCR, trésorerie saisonnière.</p>
+        <span class="metier-go">Voir la solution HCR →</span>
+      </a>
+
+      <a class="metier reveal d2" href="micro-entreprise.html">
+        <span class="metier-ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20.5a7.5 7.5 0 0 1 15 0"/></svg></span>
+        <h3>Micro-entreprise &amp; indépendant</h3>
+        <p>Offre dédiée à 19 € HT/mois : facturation, facture électronique, prévisionnel.</p>
+        <span class="metier-go">Voir l'offre Indépendant →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 5. Un abonnement au lieu de trois ===== -->
+<section style="background:var(--ink-50);">
   <div class="container container-sm">
     <header class="section-header reveal">
       <span class="eyebrow">Le calcul</span>
@@ -857,6 +844,63 @@
   </div>
 </section>
 
+
+<!-- ===== 4. Segmentation par taille ===== -->
+<section>
+  <div class="container">
+    <header class="section-header reveal">
+      <span class="eyebrow">Vous êtes…</span>
+      <h2>Un tarif par taille d'entreprise</h2>
+      <p class="lead">Pas de fonctionnalités bridées. Vous payez selon votre effectif, pas selon ce que vous utilisez.</p>
+    </header>
+
+    <div class="seg-grid">
+      <article class="seg reveal">
+        <div class="seg-tag">Indépendant</div>
+        <h3>Seul aux commandes</h3>
+        <p class="seg-who">EURL, SASU, micro-entreprise</p>
+        <div class="seg-price">19 €<small> HT / mois</small></div>
+        <ul>
+          <li>Facturation, TVA, trésorerie</li>
+          <li>Export FEC pour votre cabinet</li>
+        </ul>
+        <a href="micro-entreprise.html" class="btn btn-secondary">Voir l'offre Indépendant</a>
+      </article>
+
+      <article class="seg is-featured reveal d1">
+        <div class="seg-tag">TPE · 2 à 10 salariés</div>
+        <h3>Une petite équipe</h3>
+        <p class="seg-who">Le cas le plus fréquent</p>
+        <div class="seg-price">35 €<small> HT / mois</small></div>
+        <ul>
+          <li>Tout l'Indépendant, plus :</li>
+          <li>Paie, DSN et documents RH</li>
+          <li>Relances clients automatiques</li>
+        </ul>
+        <p class="seg-note">Fiche de paie &amp; RH en option — <b>27 € HT</b> le bulletin <span class="vs-cab">congés et équipes compris</span></p>
+        <a href="tarifs.html" class="btn btn-primary">Voir le détail du plan Pro</a>
+      </article>
+
+      <article class="seg reveal d2">
+        <div class="seg-tag">PME · 11 à 49 salariés</div>
+        <h3>Une structure établie</h3>
+        <p class="seg-who">Plusieurs pôles, plusieurs métiers</p>
+        <div class="seg-price">79 €<small> HT / mois</small></div>
+        <ul>
+          <li>Tout le Pro, plus :</li>
+          <li>Plus de 600 conventions collectives</li>
+          <li>Prévisions de trésorerie par IA</li>
+        </ul>
+        <p class="seg-note">Fiche de paie &amp; RH en option — <b>25 € HT</b> le bulletin <span class="vs-cab">congés et équipes compris</span></p>
+        <a href="tarifs.html" class="btn btn-secondary">Voir le détail du plan Business</a>
+      </article>
+    </div>
+
+    <p style="text-align:center;margin-top:1.5rem;font-size:.92rem;color:var(--ink-500);">
+      Plus de 50 salariés ou plusieurs sociétés ? <a href="contact.html" style="font-weight:600;">Parlons de l'offre Enterprise →</a>
+    </p>
+  </div>
+</section>
 
 <!-- ===== 7. FAQ ===== -->
 <section>
@@ -900,6 +944,7 @@
       <a href="reserver-demo.html" class="btn btn-lg btn-ghost" style="color:var(--white);border-color:rgba(255,255,255,.4);">Réserver une démo</a>
     </div>
     <p style="margin-top:1rem;font-size:.87rem;color:rgba(255,255,255,.75);">14 jours gratuits · Compte configuré avec vous sous 24 h · Sans carte bancaire</p>
+    <div class="sc-lock"><img src="images/logo-72.png" alt="" width="28" height="28"><b>NUMMA</b><i></i><span class="sc-chip"><picture><source srcset="images/label-solution-compatible.webp" type="image/webp"><img src="images/label-solution-compatible.jpg" alt="Label officiel « Solution compatible – Facturation électronique »" width="99" height="40" loading="lazy"></picture></span></div>
   </div>
 </section>
 
