@@ -69,6 +69,9 @@ NUMMA réunit dans une seule plateforme quatre outils habituellement séparés. 
 - [Facture électronique refusée ou rejetée : que faire ?](https://numma.eu/blog/facture-electronique-refusee-que-faire.html) : statuts, rejet technique, refus du client, avoir.
 - [Coût d'un premier salarié en 2026](https://numma.eu/blog/cout-premier-salarie-2026.html) : coût employeur avec la réduction générale 2026, formalités, aides.
 - [Relancer une facture impayée](https://numma.eu/blog/relancer-facture-impayee.html) : calendrier, modèles, pénalités et recours.
+- [Faire ses fiches de paie soi-même en 2026](https://numma.eu/blog/faire-ses-fiches-de-paie-soi-meme.html) : légalité, DSN, TESE, Excel ou logiciel, risques.
+- [Facture électronique et auto-entrepreneur](https://numma.eu/blog/facture-electronique-auto-entrepreneur.html) : franchise de TVA comprise, réception 2026, émission 2027.
+- [Salaires brut en net 2026](https://numma.eu/simulateur-salaire-brut-net.html#grille) : grille du SMIC à 5 000 € brut, net cadre et non-cadre, coût employeur, calcul inverse net en brut.
 
 ## Secteurs
 - [Logiciel de gestion hôtel et restaurant](https://numma.eu/logiciel-gestion-hotel-restaurant.html) : TVA 10/20 %, paie HCR, factures fournisseurs électroniques, trésorerie saisonnière.

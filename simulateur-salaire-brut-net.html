@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simulateur salaire brut net 2026 : calcul gratuit | NUMMA</title>
-  <meta name="description" content="Convertissez un salaire brut en net avec les taux 2026. Détail de chaque cotisation, net après impôt et coût employeur avec réduction générale. Gratuit.">
+  <title>Simulateur salaire brut en net et net en brut 2026 | NUMMA</title>
+  <meta name="description" content="Convertissez un salaire brut en net, ou un net en brut, avec les taux 2026. Détail de chaque cotisation, net après impôt et coût employeur. Gratuit, sans inscription.">
   <meta name="keywords" content="simulateur brut net, salaire brut en net, calcul salaire net 2026, convertir brut net, coût employeur salarié, charges salariales 2026">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://numma.eu/simulateur-salaire-brut-net.html">
@@ -173,8 +173,8 @@
   <div class="container">
     <nav class="breadcrumb"><a href="index.html">Accueil</a> / <span>Simulateur brut net</span></nav>
     <span class="eyebrow">Outil gratuit</span>
-    <h1>Simulateur salaire <span class="gradient-text">brut en net</span> 2026</h1>
-    <p class="lead">Convertissez un salaire brut en net avec les taux de cotisations en vigueur en 2026. Vous obtenez le détail ligne par ligne, le net après impôt et ce que le poste coûte réellement à l'employeur. Sans inscription.</p>
+    <h1>Simulateur salaire <span class="gradient-text">brut en net</span> et net en brut 2026</h1>
+    <p class="lead">Convertissez un salaire brut en net, ou retrouvez le brut à partir d'un net, avec les taux de cotisations en vigueur en 2026. Vous obtenez le détail ligne par ligne, le net après impôt et ce que le poste coûte réellement à l'employeur. Sans inscription.</p>
   </div>
 </section>
 
@@ -184,7 +184,13 @@
 
       <div class="sim-card">
         <div class="fld">
-          <label for="brut">Salaire brut</label>
+          <div class="seg2" role="group" aria-label="Sens du calcul">
+            <button type="button" id="d-bn" aria-pressed="true">Brut → net</button>
+            <button type="button" id="d-nb" aria-pressed="false">Net → brut</button>
+          </div>
+        </div>
+        <div class="fld">
+          <label for="brut" id="lbl-montant">Salaire brut</label>
           <div class="amt">
             <input type="number" id="brut" value="2500" min="0" max="500000" step="10" inputmode="decimal">
             <span>€</span>
@@ -206,13 +212,13 @@
           </div>
         </div>
 
-        <div class="fld">
+        <div class="fld" id="f-pas">
           <label for="pas">Taux de prélèvement à la source <span class="rng-val" id="pas-val">3,0 %</span></label>
           <input type="range" id="pas" class="rng" min="0" max="30" step="0.5" value="3">
           <p style="margin:.4rem 0 0;font-size:.8rem;color:var(--ink-500);">Votre taux figure sur votre dernier bulletin ou dans votre espace impots.gouv.fr. Laissez à 0 pour ignorer l'impôt.</p>
         </div>
 
-        <div class="fld" style="margin-bottom:0;">
+        <div class="fld" id="f-tps" style="margin-bottom:0;">
           <label for="tps">Temps de travail <span class="rng-val" id="tps-val">100 %</span></label>
           <input type="range" id="tps" class="rng" min="10" max="100" step="5" value="100">
         </div>
@@ -221,11 +227,11 @@
       <div>
         <div class="res">
           <div class="res-main">
-            <p class="res-lbl">Net à payer, après impôt</p>
+            <p class="res-lbl" id="r-lbl">Net à payer, après impôt</p>
             <div class="res-big"><span id="r-net">1 919</span> €<small id="r-per">/ mois</small></div>
           </div>
           <div class="res-grid">
-            <div class="res-box"><p>Net avant impôt</p><b id="r-brutnet">1 979 €</b></div>
+            <div class="res-box"><p id="r-l2">Net avant impôt</p><b id="r-brutnet">1 979 €</b></div>
             <div class="res-box"><p>Cotisations salariales</p><b id="r-cot">521 €</b></div>
             <div class="res-box"><p>Coût employeur</p><b id="r-cout">3 117 €</b></div>
             <div class="res-box"><p>Charges patronales</p><b id="r-pat">617 €</b></div>
@@ -248,6 +254,17 @@
     <div class="warn">
       <strong>C'est une estimation, pas un bulletin de paie.</strong> Le calcul applique les taux légaux 2026 du secteur privé. Il ne connaît ni votre convention collective, ni votre mutuelle d'entreprise, ni votre taux réel d'accidents du travail, ni vos heures supplémentaires, ni le régime Alsace-Moselle. L'écart courant est de 1 à 3 %. Pour un calcul officiel, utilisez le <a href="https://mon-entreprise.urssaf.fr/simulateurs/salaire-brut-net" rel="noopener" target="_blank">simulateur de l'URSSAF</a>.
     </div>
+  </div>
+</section>
+
+<section id="grille">
+  <div class="container container-sm">
+    <header class="section-header">
+      <span class="eyebrow">Grille 2026</span>
+      <h2>Salaire brut en net : la grille des montants courants</h2>
+      <p class="lead">Net mensuel avant impôt, temps plein, taux 2026. Cliquez sur un montant pour le détail complet et le calcul inverse (net en brut).</p>
+    </header>
+    <table class="det"><thead><tr><th>Brut mensuel</th><th>Net non-cadre</th><th>Net cadre</th><th>Coût employeur</th></tr></thead><tbody><tr><td><a href="salaire-smic-brut-en-net-2026.html">SMIC brut</a></td><td>1 478 €</td><td>1 449 €</td><td>1 929 €</td></tr><tr><td><a href="salaire-2000-euros-brut-en-net.html">2 000 € brut</a></td><td>1 583 €</td><td>1 553 €</td><td>2 193 €</td></tr><tr><td><a href="salaire-2100-euros-brut-en-net.html">2 100 € brut</a></td><td>1 662 €</td><td>1 630 €</td><td>2 385 €</td></tr><tr><td><a href="salaire-2200-euros-brut-en-net.html">2 200 € brut</a></td><td>1 742 €</td><td>1 708 €</td><td>2 574 €</td></tr><tr><td><a href="salaire-2300-euros-brut-en-net.html">2 300 € brut</a></td><td>1 821 €</td><td>1 786 €</td><td>2 758 €</td></tr><tr><td><a href="salaire-2400-euros-brut-en-net.html">2 400 € brut</a></td><td>1 900 €</td><td>1 863 €</td><td>2 939 €</td></tr><tr><td><a href="salaire-2500-euros-brut-en-net.html">2 500 € brut</a></td><td>1 979 €</td><td>1 941 €</td><td>3 117 €</td></tr><tr><td><a href="salaire-2600-euros-brut-en-net.html">2 600 € brut</a></td><td>2 058 €</td><td>2 019 €</td><td>3 292 €</td></tr><tr><td><a href="salaire-2800-euros-brut-en-net.html">2 800 € brut</a></td><td>2 216 €</td><td>2 174 €</td><td>3 634 €</td></tr><tr><td><a href="salaire-3000-euros-brut-en-net.html">3 000 € brut</a></td><td>2 375 €</td><td>2 329 €</td><td>3 969 €</td></tr><tr><td><a href="salaire-3200-euros-brut-en-net.html">3 200 € brut</a></td><td>2 533 €</td><td>2 484 €</td><td>4 296 €</td></tr><tr><td><a href="salaire-3500-euros-brut-en-net.html">3 500 € brut</a></td><td>2 771 €</td><td>2 717 €</td><td>4 775 €</td></tr><tr><td><a href="salaire-4000-euros-brut-en-net.html">4 000 € brut</a></td><td>3 166 €</td><td>3 105 €</td><td>5 551 €</td></tr><tr><td><a href="salaire-4500-euros-brut-en-net.html">4 500 € brut</a></td><td>3 567 €</td><td>3 506 €</td><td>6 303 €</td></tr><tr><td><a href="salaire-5000-euros-brut-en-net.html">5 000 € brut</a></td><td>3 968 €</td><td>3 907 €</td><td>7 038 €</td></tr></tbody></table>
   </div>
 </section>
 
@@ -359,7 +376,7 @@
   var eur = function(n){ return Math.round(n).toLocaleString('fr-FR') + ' €'; };
   var pct = function(n){ return n.toFixed(2).replace('.',',') + ' %'; };
 
-  var state = { annuel:false, cadre:false };
+  var state = { annuel:false, cadre:false, nb:false };
 
   function calcule(brutMensuel, cadre){
     var t1 = Math.min(brutMensuel, PMSS), t2 = Math.max(0, brutMensuel - PMSS), L = [];
@@ -390,18 +407,33 @@
     return { lignes:L, cot:cot, net:brutMensuel-cot, pat:patNet, cout:brutMensuel+patNet };
   }
 
+  // Net → brut : on cherche le brut dont le net avant impôt égale le montant saisi
+  function brutDepuisNet(netM, cadre){
+    if(netM <= 0) return 0;
+    var lo = netM, hi = netM*2;
+    for(var i=0;i<60;i++){ var mid=(lo+hi)/2; if(calcule(mid,cadre).net < netM) lo=mid; else hi=mid; }
+    return (lo+hi)/2;
+  }
+
   function rendu(){
     var saisi = parseFloat($('brut').value) || 0;
-    var tps = parseFloat($('tps').value)/100;
-    var brutM = (state.annuel ? saisi/12 : saisi) * tps;
-    var r = calcule(brutM, state.cadre);
-    var taux = parseFloat($('pas').value);
-    var netApres = r.net * (1 - taux/100);
     var k = state.annuel ? 12 : 1;
-
-    $('r-net').textContent = Math.round(netApres*k).toLocaleString('fr-FR');
+    var brutM, taux, netApres, r;
+    if(state.nb){
+      brutM = brutDepuisNet(saisi/k, state.cadre);
+      r = calcule(brutM, state.cadre);
+      $('r-net').textContent = Math.round(brutM*k).toLocaleString('fr-FR');
+      $('r-brutnet').textContent = eur(r.net*k);
+    } else {
+      var tps = parseFloat($('tps').value)/100;
+      brutM = (saisi/k) * tps;
+      r = calcule(brutM, state.cadre);
+      taux = parseFloat($('pas').value);
+      netApres = r.net * (1 - taux/100);
+      $('r-net').textContent = Math.round(netApres*k).toLocaleString('fr-FR');
+    }
     $('r-per').textContent = state.annuel ? '/ an' : '/ mois';
-    $('r-brutnet').textContent = eur(r.net*k);
+    if(!state.nb) $('r-brutnet').textContent = eur(r.net*k);
     $('r-cot').textContent    = eur(r.cot*k);
     $('r-cout').textContent   = eur(r.cout*k);
     $('r-pat').textContent    = eur(r.pat*k);
@@ -440,6 +472,26 @@
   }
   paire('p-mois','p-an','annuel',false);
   paire('s-nc','s-c','cadre',false);
+  function sens(nb){
+    if(state.nb === nb) return;
+    var cur = parseFloat($('brut').value) || 0;
+    var k = state.annuel ? 12 : 1;
+    var r0 = calcule(state.nb ? cur/k : cur/k, state.cadre);
+    // on convertit le montant saisi pour garder le même salaire
+    $('brut').value = Math.round(nb ? r0.net*k : brutDepuisNet(cur/k, state.cadre)*k);
+    state.nb = nb;
+    $('d-bn').setAttribute('aria-pressed', String(!nb));
+    $('d-nb').setAttribute('aria-pressed', String(nb));
+    $('lbl-montant').textContent = nb ? 'Salaire net avant impôt' : 'Salaire brut';
+    $('r-lbl').textContent = nb ? 'Salaire brut correspondant' : 'Net à payer, après impôt';
+    $('r-l2').textContent = 'Net avant impôt';
+    $('f-pas').style.display = nb ? 'none' : '';
+    $('f-tps').style.display = nb ? 'none' : '';
+    rendu();
+  }
+  $('d-bn').addEventListener('click',function(){ sens(false); });
+  $('d-nb').addEventListener('click',function(){ sens(true); });
+  if(/[?&]sens=net-brut/.test(location.search)) sens(true);
 
   $('pas').addEventListener('input',function(){
     $('pas-val').textContent = parseFloat(this.value).toFixed(1).replace('.',',')+' %'; rendu();
