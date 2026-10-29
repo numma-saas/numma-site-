@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logiciel de gestion camping : TVA, paie saisonniers | NUMMA</title>
+  <meta name="description" content="Logiciel de gestion financière pour campings et hôtellerie de plein air : TVA 10 % camping classé, paie des saisonniers, factures fournisseurs électroniques, trésorerie saisonnière.">
+  <meta name="keywords" content="logiciel gestion camping, gestion camping, comptabilité camping, paie saisonniers camping, TVA camping, hôtellerie de plein air logiciel">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://numma.eu/logiciel-gestion-camping.html">
+  <meta property="og:title" content="Logiciel de gestion pour campings | NUMMA">
+  <meta property="og:description" content="TVA du camping, paie des saisonniers, factures fournisseurs et trésorerie saisonnière dans un seul outil.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://numma.eu/logiciel-gestion-camping.html">
+  <meta property="og:image" content="https://numma.eu/images/og/camping.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Logiciel de gestion pour campings | NUMMA">
+  <meta name="twitter:image" content="https://numma.eu/images/og/camping.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:site_name" content="NUMMA">
+  <meta property="og:locale" content="fr_FR">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <meta name="theme-color" content="#7C3AED">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "Product", "name": "NUMMA pour les campings", "description": "Logiciel de gestion financière pour campings et hôtellerie de plein air : TVA 10 % camping classé, paie des saisonniers, factures fournisseurs électroniques, trésorerie saisonnière.", "brand": {"@type": "Brand", "name": "NUMMA"}, "image": "https://numma.eu/images/og/camping.jpg", "offers": {"@type": "AggregateOffer", "lowPrice": "19", "highPrice": "79", "priceCurrency": "EUR", "offerCount": "3"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Quelle TVA pour un camping ?", "acceptedAnswer": {"@type": "Answer", "text": "10 % pour les emplacements dans un terrain de camping classé, 20 % dans un terrain non classé. La restauration, les ventes et les locations annexes suivent leur propre taux."}}, {"@type": "Question", "name": "Quelle convention collective pour un camping ?", "acceptedAnswer": {"@type": "Answer", "text": "La convention collective nationale de l'hôtellerie de plein air (IDCC 1631)."}}, {"@type": "Question", "name": "NUMMA remplace-t-il un logiciel de réservation de camping ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. NUMMA ne gère pas les réservations ni la caisse d'accueil. Il gère la TVA, la pré-comptabilité, la paie des saisonniers, les factures fournisseurs électroniques et la trésorerie."}}, {"@type": "Question", "name": "Un camping est-il concerné par la facture électronique ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. Il doit recevoir les factures électroniques de ses fournisseurs depuis septembre 2026. À partir de septembre 2027, il émet des factures électroniques pour ses clients professionnels et déclare ses ventes aux particuliers en e-reporting."}}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://numma.eu/"}, {"@type": "ListItem", "position": 2, "name": "Solutions par métier", "item": "https://numma.eu/#secteurs"}, {"@type": "ListItem", "position": 3, "name": "Camping et hôtellerie de plein air", "item": "https://numma.eu/logiciel-gestion-camping.html"}]}
+  </script>
+  <style>
+    .sector-hero { background: linear-gradient(135deg, #FEF3E7 0%, #F5F3FF 100%); padding: 4rem 0 3rem; }
+    .sector-hero .lead-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2rem; }
+    @media (max-width: 720px) { .sector-hero .lead-stats { grid-template-columns: 1fr; } }
+    .stat-mini { background: white; padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--ink-100); text-align: center; }
+    .stat-mini .n { font-size: 1.6rem; font-weight: 800; color: var(--numma-purple-700); }
+    .stat-mini .l { font-size: 0.82rem; color: var(--ink-500); }
+    .pain-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin: 2rem 0; }
+    @media (max-width: 720px) { .pain-grid { grid-template-columns: 1fr; } }
+    .pain-card { background: white; border: 1px solid var(--ink-100); border-radius: var(--radius-lg); padding: 1.5rem; }
+    .pain-card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; display: flex; gap: 0.5rem; align-items: center; }
+    .pain-card .ico { font-size: 1.4rem; }
+    .case-card { background: linear-gradient(135deg, #F5F3FF 0%, #FEF3E7 100%); border-radius: var(--radius-lg); padding: 1.75rem; margin: 1.25rem 0; border: 1px solid var(--numma-purple-100); }
+    .case-card .head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--numma-purple-100); }
+    .case-card h3 { font-size: 1.1rem; margin: 0; }
+    .case-card .tag { background: white; padding: 0.25rem 0.75rem; border-radius: var(--radius-full); font-size: 0.78rem; font-weight: 700; color: var(--numma-purple-700); border: 1px solid var(--numma-purple-100); }
+    .case-metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin-top: 1rem; }
+    @media (max-width: 480px) { .case-metrics { grid-template-columns: 1fr; } }
+    .case-metric { background: white; padding: 0.85rem; border-radius: var(--radius-sm); text-align: center; }
+    .case-metric .v { font-size: 1.3rem; font-weight: 800; color: #16A34A; }
+    .case-metric .lbl { font-size: 0.75rem; color: var(--ink-500); }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+ <div class="container">
+ <nav class="nav" aria-label="Navigation principale">
+ <a href="index.html" class="nav-logo"><img src="images/logo-72.png" alt="Logo NUMMA" width="36" height="36" decoding="async"><span>NUMMA</span></a>
+ <ul class="nav-links" id="nav-links">
+ <li class="has-dropdown"><a href="fonctionnalites.html">Solutions ▾</a>
+ <div class="dropdown megamenu">
+ <div class="mm-col">
+ <p class="mm-title">Par profil</p>
+ <a href="micro-entreprise.html">Indépendant &amp; micro<small>1 personne — dès 19 €</small></a>
+ <a href="tarifs.html">TPE — 2 à 10 salariés<small>Le cas le plus fréquent</small></a>
+ <a href="tarifs.html">PME — 11 à 49 salariés<small>Paie et multi-conventions</small></a>
+ <a href="contact.html">Enterprise — 50+<small>Multi-sociétés, sur devis</small></a>
+ </div>
+ <div class="mm-col">
+ <p class="mm-title">Par secteur</p>
+ <a href="logiciel-gestion-btp.html">Bâtiment &amp; Construction<small>BTP, artisans, travaux et rénovation</small></a>
+ <a href="logiciel-gestion-commerce-detail.html">Commerce &amp; Distribution<small>Commerces, e-commerce, vente et négoce</small></a>
+ <a href="logiciel-gestion-agence.html">Services &amp; Conseil<small>Consultants, agences, freelances et prestations</small></a>
+ <a href="logiciel-gestion-industrie.html">Industrie &amp; Production<small>Fabrication, production et activités industrielles</small></a>
+ <a href="logiciel-gestion-hotel-restaurant.html">Hôtellerie &amp; Restauration<small>Restaurants, hôtels et établissements touristiques</small></a>
+ </div>
+ <div class="mm-col">
+ <p class="mm-title">Le produit</p>
+ <a href="facturation-electronique.html">Facturation électronique<small>Factur-X, UBL, CII</small></a>
+ <a href="comptabilite.html">Comptabilité<small>Grand livre, balance, TVA</small></a>
+ <a href="paie-rh.html">Paie &amp; RH<small>Bulletins, DSN, documents</small></a>
+ <a href="tresorerie.html">Trésorerie<small>Banque, prévisionnel IA</small></a>
+              <a href="e-reporting.html">E-reporting 2027<small>Le 2e volet de la réforme</small></a>
+ </div>
+ <div class="mm-col">
+              <p class="mm-title">Outils gratuits</p>
+              <a href="simulateur-salaire-brut-net.html">Simulateur brut / net<small>Taux 2026, coût employeur</small></a>
+              <a href="calculateur-roi.html">Calculateur d'économies<small>Sur votre cas réel</small></a>
+              <a href="blog/pennylane-vs-numma-2026.html">Comparatifs<small>Pennylane, Sage, Cegid</small></a>
+              <a href="blog.html">Ressources<small>Guides et livres blancs</small></a>
+            </div>
+ <div class="mm-foot">
+ <span>Pas sûr du plan qu'il vous faut ?</span>
+ <a href="essai-gratuit.html">Essayer gratuitement 14 jours &rarr;</a>
+ </div>
+ </div>
+ </li>
+ <li><a href="tarifs.html">Tarifs</a></li>
+ <li><a href="blog.html">Ressources</a></li>
+ <li><a href="a-propos.html">À propos</a></li>
+ <li><a href="contact.html">Contact</a></li>
+ </ul>
+ <div class="nav-actions">
+ <a href="https://app.numma.eu/login" class="btn btn-ghost btn-sm">Connexion</a>
+ <a href="reserver-demo.html" class="btn btn-primary btn-sm">Réserver une démo</a>
+ <button class="nav-toggle btn btn-secondary btn-sm" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">Menu</button>
+ </div>
+ </nav>
+ </div>
+</header>
+
+<main>
+<section class="sector-hero">
+ <div class="container">
+ <nav class="breadcrumb"><a href="index.html">Accueil</a> / <a href="index.html#secteurs">Solutions métier</a> / <span>Camping et hôtellerie de plein air</span></nav>
+ <span class="eyebrow">Solution métier · Campings, résidences de tourisme</span>
+ <h1>La gestion financière <span class="gradient-text">de votre camping</span></h1>
+ <p class="lead">Votre logiciel de réservation gère les séjours. NUMMA gère tout le reste : la TVA de vos différentes activités, la paie de vos saisonniers, vos factures fournisseurs et une trésorerie qui se joue sur quelques mois.</p>
+ <div class="hero-ctas">
+ <a href="reserver-demo.html?metier=camping" class="btn btn-primary btn-lg">Réserver une démo</a>
+ <a href="essai-gratuit.html?metier=camping" class="btn btn-secondary btn-lg">Essai gratuit 14 jours</a>
+ </div>
+ <div class="lead-stats"><div class="stat-mini"><div class="n">10 %</div><div class="l">emplacements en camping classé</div></div><div class="stat-mini"><div class="n">Saisonniers</div><div class="l">paie de l'hôtellerie de plein air</div></div><div class="stat-mini"><div class="n">8 semaines</div><div class="l">de trésorerie prévisionnelle</div></div></div>
+ </div>
+</section>
+
+<section>
+ <div class="container container-sm">
+
+ <h2>Ce qui coûte du temps à un camping, et comment NUMMA le règle</h2>
+ <p class="lead">Un camping réalise l'essentiel de son chiffre d'affaires en quelques mois, avec une équipe qui triple l'été et plusieurs activités qui n'ont pas la même TVA. La gestion se fait souvent dans l'urgence de la saison.</p>
+<div class="pain-grid">
+ <div class="pain-card">
+ <h3>Plusieurs activités, plusieurs taux de TVA</h3>
+ <p>Emplacements et locatifs, snack, épicerie, location de vélos, animations : chaque activité a son régime, et la déclaration de TVA doit les distinguer.</p>
+ <p><strong>Avec NUMMA :</strong> vos ventes sont ventilées par taux de TVA dans la pré-comptabilité, et votre déclaration part de chiffres justes.</p>
+ </div>
+ <div class="pain-card">
+ <h3>Une équipe qui triple en saison</h3>
+ <p>Accueil, entretien, animation, snack : les contrats saisonniers s'enchaînent d'avril à septembre, avec leurs entrées, leurs sorties et leurs particularités.</p>
+ <p><strong>Avec NUMMA :</strong> paie et DSN réalisées avec notre partenaire paie intégré, plus de 600 conventions collectives, avec les demandes de congés et la répartition par équipe. 27 € HT par bulletin sur Pro, 25 € sur Business.</p>
+ </div>
+ <div class="pain-card">
+ <h3>Des fournisseurs en facture électronique</h3>
+ <p>Linge, alimentaire, entretien, travaux d'avant-saison : depuis septembre 2026, vos fournisseurs vous envoient des factures électroniques.</p>
+ <p><strong>Avec NUMMA :</strong> vos factures fournisseurs électroniques sont reçues via SEQINO, Plateforme Agréée immatriculée par la DGFiP, et intégrées à votre pré-comptabilité sans ressaisie.</p>
+ </div>
+ <div class="pain-card">
+ <h3>Une trésorerie en dents de scie</h3>
+ <p>Les acomptes de réservation arrivent l'hiver, les recettes l'été, les travaux et les remboursements d'emprunt toute l'année.</p>
+ <p><strong>Avec NUMMA :</strong> comptes bancaires synchronisés et prévisionnel de trésorerie sur 8 semaines pour préparer l'avant-saison et l'hiver.</p>
+ </div>
+</div>
+
+ <h2>Les règles à connaître</h2>
+ <ul>
+  <li><strong>TVA des emplacements</strong> : 10 % dans les terrains de camping classés ; 20 % dans les terrains non classés (CGI, art. 279 a ; BOI-TVA-LIQ-30-20-10-30).</li>
+  <li><strong>Autres activités</strong> : restauration, ventes et locations annexes suivent leur propre taux de TVA.</li>
+  <li><strong>Taxe de séjour</strong> : collectée pour la commune, elle ne fait pas partie du chiffre d'affaires soumis à TVA.</li>
+  <li><strong>Convention collective</strong> : les campings relèvent de la convention collective nationale de l'hôtellerie de plein air (IDCC 1631).</li>
+  <li><strong>Facture électronique</strong> : réception obligatoire depuis le 1<sup>er</sup> septembre 2026 ; au 1<sup>er</sup> septembre 2027, émission pour vos clients professionnels (groupes, comités d'entreprise) et e-reporting de vos ventes aux particuliers. Voir <a href="e-reporting.html">l'e-reporting 2027</a>.</li>
+ </ul>
+
+ <h2>Ce que NUMMA vous coûte, tout compris</h2>
+ <p>Le prix réel, selon la taille de votre entreprise. Prix publics HT par mois.</p>
+
+ <div class="case-card">
+ <div class="head"><h3>Camping familial, 6 salariés en saison</h3><span class="tag">Offre Pro · 35 € HT/mois</span></div>
+ <p>Un couple d'exploitants, six saisonniers d'avril à septembre, un snack et une petite épicerie.</p>
+ <p><strong>Avec NUMMA :</strong> TVA ventilée par activité, factures fournisseurs électroniques, trésorerie, et la paie des saisonniers via notre partenaire paie intégré.</p>
+ <div class="case-metrics"><div class="case-metric"><div class="v">35 €</div><div class="lbl">abonnement</div></div><div class="case-metric"><div class="v">6 × 27 €</div><div class="lbl">bulletins, RH comprise</div></div><div class="case-metric"><div class="v">197 €/mois</div><div class="lbl">en saison</div></div></div>
+ </div>
+ <div class="case-card">
+ <div class="head"><h3>Camping de 200 emplacements, 15 salariés</h3><span class="tag">Offre Business · 79 € HT/mois</span></div>
+ <p>Une équipe permanente et des saisonniers, des locatifs, un restaurant, des groupes.</p>
+ <p><strong>Avec NUMMA :</strong> 5 utilisateurs, TVA par activité, paie des 15 salariés, absences et répartition par équipe, prévisionnel de trésorerie et export FEC pour le cabinet.</p>
+ <div class="case-metrics"><div class="case-metric"><div class="v">79 €</div><div class="lbl">abonnement</div></div><div class="case-metric"><div class="v">15 × 25 €</div><div class="lbl">bulletins, RH comprise</div></div><div class="case-metric"><div class="v">454 €/mois</div><div class="lbl">en saison</div></div></div>
+ </div>
+
+ <h2>Ce que NUMMA fait, et ce qu'il ne fait pas</h2>
+ <p>NUMMA n'est pas un logiciel de réservation ni de caisse : il ne gère ni le planning des emplacements, ni les réservations en ligne, ni l'encaissement à l'accueil. Il s'occupe de la gestion financière : TVA, pré-comptabilité, paie, RH, facture électronique et trésorerie. Vous avez aussi un restaurant ? Voir <a href="logiciel-gestion-hotel-restaurant.html">NUMMA pour les hôtels et restaurants</a>.</p>
+
+ <div class="faq-h" style="margin-top:2.5rem;"><h2 style="margin-bottom:.5rem;">Questions fréquentes</h2>
+ <details><summary>Quelle TVA pour un camping ?</summary><p>10 % pour les emplacements dans un terrain de camping classé, 20 % dans un terrain non classé. La restauration, les ventes et les locations annexes suivent leur propre taux.</p></details>
+ <details><summary>Quelle convention collective pour un camping ?</summary><p>La convention collective nationale de l'hôtellerie de plein air (IDCC 1631).</p></details>
+ <details><summary>NUMMA remplace-t-il un logiciel de réservation de camping ?</summary><p>Non. NUMMA ne gère pas les réservations ni la caisse d'accueil. Il gère la TVA, la pré-comptabilité, la paie des saisonniers, les factures fournisseurs électroniques et la trésorerie.</p></details>
+ <details><summary>Un camping est-il concerné par la facture électronique ?</summary><p>Oui. Il doit recevoir les factures électroniques de ses fournisseurs depuis septembre 2026. À partir de septembre 2027, il émet des factures électroniques pour ses clients professionnels et déclare ses ventes aux particuliers en e-reporting.</p></details>
+ </div>
+ <div style="background:linear-gradient(135deg, #5B21B6 0%, #7C3AED 50%, #FB923C 100%); border-radius:var(--radius-xl); padding:3rem 2rem; text-align:center; color:white; margin-top:3rem;">
+ <h2 style="color:white; margin-bottom:0.75rem;">Préparons votre prochaine saison</h2>
+ <p style="opacity:0.95; max-width:560px; margin:0 auto 1.5rem;">30 minutes en visio avec Mallory, cofondateur : vos activités, vos saisonniers, votre trésorerie. Votre compte est configuré avec vous sous 24 h.</p>
+ <a href="reserver-demo.html?metier=camping" class="btn btn-lg" style="background:white; color:var(--numma-purple-700); font-weight:700;">Réserver ma démo</a>
+ <div style="margin-top:1rem; font-size:0.85rem; opacity:0.85;">14 jours gratuits · Sans carte bancaire · Sans engagement</div>
+ </div>
+ </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+ <div class="container">
+ <div class="footer-grid">
+ <div class="footer-brand"><div class="footer-logo-text"><img src="images/logo-72.png" alt="Logo NUMMA" width="32" height="32" loading="lazy"><span>NUMMA</span></div><p>Le logiciel de gestion tout-en-un pour TPE, PME et artisans français.</p><div class="footer-socials" style="margin-top:1.1rem"><a href="https://www.instagram.com/numma.eu/" target="_blank" rel="noopener" aria-label="NUMMA sur Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a><a href="https://www.linkedin.com/company/numma-gestion/" target="_blank" rel="noopener" aria-label="NUMMA sur LinkedIn"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.1c0-1.22-.02-2.79-1.7-2.79-1.7 0-1.96 1.33-1.96 2.7V21h-4z"/></svg></a></div></div>
+ <div class="footer-col"><p class="footer-h">Produit</p><ul><li><a href="fonctionnalites.html">Fonctionnalités</a></li><li><a href="tarifs.html">Tarifs</a></li><li><a href="calculateur-roi.html">Calculateur ROI</a></li><li><a href="simulateur-salaire-brut-net.html">Simulateur brut / net</a></li></ul></div>
+ <div class="footer-col"><p class="footer-h">Secteurs</p><ul><li><a href="logiciel-gestion-btp.html">Bâtiment &amp; Construction</a></li><li><a href="logiciel-gestion-commerce-detail.html">Commerce &amp; Distribution</a></li><li><a href="logiciel-gestion-agence.html">Services &amp; Conseil</a></li><li><a href="logiciel-gestion-industrie.html">Industrie &amp; Production</a></li><li><a href="logiciel-gestion-hotel-restaurant.html">Hôtellerie &amp; Restauration</a></li><li><a href="logiciel-gestion-electricien.html">Électricien</a></li><li><a href="logiciel-gestion-plombier-chauffagiste.html">Plombier-chauffagiste</a></li></ul></div>
+ <div class="footer-col"><p class="footer-h">Entreprise</p><ul><li><a href="a-propos.html">À propos</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+ <div class="footer-col"><p class="footer-h">Légal</p><ul><li><a href="mentions-legales.html">Mentions légales</a></li><li><a href="cgv.html">CGV</a></li></ul></div>
+ </div>
+ <div class="footer-bottom"><div>© 2025–2026 NUMMA SAS · Made in France</div></div>
+ </div>
+</footer>
+
+<script src="js/cookies.js" defer></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>

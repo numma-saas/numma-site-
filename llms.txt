@@ -74,5 +74,15 @@ NUMMA réunit dans une seule plateforme quatre outils habituellement séparés. 
 - [Salaires brut en net 2026](https://numma.eu/simulateur-salaire-brut-net.html#grille) : grille du SMIC à 5 000 € brut, net cadre et non-cadre, coût employeur, calcul inverse net en brut.
 
 ## Secteurs
+- [Logiciel de gestion pour maîtres d'œuvre et bureaux d'études](https://numma.eu/logiciel-gestion-maitre-oeuvre.html) : honoraires par phase, TVA 10 ou 20 %, paie Syntec.
+- [Logiciel de gestion pour entreprises de nettoyage](https://numma.eu/logiciel-gestion-entreprise-nettoyage.html) : contrats facturés chaque mois, paie de la propreté (IDCC 3043).
+- [Gestion financière des agences immobilières](https://numma.eu/logiciel-gestion-agence-immobiliere.html) : honoraires, factures des agents commerciaux, paie de l'immobilier (IDCC 1527).
+- [Logiciel pour agents commerciaux immobiliers](https://numma.eu/logiciel-agent-commercial-immobilier.html) : factures de commission, franchise de TVA, facture électronique 2027.
+- [Gestion financière des campings](https://numma.eu/logiciel-gestion-camping.html) : TVA 10 % camping classé, paie de l'hôtellerie de plein air (IDCC 1631).
+- [Logiciel de gestion pour paysagistes](https://numma.eu/logiciel-gestion-paysagiste.html) : TVA 10 ou 20 %, contrats d'entretien récurrents, paie du paysage (IDCC 7018).
+- [Logiciel de gestion pour architectes d'intérieur](https://numma.eu/logiciel-gestion-architecte-interieur.html) : honoraires par phase, franchise ou TVA.
+- [TVA du paysagiste](https://numma.eu/blog/tva-paysagiste.html) : tableau des travaux à 10 % et 20 %, source BOFiP.
+- [Logiciel de gestion pour cabinets d'architecte](https://numma.eu/logiciel-gestion-architecte.html) : honoraires par phase, acomptes, TVA 10 ou 20 %, Chorus Pro, paie des entreprises d'architecture.
+- [TVA des honoraires d'architecte](https://numma.eu/blog/tva-honoraires-architecte.html) : 20 % en principe, 10 % avec maîtrise d'œuvre de travaux éligibles (BOI-TVA-LIQ-30-20-90-30).
 - [Logiciel de gestion hôtel et restaurant](https://numma.eu/logiciel-gestion-hotel-restaurant.html) : TVA 10/20 %, paie HCR, factures fournisseurs électroniques, trésorerie saisonnière.
 - [Logiciel de gestion PME industrielle](https://numma.eu/logiciel-gestion-industrie.html) : facture électronique B2B, achats, export, paie de branche, trésorerie.
