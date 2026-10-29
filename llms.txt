@@ -66,6 +66,10 @@ NUMMA réunit dans une seule plateforme quatre outils habituellement séparés. 
 - [IPD bâtiment Loire 2026](https://numma.eu/blog/ipd-batiment-loire-2026.html) : barème départemental zone par zone.
 
 ## Gestion courante
+- [Réduction générale 2026 (RGDU)](https://numma.eu/blog/reduction-generale-2026-rgdu.html) : formule, paramètres du décret 2025-1446, tableau salaire par salaire.
+- [Guide de démarrage DGFiP de la facture électronique](https://numma.eu/blog/guide-demarrage-facture-electronique-dgfip.html) : PDF, sanctions, client qui exige l'émission avant 2027.
+- [Prime de partage de la valeur 2026](https://numma.eu/blog/prime-partage-valeur-2026.html) : plafonds, régime de faveur des moins de 50 salariés jusqu'au 31/12/2026.
+- [Clôture de l'exercice 2026](https://numma.eu/blog/cloture-exercice-2026-checklist.html) : checklist de décembre des TPE.
 - [Facture électronique refusée ou rejetée : que faire ?](https://numma.eu/blog/facture-electronique-refusee-que-faire.html) : statuts, rejet technique, refus du client, avoir.
 - [Coût d'un premier salarié en 2026](https://numma.eu/blog/cout-premier-salarie-2026.html) : coût employeur avec la réduction générale 2026, formalités, aides.
 - [Relancer une facture impayée](https://numma.eu/blog/relancer-facture-impayee.html) : calendrier, modèles, pénalités et recours.
