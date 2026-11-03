@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sécurité et hébergement en France | NUMMA</title>
-  <meta name="description" content="Sécurité de vos données chez NUMMA : hébergement en France chez OVHcloud et Scaleway, chiffrement AES-256, MFA, sauvegardes redondées, pentest annuel, plan de continuité, conformité RGPD.">
+  <meta name="description" content="Sécurité chez NUMMA : hébergement en France chez Scalingo (infrastructure 3DS Outscale, Paris), chiffrement en transit, sous-traitants publiés, transferts hors UE expliqués, RGPD.">
   <meta name="keywords" content="sécurité SaaS comptabilité, hébergement France, RGPD logiciel, chiffrement données entreprise">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://numma.eu/securite.html">
   <meta property="og:title" content="Sécurité NUMMA - Vos données protégées en France">
-  <meta property="og:description" content="Hébergement en France, AES-256, MFA, pentests, PCA : la sécurité de vos données de gestion.">
+  <meta property="og:description" content="Sécurité chez NUMMA : hébergement en France chez Scalingo (infrastructure 3DS Outscale, Paris), chiffrement en transit, sous-traitants publiés, transferts hors UE expliqués, RGPD.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://numma.eu/securite.html">
   <meta property="og:image" content="https://numma.eu/images/og/home.jpg">
@@ -100,9 +100,9 @@
 <section class="page-header">
   <div class="container">
     <nav class="breadcrumb"><a href="index.html">Accueil</a> / <span>Sécurité</span></nav>
-    <span class="eyebrow">Trust center</span>
-    <h1>La sécurité de vos données, <span class="gradient-text">notre priorité n°1</span>.</h1>
-    <p class="lead">Votre comptabilité, votre paie et vos flux bancaires sont parmi les données les plus sensibles de votre entreprise. Nous les traitons comme telles : hébergement en France, chiffrement de bout en bout, double authentification et test d'intrusion annuel par un tiers indépendant.</p>
+    <span class="eyebrow">Sécurité et hébergement</span>
+    <h1>Où sont vos données, <span class="gradient-text">et comment elles sont protégées</span>.</h1>
+    <p class="lead">Votre comptabilité, votre paie et vos flux bancaires sont parmi les données les plus sensibles de votre entreprise. Voici, sans formule creuse, où elles sont hébergées, qui y a accès et comment elles sont protégées.</p>
   </div>
 </section>
 
@@ -111,62 +111,27 @@
     <div class="features-grid">
       <article class="feature-card">
         <h3>Hébergement en France</h3>
-        <p>Données stockées exclusivement chez OVHcloud (Roubaix / Gravelines) et Scaleway (Paris), deux hébergeurs français. Aucune donnée n'est transférée hors UE.</p>
+        <p>L'application et ses données sont hébergées chez Scalingo, hébergeur français basé à Strasbourg, sur l'infrastructure de 3DS Outscale à Paris.</p>
       </article>
       <article class="feature-card">
-        <h3>Chiffrement bout en bout</h3>
-        <p>TLS 1.3 en transit, AES-256 au repos. Les sauvegardes et exports sont eux-mêmes chiffrés. Les clés sont rotées tous les 90 jours et stockées dans un HSM.</p>
+        <h3>Chiffrement</h3>
+        <p>Tous les échanges avec le site et l'application NUMMA sont chiffrés en HTTPS (TLS).</p>
       </article>
       <article class="feature-card">
-        <h3>Authentification forte (MFA)</h3>
-        <p>Authentification à deux facteurs (TOTP, WebAuthn / clé physique) recommandée pour tous les comptes, obligatoire pour les rôles administrateur et expert-comptable.</p>
+        <h3>Accès aux comptes</h3>
+        <p>Droits définis utilisateur par utilisateur : chacun ne voit que ce qui le concerne, et votre expert-comptable dispose de son propre accès.</p>
       </article>
       <article class="feature-card">
-        <h3>Sauvegardes redondées</h3>
-        <p>Sauvegardes incrémentales toutes les 4 heures, complètes chaque nuit, répliquées sur deux datacenters distincts. RPO ≤ 24 h, RTO ≤ 4 h.</p>
+        <h3>Sauvegardes</h3>
+        <p>Les bases de données sont sauvegardées chez notre hébergeur, en France.</p>
       </article>
       <article class="feature-card">
-        <h3>Pentest annuel + bug bounty</h3>
-        <p>Test d'intrusion réalisé chaque année par un cabinet PASSI référencé ANSSI. Programme de bug bounty privé ouvert aux chercheurs en sécurité.</p>
+        <h3>Banque et paiements</h3>
+        <p>L'agrégation bancaire passe par Bridge, prestataire agréé DSP2 : la connexion à votre banque se fait dans l'interface de Bridge. Les paiements par carte sont traités par Stripe : NUMMA ne voit ni ne stocke vos numéros de carte.</p>
       </article>
       <article class="feature-card">
-        <h3>Plan de continuité (PCA)</h3>
-        <p>Architecture multi-AZ, failover automatique, exercices de restauration trimestriels documentés. Continuité même en cas de perte d'un datacenter complet.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="testimonials">
-  <div class="container">
-    <header class="section-header">
-      <span class="eyebrow">Conformité &amp; certifications</span>
-      <h2>Les standards qui structurent NUMMA</h2>
-    </header>
-    <div class="testimonial-grid">
-      <article class="testimonial">
-        <h3 style="margin-bottom:0.5rem;">RGPD natif</h3>
-        <p style="color:var(--ink-600);">Privacy-by-design dès la conception, registre des traitements, AIPD pour chaque module sensible, DPA disponible sur demande.</p>
-      </article>
-      <article class="testimonial">
-        <h3 style="margin-bottom:0.5rem;">Hébergeurs français</h3>
-        <p style="color:var(--ink-600);">OVHcloud et Scaleway, deux hébergeurs de droit français : vos données restent en France et ne sont pas soumises à des législations extra-européennes.</p>
-      </article>
-      <article class="testimonial">
-        <h3 style="margin-bottom:0.5rem;">Sécurité dès la conception</h3>
-        <p style="color:var(--ink-600);">La sécurité est un critère de chaque développement, au même titre que la conformité fiscale et sociale : rien n'est mis en production sans elle.</p>
-      </article>
-      <article class="testimonial">
-        <h3 style="margin-bottom:0.5rem;">DSP2 / Open Banking</h3>
-        <p style="color:var(--ink-600);">Agrégation bancaire opérée via partenaires agréés ACPR (Bridge, Budget Insight). Aucun identifiant bancaire n'est stocké en clair par NUMMA.</p>
-      </article>
-      <article class="testimonial">
-        <h3 style="margin-bottom:0.5rem;">PCI-DSS</h3>
-        <p style="color:var(--ink-600);">Les paiements sont délégués à Stripe (PCI-DSS Level 1). NUMMA ne stocke jamais de numéro de carte bancaire, même tokenisé.</p>
-      </article>
-      <article class="testimonial">
-        <h3 style="margin-bottom:0.5rem;">Hébergement HDS (option)</h3>
-        <p style="color:var(--ink-600);">Pour les clients du secteur santé, un hébergement HDS (Hébergeur de Données de Santé) est disponible en option sur le plan Enterprise.</p>
+        <h3>Sous-traitants publiés</h3>
+        <p>La liste complète de nos sous-traitants, avec leur pays et les garanties en cas de transfert hors de l'Union européenne, est publiée dans notre <a href="dpa.html">accord de traitement des données</a>.</p>
       </article>
     </div>
   </div>
@@ -175,35 +140,18 @@
 <section>
   <div class="container container-xs">
     <article class="blog-post" style="padding-top:0;">
+      <h2>Données hors de l'Union européenne : ce qu'il faut savoir</h2>
+      <p>Vos données comptables, de paie et bancaires sont hébergées en France. Certains services utilisés par NUMMA sont toutefois fournis par des entreprises établies aux États-Unis, notamment pour l'intelligence artificielle (Anthropic), l'envoi d'e-mails (Resend) et le suivi des erreurs techniques (Sentry). Ces transferts sont encadrés par les garanties prévues par le RGPD (clauses contractuelles types et/ou Data Privacy Framework). Le détail est dans notre <a href="politique-confidentialite.html">politique de confidentialité</a>.</p>
+
+      <h2>RGPD</h2>
+      <p>NUMMA agit comme sous-traitant pour les données de vos salariés, clients et fournisseurs. Notre <a href="dpa.html">accord de traitement des données</a> (article 28 du RGPD) est en ligne.</p>
+
       <h2>Signaler une faille de sécurité</h2>
-      <p>NUMMA encourage le signalement responsable des failles de sécurité. Si vous identifiez une vulnérabilité, contactez-nous à <a href="mailto:contact@numma.eu">contact@numma.eu</a> avec l'objet <em>« Vulnérabilité »</em>. Nous accusons réception sous 24 h et tenons informé le rapporteur jusqu'à correction. Aucune action en justice ne sera engagée contre les chercheurs respectant notre politique de divulgation responsable.</p>
+      <p>Si vous identifiez une vulnérabilité, écrivez à <a href="mailto:contact@numma.eu">contact@numma.eu</a> avec l'objet « Vulnérabilité ». Nous accusons réception et tenons le rapporteur informé jusqu'à la correction. Aucune action en justice ne sera engagée contre les personnes qui signalent de bonne foi une faille sans l'exploiter.</p>
 
-      <h2>Documents disponibles sur demande</h2>
-      <ul>
-        <li>Rapport de pentest annuel (synthèse)</li>
-        <li>Plan d'Assurance Sécurité (PAS)</li>
-        <li>DPA (<a href="dpa.html">téléchargeable ici</a>)</li>
-        <li>Architecture technique haut niveau</li>
-        <li>Liste des sous-traitants à jour</li>
-        <li>Certifications des hébergeurs (OVHcloud, Scaleway)</li>
-      </ul>
-
-      <h2>Notre engagement</h2>
-      <p>La sécurité n'est pas une checklist : c'est un engagement quotidien. NUMMA dédie au moins 15 % de son budget tech à la sécurité, à la fiabilité et à la conformité.</p>
+      <h2>Une question sur la sécurité ?</h2>
+      <p>DSI, RSSI, DPO ou expert-comptable : écrivez-nous à <a href="mailto:contact@numma.eu">contact@numma.eu</a> ou <a href="reserver-demo.html">réservez un échange de 30 minutes</a>.</p>
     </article>
-  </div>
-</section>
-
-<section>
-  <div class="container">
-    <div class="cta-final">
-      <h2>Une question sécurité ?</h2>
-      <p>Notre équipe répond aux questions des DSI, RSSI et DPO sous 4 h ouvrées.</p>
-      <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
-        <a href="contact.html" class="btn btn-primary btn-lg">Échanger avec un expert</a>
-        <a href="dpa.html" class="btn btn-ghost btn-lg">Voir le DPA</a>
-      </div>
-    </div>
   </div>
 </section>
 </main>
