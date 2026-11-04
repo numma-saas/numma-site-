@@ -65,6 +65,14 @@
     .booking-step .num { width: 44px; height: 44px; border-radius: var(--radius-full); background: var(--gradient-brand); color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.9rem; box-shadow: var(--shadow-purple); }
     .booking-step h4 { font-size: 1rem; margin-bottom: 0.4rem; }
     .booking-step p { font-size: 0.9rem; color: var(--ink-600); }
+    .demo-gate { padding: 1.75rem 1.75rem 1.5rem; }
+    .demo-gate h3 { margin-bottom: .35rem; }
+    .demo-gate .gate-sub { font-size: .92rem; color: var(--ink-500); margin: 0 0 1.25rem; }
+    .demo-gate form { border: 0; box-shadow: none; padding: 0; }
+    .demo-gate .gate-legal { font-size: .78rem; color: var(--ink-500); margin: .85rem 0 0; text-align: center; }
+    .demo-gate .gate-direct { display: block; text-align: center; margin-top: .9rem; font-size: .88rem; font-weight: 600; color: var(--ink-500); text-decoration: underline; text-underline-offset: 3px; background: none; border: 0; width: 100%; cursor: pointer; }
+    .demo-gate .gate-direct:hover { color: var(--numma-purple-700); }
+    .demo-gate .gate-error { color: #DC2626; font-size: .9rem; margin-top: .75rem; }
     @media (max-width: 960px) {
       .booking-grid { grid-template-columns: 1fr; gap: 2rem; }
     }
@@ -184,6 +192,37 @@
  data-booking-src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3XTO5zWnoQ0fcKEXHzGvvJzKVOTefkP84mJXjJvhqiWD5iBzLEtb7387Az9ItXVRH9R05ByVFa?gv=true">
 
  <!-- Message de repli affiché tant que l'URL n'est pas configurée -->
+ <div class="demo-gate" id="demo-gate">
+ <h3>Avant de choisir votre créneau</h3>
+ <p class="gate-sub">Quatre questions rapides pour préparer une démo adaptée à votre activité. L'agenda s'affiche juste après.</p>
+ <form id="demo-form" class="form" data-endpoint="https://script.google.com/macros/s/AKfycbyaYm-SpGtcyUPb1NFwpqlSrDrM8V6-ZlGH5jBrrhO0XGxJ1WtP2259ntft_onJdTMjNQ/exec">
+ <div aria-hidden="true" style="position:absolute; left:-9999px; height:0; overflow:hidden;">
+ <label for="d-website">Ne pas remplir ce champ</label>
+ <input type="text" id="d-website" name="website" tabindex="-1" autocomplete="off">
+ </div>
+ <input type="hidden" name="interest" value="Réserver une démo">
+ <div class="form-row">
+ <div class="form-group"><label for="d-firstname">Prénom *</label><input type="text" id="d-firstname" name="firstname" autocomplete="given-name" required></div>
+ <div class="form-group"><label for="d-company">Entreprise *</label><input type="text" id="d-company" name="company" autocomplete="organization" required></div>
+ </div>
+ <div class="form-group"><label for="d-email">E-mail professionnel *</label><input type="email" id="d-email" name="email" autocomplete="email" required></div>
+ <div class="form-group"><label for="d-how">Comment avez-vous connu NUMMA ? *</label>
+ <select id="d-how" name="how" required>
+ <option value="" selected disabled>Choisir</option>
+ <option>Recherche Google</option>
+ <option>ChatGPT, Claude ou une autre IA</option>
+ <option>LinkedIn</option>
+ <option>Instagram ou Facebook</option>
+ <option>Mon expert-comptable</option>
+ <option>Bouche-à-oreille</option>
+ <option>Autre</option>
+ </select></div>
+ <button type="submit" class="btn btn-primary btn-lg">Voir les créneaux disponibles</button>
+ <p class="gate-legal">Vos informations servent uniquement à préparer la démo. <a href="politique-confidentialite.html">Confidentialité</a></p>
+ </form>
+ <button type="button" class="gate-direct" id="demo-direct">Accéder directement à l'agenda</button>
+ </div>
+
  <div class="booking-fallback" id="booking-fallback">
  <h3>Réservation en cours de configuration</h3>
  <p>La prise de rendez-vous en ligne sera disponible très prochainement. En attendant, écrivez-nous et nous vous proposons un créneau sous 24&nbsp;h.</p>
@@ -238,22 +277,55 @@
 </footer>
 
 <script>
- // Affiche le calendrier Google si l'URL a été configurée, sinon laisse le message de repli.
+ // Démo en 2 temps (v49) : formulaire court, puis agenda Google.
  (function () {
  var wrap = document.getElementById('booking-embed');
  if (!wrap) return;
  var src = wrap.getAttribute('data-booking-src') || '';
  var configured = src && src.indexOf('COLLER_VOTRE_ID') === -1;
- if (configured) {
+ var gate = document.getElementById('demo-gate');
  var fallback = document.getElementById('booking-fallback');
- if (fallback) fallback.remove();
+ if (!configured) { if (gate) gate.remove(); return; }
+ if (fallback) fallback.style.display = 'none';
+ function showAgenda() {
+ if (gate) gate.remove();
+ if (wrap.querySelector('iframe')) return;
  var iframe = document.createElement('iframe');
  iframe.src = src;
  iframe.title = 'Réserver une démo NUMMA';
- iframe.loading = 'lazy';
  iframe.setAttribute('frameborder', '0');
  wrap.appendChild(iframe);
+ wrap.scrollIntoView({ behavior: 'smooth', block: 'start' });
  }
+ var direct = document.getElementById('demo-direct');
+ if (direct) direct.addEventListener('click', function () {
+ var c = window.NUMMA_CONSENT || {};
+ if (c.analytics && window.gtag) window.gtag('event', 'agenda_direct', { page: location.pathname });
+ showAgenda();
+ });
+ var form = document.getElementById('demo-form');
+ if (!form) return;
+ form.addEventListener('submit', function (e) {
+ e.preventDefault();
+ if (form.website && form.website.value) { showAgenda(); return; }
+ var btn = form.querySelector('button[type="submit"]');
+ if (btn) { btn.disabled = true; btn.textContent = 'Un instant…'; }
+ var data = new URLSearchParams();
+ new FormData(form).forEach(function (v, k) { data.append(k, v); });
+ data.append('source', location.pathname);
+ var ex = window.NUMMA_formExtras ? window.NUMMA_formExtras() : (window.NUMMA_FT || {});
+ Object.keys(ex).forEach(function (k) { if (!data.has(k)) data.append(k, ex[k] || ''); });
+ var done = false;
+ function next() { if (done) return; done = true; showAgenda(); }
+ fetch(form.getAttribute('data-endpoint'), { method: 'POST', body: data })
+ .then(function (r) { return r.json().catch(function () { return { result: 'success' }; }); })
+ .then(function (json) {
+ if (json && json.result !== 'error' && window.NUMMA_track) window.NUMMA_track('demo', { page: location.pathname, metier: ex.metier || '', source: ex.utm_source || '' });
+ next();
+ })
+ .catch(next);
+ setTimeout(next, 4000); // ne jamais bloquer l'accès à l'agenda
+ });
  })();
 </script>
 <script src="js/cookies.js" defer></script>
