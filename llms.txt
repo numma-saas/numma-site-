@@ -4,6 +4,9 @@
 
 NUMMA réunit dans une seule plateforme quatre outils habituellement séparés. Cible : entreprises de 1 à 50 salariés. Tarifs à partir de 19 € HT/mois. Essai gratuit de 14 jours sans carte bancaire.
 
+## Référence
+- [Informations officielles sur NUMMA](https://numma.eu/informations-numma.html) : société, offre, prix, hébergement et limites, vérifiés. Version texte : https://numma.eu/llms-full.txt
+
 ## Produit
 - [Fonctionnalités](https://numma.eu/fonctionnalites.html) : vue d'ensemble des quatre modules
 - [Facturation électronique](https://numma.eu/facturation-electronique.html) : Factur-X, UBL, CII, conformité réforme 2026
@@ -44,6 +47,10 @@ NUMMA réunit dans une seule plateforme quatre outils habituellement séparés. 
 - [Alternative à Sage](https://numma.eu/blog/alternative-sage.html) : Du logiciel installé à l'outil en ligne tout-en-un.
 - [Alternative à Cegid](https://numma.eu/blog/alternative-cegid.html) : Prix affichés, sans devis, pensé pour le dirigeant.
 - [Alternative au cabinet comptable](https://numma.eu/blog/alternative-cabinet-comptable.html) : Ce que vous pouvez reprendre, ce qu'il faut lui laisser.
+- [Alternative à Abby](https://numma.eu/blog/alternative-abby.html) : quand une société embauche, paie et trésorerie comparées, prix relevés le 4 novembre 2026.
+- [Alternative à Tiime](https://numma.eu/blog/alternative-tiime.html) : garder sa banque et ajouter la paie, prix selon l'effectif comparés.
+- [Changer de Plateforme Agréée](https://numma.eu/blog/changer-plateforme-agreee.html) : procédure officielle de juillet 2026, délais et annuaire.
+- [Changer de logiciel de gestion en cours d'année](https://numma.eu/blog/changer-logiciel-gestion.html) : date de bascule, exports, résiliation.
 
 ## Électriciens et installateurs de bornes
 - [Logiciel de gestion pour électricien](https://numma.eu/logiciel-gestion-electricien.html) : devis, factures électroniques, TVA 5,5/10/20 %, paie du bâtiment, trésorerie.
@@ -57,7 +64,7 @@ NUMMA réunit dans une seule plateforme quatre outils habituellement séparés. 
 - [Alternative à Indy quand on a des salariés](https://numma.eu/blog/alternative-indy.html) : comparatif honnête, paie et RH intégrées.
 
 ## Paie du bâtiment
-- [Indemnités de petits déplacements BTP 2026](https://numma.eu/blog/indemnites-petits-deplacements-btp-2026.html) : repas, trajet, transport, zones, cotisations et comparatif de sept territoires.
+- [Indemnités de petits déplacements BTP 2026](https://numma.eu/blog/indemnites-petits-deplacements-btp-2026.html) : repas, trajet, transport, zones, cotisations et comparatif de dix territoires.
 - [IPD bâtiment Île-de-France 2026](https://numma.eu/blog/ipd-batiment-ile-de-france-2026.html) : barème régional zone par zone, vérifié sur l'accord signé.
 - [IPD bâtiment Nouvelle-Aquitaine 2026](https://numma.eu/blog/ipd-batiment-nouvelle-aquitaine-2026.html) : barème régional zone par zone, vérifié sur l'accord signé.
 - [IPD bâtiment Occitanie 2026](https://numma.eu/blog/ipd-batiment-occitanie-2026.html) : barème régional zone par zone, vérifié sur l'accord signé.
@@ -65,6 +72,9 @@ NUMMA réunit dans une seule plateforme quatre outils habituellement séparés. 
 - [IPD bâtiment Auvergne 2026](https://numma.eu/blog/ipd-batiment-auvergne-2026.html) : barème régional zone par zone, vérifié sur l'accord signé.
 - [IPD bâtiment Centre-Val de Loire 2026](https://numma.eu/blog/ipd-batiment-centre-val-de-loire-2026.html) : barème régional zone par zone, deux grilles selon la taille.
 - [IPD bâtiment Loire 2026](https://numma.eu/blog/ipd-batiment-loire-2026.html) : barème départemental zone par zone.
+- [IPD bâtiment Hauts-de-France 2026](https://numma.eu/blog/ipd-batiment-hauts-de-france-2026.html) : barème régional zone par zone, repas à 14,00 €.
+- [IPD bâtiment Pays de la Loire 2026](https://numma.eu/blog/ipd-batiment-pays-de-la-loire-2026.html) : barème régional en huit zones, jusqu'à 80 km.
+- [IPD bâtiment Isère 2026](https://numma.eu/blog/ipd-batiment-isere-2026.html) : barème départemental, distances en kilomètres réels.
 
 ## Gestion courante
 - [Réduction générale 2026 (RGDU)](https://numma.eu/blog/reduction-generale-2026-rgdu.html) : formule, paramètres du décret 2025-1446, tableau salaire par salaire.
