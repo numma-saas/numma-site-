@@ -18,6 +18,7 @@ NUMMA réunit dans une seule plateforme quatre outils habituellement séparés. 
 - [Calculateur ROI](https://numma.eu/calculateur-roi.html) : estimation des économies annuelles
 - [Simulateur salaire brut net 2026](https://numma.eu/simulateur-salaire-brut-net.html) : conversion brut/net avec le détail des cotisations et le coût employeur.
 - [E-reporting 2027](https://numma.eu/e-reporting.html) : qui est concerné, quelles données, quelle fréquence, quelles sanctions.
+- [Facture électronique : restaurants, bars, commerces](https://numma.eu/blog/facture-electronique-restaurant-bar-commerce.html) : réception depuis septembre 2026, émission et e-reporting en septembre 2027, plan en 5 étapes.
 - [Obligation d'émettre au 1er septembre 2027](https://numma.eu/blog/facturation-electronique-2027-obligation-emettre.html) : formats, nouvelles mentions obligatoires, calendrier.
 - [Choisir sa Plateforme Agréée](https://numma.eu/blog/choisir-plateforme-agreee.html) : vérifier un agrément DGFiP et les coûts cachés.
 
@@ -102,4 +103,7 @@ NUMMA réunit dans une seule plateforme quatre outils habituellement séparés. 
 - [Logiciel de gestion pour cabinets d'architecte](https://numma.eu/logiciel-gestion-architecte.html) : honoraires par phase, acomptes, TVA 10 ou 20 %, Chorus Pro, paie des entreprises d'architecture.
 - [TVA des honoraires d'architecte](https://numma.eu/blog/tva-honoraires-architecte.html) : 20 % en principe, 10 % avec maîtrise d'œuvre de travaux éligibles (BOI-TVA-LIQ-30-20-90-30).
 - [Logiciel de gestion hôtel et restaurant](https://numma.eu/logiciel-gestion-hotel-restaurant.html) : TVA 10/20 %, paie HCR, factures fournisseurs électroniques, trésorerie saisonnière.
+- [Logiciel de gestion bar et café](https://numma.eu/logiciel-gestion-bar.html) : ticket Z en photo, factures fournisseurs électroniques, paie et RH, trésorerie ; NUMMA n'est pas une caisse.
+- [Logiciel de gestion boulangerie-pâtisserie](https://numma.eu/logiciel-gestion-boulangerie.html) : ticket Z, TVA 5,5 / 10 / 20 %, factures fournisseurs électroniques, paie des boulangers et apprentis.
+- [Logiciel de gestion boutique et magasin](https://numma.eu/logiciel-gestion-boutique.html) : ticket Z, factures des marques, paie des vendeurs, trésorerie des soldes ; pas de gestion de stock.
 - [Logiciel de gestion PME industrielle](https://numma.eu/logiciel-gestion-industrie.html) : facture électronique B2B, achats, export, paie de branche, trésorerie.
